@@ -4,6 +4,8 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
     defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
         applicationId "codingblocks.com.gsocinfo"
         minSdkVersion 16
         targetSdkVersion 26
