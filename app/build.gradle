@@ -35,6 +35,7 @@ dependencies {
     compile 'com.firebaseui:firebase-ui-auth:2.3.0'
     compile 'com.google.code.gson:gson:2.8.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.github.vipulasri:timelineview:1.0.5'
     compile 'com.google.firebase:firebase-core:10.0.1'
     compile 'com.google.firebase:firebase-auth:10.0.1'
     compile 'com.google.firebase:firebase-database:10.0.1'
@@ -42,11 +43,5 @@ dependencies {
     compile 'com.google.firebase:firebase-messaging:10.0.1'
     testCompile 'junit:junit:4.12'
 }
-
-
-
-
-
-
 
 apply plugin: 'com.google.gms.google-services'
