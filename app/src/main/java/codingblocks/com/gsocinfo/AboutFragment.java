@@ -9,11 +9,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
 /**
  * Created by harshit on 25/08/17.
  */
 
 public class AboutFragment extends Fragment {
+
+    private ArrayList<String> date = new ArrayList<>();
+    private ArrayList<String> title = new ArrayList<>();
+    private ArrayList<String> description = new ArrayList<>();
 
     @Nullable
     @Override

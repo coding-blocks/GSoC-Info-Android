@@ -42,8 +42,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:id="@+id/text_timeline_title"
+            android:textStyle="bold"
             android:textColor="@android:color/black"
             tools:text="Order Successfully Completed"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/text_timeline_description"
+            android:textColor="@android:color/black"
+            tools:text="Order details are as follows"/>
 
     </LinearLayout>
 

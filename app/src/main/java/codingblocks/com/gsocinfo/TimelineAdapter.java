@@ -1,5 +1,6 @@
 package codingblocks.com.gsocinfo;
 
+import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +15,12 @@ import java.util.ArrayList;
 
 public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adapter<TimelineAdapter.TimelineHolder> {
 
-    private ArrayList<String> date, title, content;
+    private ArrayList<String> date, title, description;
 
-    public TimelineAdapter(ArrayList<String> date, ArrayList<String> title, ArrayList<String> content) {
+    public TimelineAdapter(ArrayList<String> date, ArrayList<String> title, ArrayList<String> description) {
         this.date = date;
         this.title = title;
-        this.content = content;
+        this.description = description;
     }
 
     @Override
@@ -30,7 +31,9 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
 
     @Override
     public void onBindViewHolder(TimelineHolder holder, int position) {
-
+        holder.description.setText(description.get(position));
+        holder.title.setText(title.get(position));
+        holder.date.setText(date.get(position));
     }
 
     @Override
@@ -46,11 +49,14 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
     public class TimelineHolder extends RecyclerView.ViewHolder{
 
         TimelineView timelineView;
-
+        AppCompatTextView title,description,date;
 
         public TimelineHolder(View itemView, int viewType) {
             super(itemView);
             timelineView = itemView.findViewById(R.id.time_line_item);
+            title = itemView.findViewById(R.id.text_timeline_title);
+            description = itemView.findViewById(R.id.text_timeline_description);
+            date = itemView.findViewById(R.id.text_timeline_date);
             timelineView.initLine(viewType);
         }
     }
