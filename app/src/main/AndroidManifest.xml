@@ -12,7 +12,7 @@
         <meta-data android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"/>
         <activity
-            android:name=".AboutActivity"
+            android:name=".activities.AboutActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity

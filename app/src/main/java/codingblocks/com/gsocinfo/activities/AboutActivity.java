@@ -1,11 +1,9 @@
-package codingblocks.com.gsocinfo;
+package codingblocks.com.gsocinfo.activities;
 
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,6 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import codingblocks.com.gsocinfo.R;
+import codingblocks.com.gsocinfo.fragments.AboutFragment;
+import codingblocks.com.gsocinfo.fragments.FaqFragment;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -43,7 +46,7 @@ public class AboutActivity extends AppCompatActivity
 
 //        ConstraintLayout container = findViewById(R.id.container_about);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container_about,AboutFragment.newInstance()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container_about, AboutFragment.newInstance()).commit();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -87,23 +90,23 @@ public class AboutActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_about) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container_about,AboutFragment.newInstance()).commit();
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_organizations) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_projects) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_faq) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_about, FaqFragment.newInstance()).commit();
+        } else if (id == R.id.nav_chat) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-            FirebaseAuth auth = FirebaseAuth.getInstance();
+        }else if(id == R.id.nav_logout){
+            FirebaseAuth auth  = FirebaseAuth.getInstance();
             auth.signOut();
             finish();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

@@ -1,4 +1,4 @@
-package codingblocks.com.gsocinfo;
+package codingblocks.com.gsocinfo.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
-import com.daimajia.slider.library.SliderTypes.TextSliderView;
 
-import java.util.ArrayList;
+import codingblocks.com.gsocinfo.R;
+import codingblocks.com.gsocinfo.adapters.TimelineAdapter;
 
 /**
  * Created by harshit on 25/08/17.
@@ -46,11 +46,12 @@ public class AboutFragment extends Fragment {
         sliderLayout = view.findViewById(R.id.sliderView);
 
         DefaultSliderView apply  = new DefaultSliderView(getContext());
-        apply.image(R.drawable.apply_);
+
+        apply.image(R.drawable.apply);
         DefaultSliderView code = new DefaultSliderView(getContext());
-        code.image(R.drawable.code_);
+        code.image(R.drawable.code);
         DefaultSliderView share = new DefaultSliderView(getContext());
-        share.image(R.drawable.share_);
+        share.image(R.drawable.share);
 
         sliderLayout.addSlider(apply);
         sliderLayout.addSlider(code);

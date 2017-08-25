@@ -5,11 +5,10 @@
     android:background="@drawable/side_nav_bar"
     android:orientation="vertical">
 
-
     <com.daimajia.slider.library.SliderLayout
         android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:id="@+id/sliderView"></com.daimajia.slider.library.SliderLayout>
+        android:layout_height="80dp"
+        android:id="@+id/sliderView" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_timeline"

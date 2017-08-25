@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="codingblocks.com.gsocinfo.AboutActivity">
+    tools:context="codingblocks.com.gsocinfo.activities.AboutActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:elevation="0dp"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
@@ -24,11 +25,12 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
+        android:scaleType="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         app:fabSize="normal"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@drawable/ic_chat_bubble_outline" />
 
 </android.support.design.widget.CoordinatorLayout>
