@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/container_about"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="codingblocks.com.gsocinfo.AboutActivity"
+    tools:context="codingblocks.com.gsocinfo.activities.AboutActivity"
     tools:showIn="@layout/app_bar_about">
 
 

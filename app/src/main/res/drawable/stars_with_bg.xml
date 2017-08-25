@@ -7,6 +7,10 @@
                 android:endColor="#0E1926"
                 android:startColor="#213754"
                 android:type="linear" />
+
         </shape>
     </item>
+
+    <item android:drawable="@drawable/stars_background" />
+
 </layer-list>

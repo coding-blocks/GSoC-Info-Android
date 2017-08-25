@@ -1,4 +1,4 @@
-package codingblocks.com.gsocinfo;
+package codingblocks.com.gsocinfo.adapters;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -15,13 +15,16 @@ import com.github.vipulasri.timelineview.TimelineView;
 
 import java.util.ArrayList;
 
+import codingblocks.com.gsocinfo.Constants;
+import codingblocks.com.gsocinfo.R;
+
 /**
  * Created by harshit on 25/08/17.
  */
 
 public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adapter<TimelineAdapter.TimelineHolder> {
 
-    Context context;
+    private Context context;
     private ArrayList<String> date = Constants.generateDate(),
     title = Constants.generateTitle(), description = Constants.generateDescription();
 
@@ -41,6 +44,7 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
 
     @Override
     public void onBindViewHolder(final TimelineHolder holder, int position) {
+
         holder.description.setText(description.get(position));
         holder.title.setText(title.get(position));
         holder.date.setText(date.get(position));
@@ -48,7 +52,7 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
             int colorFrom = Color.WHITE;
             int colorTo = context.getResources().getColor(R.color.colorAccent);
             ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
-            colorAnimation.setDuration(250); // milliseconds
+            colorAnimation.setDuration(300); // milliseconds
             colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
 
                 @Override

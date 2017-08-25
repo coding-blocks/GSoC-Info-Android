@@ -1,7 +1,6 @@
-package codingblocks.com.gsocinfo;
+package codingblocks.com.gsocinfo.activities;
 
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -13,6 +12,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import codingblocks.com.gsocinfo.fragments.AboutFragment;
+import codingblocks.com.gsocinfo.R;
 
 public class AboutActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -41,7 +43,7 @@ public class AboutActivity extends AppCompatActivity
 
 //        ConstraintLayout container = findViewById(R.id.container_about);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container_about,AboutFragment.newInstance()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container_about, AboutFragment.newInstance()).commit();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -85,21 +87,19 @@ public class AboutActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_about) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container_about,AboutFragment.newInstance()).commit();
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_organizations) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_projects) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_faq) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_chat) {
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
