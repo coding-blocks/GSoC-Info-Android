@@ -41,25 +41,14 @@ public class FaqAdapter extends RecyclerView.Adapter<FaqAdapter.FaqHolder> {
     @Override
     public FaqHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         this.context = parent.getContext();
-        final FaqHolder faqHolder = new FaqHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_faq, parent, false));
-        faqHolder.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                    lastCheckedPosition = getAdapterPosition();
-//                    notifyDataSetChanged();
-                if (faqHolder.answer.isShown()){
-                    collapse(faqHolder);
-                }else {
-                    expand(faqHolder);
-                }
-            }
-        });
-        return faqHolder;
+
+        return new FaqHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_faq, parent, false));
     }
 
     @Override
     public void onBindViewHolder(final FaqHolder holder, int position) {
         holder.question.setText(questions.get(position));
+        collapse(holder);
         holder.answer.setText(Html.fromHtml(answers.get(position)));
         holder.answer.setClickable(true);
         holder.answer.setMovementMethod(LinkMovementMethod.getInstance());
@@ -100,7 +89,7 @@ public class FaqAdapter extends RecyclerView.Adapter<FaqAdapter.FaqHolder> {
             @Override
             public void onAnimationUpdate(ValueAnimator animator) {
                 h.question.setTextSize(16);
-                h.cardView.setBackgroundColor((int) animator.getAnimatedValue());
+                h.cardView.setBackgroundColor(Color.WHITE);
             }
         });
         colorAnimation.start();
@@ -131,9 +120,20 @@ public class FaqAdapter extends RecyclerView.Adapter<FaqAdapter.FaqHolder> {
 
         public FaqHolder(View itemView) {
             super(itemView);
+            final FaqHolder faqHolder = this;
             cardView = itemView.findViewById(R.id.cardview_faq);
             question = itemView.findViewById(R.id.question_faq);
             answer = itemView.findViewById(R.id.answer_faq);
+            faqHolder.cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (faqHolder.answer.isShown()){
+                        collapse(faqHolder);
+                    }else {
+                        expand(faqHolder);
+                    }
+                }
+            });
         }
     }
 
