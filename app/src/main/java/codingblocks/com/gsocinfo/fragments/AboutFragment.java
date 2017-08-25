@@ -64,7 +64,6 @@ public class AboutFragment extends Fragment {
 
         recyclerView.setAdapter(timelineAdapter);
         return view;
-//        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override

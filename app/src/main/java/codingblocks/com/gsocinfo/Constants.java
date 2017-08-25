@@ -1,6 +1,10 @@
 package codingblocks.com.gsocinfo;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
+
+import codingblocks.com.gsocinfo.model.Organizations;
 
 
 /**
@@ -9,10 +13,22 @@ import java.util.ArrayList;
 
 public class Constants {
 
+    private static Organizations organizations;
+
+    public static void setOrganizations(String json) {
+        Gson gson = new Gson();
+
+        Constants.organizations = gson.fromJson(json, Organizations.class);
+    }
+
+    public static ArrayList<Organizations.Organization> getOrganizations(){
+        return organizations.getResults();
+    }
+
     public static ArrayList<String > generateTitle(){
         ArrayList<String> title = new ArrayList<>();
         title.add("Organisation Applications open");
-        title.add("Organization Application Deadline");
+        title.add("Organizations Application Deadline");
         title.add("Organizations Announced");
         title.add("Student Application Period");
         title.add("Application Review Period");
