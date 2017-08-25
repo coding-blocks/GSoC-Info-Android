@@ -27,9 +27,6 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
     @Override
     public TimelineHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = View.inflate(parent.getContext(), R.layout.item_timeline, null);
-        if(viewType == 0 ){
-            view = View.inflate(parent.getContext(), R.layout.item_timeline_summary, null);
-        }
         return new TimelineHolder(view, viewType);
     }
 
@@ -47,9 +44,6 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
 
     @Override
     public int getItemViewType(int position) {
-        if(position == 0){
-            return 0;
-        }
         return TimelineView.getTimeLineViewType(position,getItemCount());
     }
 
