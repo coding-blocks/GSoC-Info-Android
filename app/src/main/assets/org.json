@@ -1,0 +1,2234 @@
+{
+   "count":201,
+   "next":"https://summerofcode.withgoogle.com/api/program/current/organization/?page=2&page_size=48",
+   "previous":null,
+   "results":[
+      {
+         "id":6116707350347776,
+         "name":"52°North Initiative for Geospatial Open Source Software GmbH",
+         "slug":"52north-initiative-for-geospatial-open-source-software-gmbh",
+         "website_url":"http://52north.org/",
+         "category":"other",
+         "contact_email":"gsocadmins@52north.org",
+         "mailing_list":"http://list.52north.org/mailman/listinfo/gsoc",
+         "irc_channel":null,
+         "tagline":"52°North works on innovative ideas and technologies in geoinformatics.",
+         "precis":"52°North is an open source initiative in the field of geoinformatics. Core topics of our activities are for example sensor web, web-based geoprocessing and earth observation.",
+         "description":"[52°North](http://52north.org) is an international research and development partner network with partners from academia, the public sector and industry. Our goal is to foster innovation in the field of geoinformatics by organizing and facilitating a collaborative software development process. The topics we address comprise for example sensor web technologies, web-based geoprocessing the web of things, linked open data, spatial data infrastructures, citizen science, earth observation, and 3D. This selection of topics reflects both the strengths and strategies of the partners involved.\n\nSome of our software projects are enviroCar, 52°North SOS, 52°North Helgoland (JavaScript Sensor Web Client), ILWIS, and 52°North WPS. Check out our GitHub organization and our Open Hub page to learn more about the wide range of software our communities work on: from mobile apps to standardized web services, from cutting edge research to established products. 52°North open source projects are used in a broad range of domains (e.g. oceanology, air quality, hydrology, traffic planning) and operational as well as research projects (e.g. European Horizon 2020 projects such as NeXOS, FixO3, ConnectinGEO, WaterInnEU, ODIP 2, SeaDataCloud).\n\nAll of the 52°North software is published under an OSI approved open source license.\n\n52°North GmbH, which is the legal body and service center of the network, acts as a non-profit organization. This means that the shareholders of 52°North do not receive profit shares or payments from company funds. Instead, the profits earned by 52°North are completely re-invested into the innovation and software development process.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Apache License 2.0 (Apache-2.0)",
+         "image_url":"//lh3.googleusercontent.com/PSonkx1qxFjtZ-hHmzVGXKvxmkxUpb67vZCnlDGacPiQ2d9iSV12wdODOz-O3xM4_Y_nNE8wC-PLOPFp2WgI0b9ZLnaGz_g",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/FiveTwoN",
+         "blog_url":"http://blog.52north.org/",
+         "application_instructions":"To apply for a GSoC project at 52°North, please have a look at our ideas page. Before submitting an application, please carefully read the project description, clarify and open questions with the mentors listed in the projects descriptions and complete the code challenge which is required for each application.\n\nYou can find a detailed description how to apply for a 52°North GSoC project in our [Wiki](https://wiki.52north.org/bin/view/Projects/GSoCForStudents)\n\nWhen submitting your application, please make sure to use the following template:\n* Personal Details\n * Name\n * Contact details (email, personal website, Skype, IRC nick, phone number, location/time zone)\n * University/School name\n * Short bio\n* Project\n * Description: Include a link to the description on the ideas page or make clear if this is your own suggestion. Also include potential mentors in the latter case.\n * Preliminary Schedule (milestones and deliverables, planned working hours, and potential other commitments)\n * Motivation (This might, but does not have to, include answers to questions such as: Why 52°North? Why this project? Why Open Source? Why are you suited to carry the project?)\n * Contribution of project to ongoing studies (if applicable)\n* Experience\n * (Open Source) software development experience (including example applications)\n * Programming level\n * Work experience\n * Academic experience and performance\n * References",
+         "topic_tags":[
+            "geoinformatics",
+            "sensor web",
+            "web-based geoprocessing",
+            "spatial data infrastructures",
+            "spatial information"
+         ],
+         "technology_tags":[
+            "web services",
+            "ogc standards",
+            "java",
+            "javascript",
+            "web"
+         ],
+         "proposal_tags":[
+            "sensor web",
+            "web-based geoprocessing",
+            "envirocar"
+         ],
+         "ideas_list":"https://wiki.52north.org/Projects/GSoC2017ProjectIdeas",
+         "contact_method":"gsocadmins@52north.org",
+         "program_year":2017
+      },
+      {
+         "id":4800434830049280,
+         "name":"AboutCode",
+         "slug":"aboutcode",
+         "website_url":"http://aboutcode.org",
+         "category":"languages",
+         "contact_email":"info@scancode.io",
+         "mailing_list":"https://lists.sourceforge.net/lists/listinfo/aboutcode-discuss",
+         "irc_channel":"https://webchat.freenode.net/?channels=#aboutcode",
+         "tagline":"Open Source for Open Source: software license, origin and packages discovery",
+         "precis":"Find data about code: origin, license, security, bugs...",
+         "description":"AboutCode is a project to uncover data ... about software code:\n-    where does it come from?\n-    what is its license? copyright?\n-    is it secure, maintained, well coded? \n\nAll these are questions that are important to find answers to when there are million of free and open source software components available on the web. \n\nWhere software comes from and what is its license should be a problem of the past such that everyone can safely consume more free and open source software. \n\n**Come and join us to make it so!**\n\nOur tools are used to help detect and report the origin and license of source code, packages and binaries as well as discover software and package dependencies, and track security vulnerabilities, bugs and other important software component attributes.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Apache License 2.0 (Apache-2.0)",
+         "image_url":"//lh3.googleusercontent.com/gaxU7t4KfAuouHAC7FljOIbjblWysDDauX8JAaBmKVlm4EVp04L10JoqCH6ZUCi8dXEDi61NvbySFb0q7eApMJTgklSseT8",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":null,
+         "blog_url":null,
+         "application_instructions":"We expect your application to be in the range of 1000 words. Anything less than that will probably not contain enough information for us to determine whether you are the right person for the job. Your proposal should contain at least the following information, plus anything you think is relevant:\n\n* Your name\n* Title of your proposal\n* Abstract of your proposal\n* Detailed description of your idea including explanation on why is it innovative and what it will contribute\n* Description of previous work, existing solutions (links to prototypes, bibliography are more than welcome)\n* Mention the details of your academic studies, any previous work, internships\n* Relevant skills that will help you to achieve the goal (programming languages, frameworks)?\n* Any previous open-source projects (or even previous GSoC) you have contributed to and links.\n* Do you plan to have any other commitments during GSoC that may affect you work? Any vacations/holidays? Will you be available full time to work on your project? (Hint: do not bother applying if this is not a serious full time commitment)\n\nSubscribe to the mailing list, or join the #aboutcode IRC channel on Freenode and introduce yourself and start the discussion!\n\nYou need to understand something about open source licensing or package managers or code and binaries static analysis. The best way to demonstrate your capability could be to submit a small patch ahead of the project selection for an existing issue or a new issue.",
+         "topic_tags":[
+            "free and open source software  license and origin",
+            "package and dependencies licensing and origin",
+            "package vulnerabilities and security",
+            "code scan and matching",
+            "code analysis and spdx"
+         ],
+         "technology_tags":[
+            "python",
+            "c/c++",
+            "javascript",
+            " shell script",
+            "static analysis"
+         ],
+         "proposal_tags":[
+            "scancode-server",
+            "fetchcode",
+            "matchcode",
+            "vulnerability-db",
+            "license-expression",
+            "scancode-license-benchmark",
+            "scancode-packaging",
+            "deltacode",
+            "tracecode-docker-static-analysis",
+            "scancode-other"
+         ],
+         "ideas_list":"https://github.com/nexB/aboutcode/wiki/GSOC-2017",
+         "contact_method":"info@scancode.io",
+         "program_year":2017
+      },
+      {
+         "id":5751020614320128,
+         "name":"AerospaceResearch.net",
+         "slug":"aerospaceresearchnet",
+         "website_url":"http://aerospaceresearch.net/",
+         "category":"science_and_medicine",
+         "contact_email":"contact@aerospaceresearch.net",
+         "mailing_list":"https://lists.shackspace.de/mailman/listinfo/constellation",
+         "irc_channel":null,
+         "tagline":"Making Space Together",
+         "precis":"We are AerospaceResearch.net, a small team of space makers solving space problems together with KSat-Stuttgart e.V. and the Cosmic Dust Team.",
+         "description":"We are AerospaceResearch.net, a small team of space makers solving space problems together with KSat-Stuttgart e.V. and the Cosmic Dust Team.\n\nIn 2011, we started as a student group at the University of Stuttgart to  provide massive computing power with our distributed computting platform Constellation to everyone needing it for space simulations. Over time, we attracted international young professionals of the space industry and the local maker community and thus becoming a full fletched  citizen science project.\n\nWe are a community project of several Projects working of different Teams in Stuttgart and globally. Together with the small satellite Team KSat-Stuttgart e.V., the Distributed Ground Station Network Team at the Institute for Photogrammetry and the Cosmic Dust Team of the Institute for Space Systems at University of Stuttgart, we are working on the rover mission ROACH crawling for maintenance reasons on the outer hull of a sounding rocket while coasting in near space, tracking cubesats faster than US NORAD and simulating cometary dust particles for the IMEX project of the European Space Agency (ESA).\n\nWe are a small organization but having impact within out space community and helping realizing space Exploration by creativity and open access. We are open for everybody interested in space for the betterment of everybody.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Apache License 2.0 (Apache-2.0)",
+         "image_url":"//lh3.googleusercontent.com/vC-84bRJDbYjZKuZYUcWjRyvw_laPLYXSAjX1Qq6MJKyBs5Ofq3g0-OWJzAmxJb4mUrJvc-m1HVcXRR43G2TsYWSx9Eu5LB7",
+         "image_bg_color":null,
+         "gplus_url":"https://plus.google.com/communities/103284191158859493054",
+         "twitter_url":"http://twitter.com/ardnnews",
+         "blog_url":"http://aerospaceresearch.net/",
+         "application_instructions":"We posted a list of points you can get if you follow our list of things we  want to see from you in your application and the communication phase. You find them on our ideas page. Please follow them. We will also help you if you contact us in time.",
+         "topic_tags":[
+            "cubesats",
+            "space applications",
+            "software defined radio",
+            "distributed computing",
+            "simulations"
+         ],
+         "technology_tags":[
+            "python",
+            "c/c++",
+            "vhdl",
+            "boinc"
+         ],
+         "proposal_tags":[
+            "space application",
+            "cubesats",
+            "software defined radio",
+            "simulations",
+            "space",
+            "gnss",
+            "signal processing"
+         ],
+         "ideas_list":"http://aerospaceresearch.net/?page_id=202",
+         "contact_method":"contact@aerospaceresearch.net",
+         "program_year":2017
+      },
+      {
+         "id":5663121491361792,
+         "name":"aimacode",
+         "slug":"aimacode",
+         "website_url":"https://github.com/aimacode/",
+         "category":"languages",
+         "contact_email":"peter.norvig+aimacode@gmail.com",
+         "mailing_list":null,
+         "irc_channel":"https://gitter.im/aimacode/",
+         "tagline":"Code for the book \"Artificial Intelligence: A Modern Approach\"",
+         "precis":"This project provides implementations of the pseudocode algorithms in the textbook \"Artificial Intelligence: A Modern Approach,\" along with tutorial examples of algorithm usage.",
+         "description":"This project provides implementations of the pseudocode algorithms in the textbook \"Artificial Intelligence: A Modern Approach,\" along with tutorial examples of their usage, emphasizing visualizations that help students understand both the core underlying concepts and the specific ways to invoke the code.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"MIT license (MIT)",
+         "image_url":"//lh3.googleusercontent.com/phzpiPMFdtG7Y1braBzluD8Sakb430i_TgKqlD4aY86JsFj4lQWkzTJk1SVrFIdJdOcdCkZHXQGY2cxFiLLlOQdO2K5MJzJL",
+         "image_bg_color":"0000cc",
+         "gplus_url":null,
+         "twitter_url":null,
+         "blog_url":null,
+         "application_instructions":"Applicants should have excellent, clear, easy-to-understanding coding style in Python, Java, or Javascript, and a passion for making concepts clear to others. Experience creating algorithm visualizations is a plus. A clear and concise English writing style is a plus.",
+         "topic_tags":[
+            "artificial intelligence",
+            "machine learning",
+            "education"
+         ],
+         "technology_tags":[
+            "python",
+            " javascript",
+            "machine learning",
+            "artificial intelligence",
+            "java"
+         ],
+         "proposal_tags":[
+            "algorithms",
+            "visualization",
+            "examples",
+            "aima-java",
+            "aima-python",
+            "aima-javascript"
+         ],
+         "ideas_list":"http://aima.cs.berkeley.edu/gsoc-ideas.html",
+         "contact_method":"peter.norvig+aimacode@gmail.com",
+         "program_year":2017
+      },
+      {
+         "id":6387543089086464,
+         "name":"Amahi",
+         "slug":"amahi",
+         "website_url":"https://www.amahi.org",
+         "category":"operating_systems",
+         "contact_email":"gsoc@amahi.org",
+         "mailing_list":"",
+         "irc_channel":"http://talk.amahi.org",
+         "tagline":"Making Home Networking and Storage Simple",
+         "precis":"Amahi is a \"Home Server\" distribution. It's based around Applications, Storage and Networking, with a nice web user interface and mobile apps for remote streaming/sharing.",
+         "description":"The Amahi Linux Home Server makes your home networking and storage simple. We like to call the Amahi servers HDAs, for \"Home Digital Assistants.\" Each HDA delivers all the functionality you would want in a home server, while being easy to use from a web browser and mobile apps.\n\nAmahi can turn popular Linux distributions into a simple to use networking, storage and app server. The server management  is done through a friendly user interface (the \"platform”). The platform allows controlling users login and storage access permissions, managing some network services like DHCP and DNS, as well as providing many apps that the users can install. The platform web interface is implemented in Ruby on Rails and runs in the web server along with other apps.\n\nThe installation process is done by installing the base distribution (Fedora at the moment) and after that, running the Amahi installer at the command line.\n\nOnce the installation is complete, the network services kick in, storage can be used and applications are installed by users. Some applications are Plugins (developed as an RoR \"engine\") and some are very popular open source apps and services.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 3.0 (GPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/N-JHCrlcSxiWxL4jPwe9JJbb6n-r-ao9IofnqXY4aOoAJflLKPKhSuvtBNUQ2vcWV13JXJD920KdvuHIqI1eXyHG0lqOIOg",
+         "image_bg_color":null,
+         "gplus_url":"https://plus.google.com/+amahi",
+         "twitter_url":"https://twitter.com/amahi",
+         "blog_url":"https://blog.amahi.org",
+         "application_instructions":"Amahi does not have hard requirements to apply. Familiarity with Android as well as Linux and modern restful APIs will be beneficial. Please introduce yourself by [filling this form](https://goo.gl/forms/C595FRTGg7YdiIgs2) so that we quickly get to know you.\n\nAmahi comprises a range of technologies and we're always looking to modernize more by using technologies like containers, real-time dbs/stacks like node, js, and more, all while maintaining and improving a clean and top-notch user interface.",
+         "topic_tags":[
+            "home servers",
+            "networking",
+            "storage",
+            "webapps",
+            "mobile streaming"
+         ],
+         "technology_tags":[
+            " android",
+            "golang",
+            "restful api",
+            "streaming",
+            "ruby on rails"
+         ],
+         "proposal_tags":[
+            "android",
+            "restful apis",
+            "streaming",
+            "ruby on rails",
+            "ruby",
+            "java",
+            "golang",
+            "system programming"
+         ],
+         "ideas_list":"https://wiki.amahi.org/index.php/Google_Summer_of_Code_Ideas",
+         "contact_method":"gsoc@amahi.org",
+         "program_year":2017
+      },
+      {
+         "id":4724897470218240,
+         "name":"AOSSIE - Australian Open Source Software Innovation and Education",
+         "slug":"aossie-australian-open-source-software-innovation-and-education",
+         "website_url":"http://www.aossie.org/",
+         "category":"science_and_medicine",
+         "contact_email":"",
+         "mailing_list":"https://groups.google.com/forum/#!forum/aossie-gsoc-2017",
+         "irc_channel":null,
+         "tagline":"Umbrella Org for Open-Source Projects in Australia",
+         "precis":"The umbrella organization for open-source projects developed in Australia.",
+         "description":"We are a not-for-profit umbrella organization for open-source projects developed in Australia. We believe the open-source philosophy provides a resource-efficient channel to transfer knowledge and achieve innovation and education.\n\nIn 2017, we offer the following projects:\n\n* **Agora** (Scala): a library of vote counting algorithms for democratic elections.\n* **Scavenger** (Scala): an automated theorem prover for first-order logic.\n* **Skeptik** (Scala): a library of algorithms to manipulate formal proofs generated by automated reasoners such as SAT and SMT solvers.\n* **Mind the Word** (Javascript, HTML, CSS): a browser extension that helps users to learn new languages.\n* **Carbon Footprint** (Javascript, HTML, CSS): a browser extension that raises environmental awareness regarding C02 emissions. \n* **Computational Philosophy** (Isabelle): formalizations of philosophical theories and arguments towards computer-assisted metaphysics, as envisaged by Leibniz.\n\nWe have a diverse group of mentors, including GSoC students from previous years who decided to become long-term contributors as well as academics with extensive experience in supervising undergraduate, M.Sc. and Ph.D. students on theses and projects, whose results are often published and presented in the most prestigious conferences of our research fields.\n\nWe are looking for excellent students of any level (undergraduate, M.Sc., or Ph.D.), who are interested in becoming long-term collaborators in our projects and in joining the open-source approach to software development. We will evaluate student applications solely on the basis of programming skills, academic merit and the feasibility of the proposals. \n\nIf you are a prospective student interested in doing your Google Summer of Code (GSoC) project with us, please contact us as soon as possible. We will do our best to assist and guide you in the formulation of your GSoC project proposal.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 3.0 (GPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/s9jqrluZqml-4FJsSX4Lpm_JUMagH9k_vYWG_V8iCd038tjiZ-OGlGuNK1SeUl3-b6_XeA23law1m3JxuibVf58jU7LDNg",
+         "image_bg_color":"000",
+         "gplus_url":null,
+         "twitter_url":null,
+         "blog_url":null,
+         "application_instructions":"Read our website (http://www.aossie.org) carefully. Pay attention to announcements at our mailing-list. Visit our repositories and contribute, solving issues marked as GSoC puzzles. Create a draft proposal before the deadline and share it with us for feedback. Use our proposal template (https://goo.gl/POIT4h).",
+         "topic_tags":[
+            "logic",
+            "electronic voting",
+            "natural language processing",
+            "philosophy",
+            "environment"
+         ],
+         "technology_tags":[
+            "scala",
+            "javascript/html/css",
+            "automated reasoning",
+            "android/ios",
+            "xcode"
+         ],
+         "proposal_tags":[
+            "agora",
+            "carbon footprint",
+            "computational philosophy",
+            "mind the word",
+            "scavenger",
+            "skeptik"
+         ],
+         "ideas_list":"https://aossie.gitlab.io/#ideas",
+         "contact_method":"https://groups.google.com/forum/#!forum/aossie-gsoc-2017",
+         "program_year":2017
+      },
+      {
+         "id":5416945173135360,
+         "name":"Apache Software Foundation",
+         "slug":"apache-software-foundation",
+         "website_url":"http://www.apache.org",
+         "category":"other",
+         "contact_email":"dev@community.apache.org",
+         "mailing_list":"http://apache.org/foundation/mailinglists.html",
+         "irc_channel":"https://wiki.apache.org/general/IRC",
+         "tagline":"Providing open source software to the public free of charge",
+         "precis":"Founded in 1999, the Apache Software Foundation is home to over 180 projects and countless contributors",
+         "description":"The Apache Software Foundation provides organizational, legal, and financial support for a broad range of open source software projects. The Foundation provides an established framework for intellectual property and financial contributions that simultaneously limits contributors potential legal exposure. Through a collaborative and meritocratic development process, Apache projects deliver enterprise-grade, freely available software products that attract large communities of users. The pragmatic Apache License makes it easy for all users, commercial and individual, to deploy Apache products.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Apache License 2.0 (Apache-2.0)",
+         "image_url":"//lh3.googleusercontent.com/-nYKQxAK_eBtGR5ztubFGJ-3ePHLmZFn-8uOdgicXm5fiyj76BuphrIMgIvILnZWUcGrbKE6znmpcZbCGRkK1T7uzi5URxLD",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/TheASF",
+         "blog_url":"https://blogs.apache.org/",
+         "application_instructions":"In order to apply we ask that you create\n\n* a list of deliverables, quantifiable results for the Apache community,\n* a detailed description / design document,\n* an approach,\n* an approximate schedule and\n* something of a background text.\n\nWe also need you to let us know what other commitments you have for the period of GSoC, for example, do you have any exams or a part time job? In other words - sell yourselves, as if this was an actual job. \n\nIn drawing up your proposal you should work with your chosen projects community.\n\nOne of our evaluation criteria is that you have already engaged with the community to ensure that you understand the needs of the project and the commitment you need to make to your mentors.",
+         "topic_tags":[
+            "cloud",
+            "libraries",
+            "big data"
+         ],
+         "technology_tags":[
+            "java",
+            "c",
+            "erlang"
+         ],
+         "proposal_tags":[
+            "original idea",
+            "from ideas list"
+         ],
+         "ideas_list":"http://s.apache.org/gsoc2017ideas",
+         "contact_method":"dev@community.apache.org",
+         "program_year":2017
+      },
+      {
+         "id":5100746233085952,
+         "name":"Apertium",
+         "slug":"apertium",
+         "website_url":"http://www.apertium.org",
+         "category":"other",
+         "contact_email":"apertium-contact@lists.sourceforge.net",
+         "mailing_list":"http://wiki.apertium.org/wiki/Contact",
+         "irc_channel":"http://wiki.apertium.org/wiki/IRC",
+         "tagline":"Free/open-source rule-based machine translation",
+         "precis":"Apertium is a free/open-source platform for rule-based machine translation and language technology which is aimed providing support for lesser-resourced and marginalised languages.",
+         "description":"Apertium is a free/open-source machine translation platform, initially aimed at related-language pairs (such as Spanish–Catalan) but which has been expanded to deal with more divergent language pairs (such as English–Catalan and even Basque→English). The platform provides\r\n\r\n- a language-independent machine translation engine\r\n- tools to manage the linguistic data necessary to build a machine translation system for a given language pair and\r\n- linguistic data for a growing number of languages and language pairs",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 3.0 (GPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/fg0u5Ly3gk1odTanmMg5WHTuFA4vJwfT-p3jxGg-dZe0yJKcb18-TNAUi8-FB9oHskX8hDC_2clCpN_2BXI8FBrg6QX444Yf",
+         "image_bg_color":"",
+         "gplus_url":"https://plus.google.com/+ApertiumOrg",
+         "twitter_url":"",
+         "blog_url":"",
+         "application_instructions":"We have a Wiki page with tips and an application template: [1] . Here are the main tips to help you when writing your GSOC application with Apertium.\r\n\r\n- Be realistic: We're more likely to accept realistic ideas than far-out wacky ones. But if you have a wacky idea, we might still be interested if we can turn it into something achievable in 3 months.\r\n- Be appropriate: Demonstrate you have a knowledge of Apertium, how it works and the problem it has that you'd like to solve.\r\n- Have a plan: Three months may seem like a long time, but it isn't. Provide a weekly plan with dates and deliverables. Leave time for getting familiar with the platform — ideally before, or in the community bonding period — and for documentation. If you plan to work on a language pair, make yourself familiar with testvoc and other quality controls, and factor those in. If you know of any breaks or absences beforehand, mention them and plan around them.\r\n- Get in contact ASAP!: We get lots of proposals: only a few are good. Contact your potential mentor as soon as possible: send your proposal to the mailing list, hang out on IRC, ask for feedback, and refine your application based on feedback. If you are remembered, you are more likely to be picked.\r\n- Read the Ideas Page! If you find yourself asking 'do you have any Java/Python/Fortran/x86 assembler projects...' -- you didn't read the ideas page. Read the ideas page. \r\n\r\n1. http://wiki.apertium.org/wiki/Top_tips_for_GSOC_applications",
+         "topic_tags":[
+            "natural language processing",
+            "machine translation",
+            "lesser-resourced languages"
+         ],
+         "technology_tags":[
+            "c++",
+            "xml",
+            "python",
+            "nlp"
+         ],
+         "proposal_tags":[
+            "new language pair",
+            "improve existing pair",
+            "engine improvements",
+            "end-user application",
+            "website improvements"
+         ],
+         "ideas_list":"http://wiki.apertium.org/wiki/Ideas_for_Google_Summer_of_Code",
+         "contact_method":"apertium-contact@lists.sourceforge.net",
+         "program_year":2017
+      },
+      {
+         "id":4801281785856000,
+         "name":"Apertus Association",
+         "slug":"apertus-association",
+         "website_url":"http://www.apertus.org",
+         "category":"graphics",
+         "contact_email":"team@apertus.org",
+         "mailing_list":"https://www.apertus.org/mailinglists",
+         "irc_channel":"https://www.apertus.org/irc-chat",
+         "tagline":"Open Technology for Professional Film Production",
+         "precis":"The goal of the global community-driven apertus° project is to create a variety of powerful, FOSS, sustainable and open digital cinema tools that we as filmmakers love to use.",
+         "description":"The goal of the award winning apertus° project is to create free and open technology for todays professional cinema and film production landscape and make all the generated knowledge freely available. It all started with creating an open modular camera system consisting of several hardware and software parts using Elphel hardware. Now with the efforts to build the very first open digital cinema camera AXIOM from scratch the apertus° project has evolved to the next level: into a platform for film-makers, creative industry professionals, artists and enthusiasts. apertus° is more than just a software/hardware collection, it's a knowledge library, an ecosystem of people supporting each other and advocating freedom.\n\nProject Overview Page for GSoC Students: https://wiki.apertus.org/index.php/GSoC_Overview",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 3.0 (GPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/gNXTBX4qiivh6920GyB633w0guu9P4KQlsnJ1ay02HRZDsNeu0ccbX3cHmpLxFAPaIZVFsTPQKpAkceBXeKBdATRKy2spg",
+         "image_bg_color":null,
+         "gplus_url":"https://plus.google.com/+ApertusOrg",
+         "twitter_url":"https://twitter.com/ApertusOSCinema",
+         "blog_url":"https://www.apertus.org/",
+         "application_instructions":"Please provide a brief CV and application letter. \n\nIf you contacted us before via email or IRC be sure to include your IRC nick or email address in your application so we know we talked to you already.\n\nIn your application please include answers to the following questions:\n\nWhat interests you most about the apertus° AXIOM project?\nWhat interests you outside of academic studies?\nDo you have any long term goals? ie. Do you have any specific objectives that you’d like to accomplish over the next three to eight years?\nPlease tell us about your greatest work-related achievement.\nAs mentors and project coordinators, how can we get the best out of you?\nIs there anything that you’ll be studying or working on whilst working alongside us?\nIf you were asked what would you like to improve upon, what would your answer be?\nAre there any techniques and tools which you use to keep yourself organized?\n\nOnce you’ve selected a project assignment from the ideas page, please include a well-defined, weekly schedule with clear milestones and deliverables around it. Alternatively, if you want to propose your own idea then please include outline, goals, and a well-defined weekly schedule with clear milestones and deliverables.",
+         "topic_tags":[
+            "video",
+            "camera",
+            "vision",
+            "real time",
+            "photography"
+         ],
+         "technology_tags":[
+            "fpga",
+            "vhdl",
+            "c",
+            "linux",
+            "c++"
+         ],
+         "proposal_tags":[
+            "fpga",
+            "new feature",
+            "linux",
+            "c++"
+         ],
+         "ideas_list":"https://lab.apertus.org/project/view/20/",
+         "contact_method":"team@apertus.org",
+         "program_year":2017
+      },
+      {
+         "id":5260604135702528,
+         "name":"appleseedhq",
+         "slug":"appleseedhq",
+         "website_url":"http://appleseedhq.net/",
+         "category":"graphics",
+         "contact_email":"hello@appleseedhq.net",
+         "mailing_list":"https://groups.google.com/forum/#!forum/appleseed-dev",
+         "irc_channel":null,
+         "tagline":"A modern open source rendering engine for animation and visual effects",
+         "precis":"appleseed is a modern, open source, physically-based global illumination rendering engine designed for animation and visual effects.",
+         "description":"# Overview\n\nappleseed is an open source, physically-based global illumination rendering engine primarily designed for animation and visual effects.\n\nappleseed is actively developed by a small, international team of talented volunteers from the animation and VFX industry. Its core mission is to provide individuals and small studios with a complete, reliable, fully open rendering package.\n\nOver the years appleseed has been used on several projects including [TV documentaries](https://vimeo.com/81199785), ads, promotional videos and [an animation short](http://www.fetchaveryshortfilm.com/).\n\n# Paradigm\n\nappleseed implements a modern workflow based on path tracing that enables artifact-free, single pass rendering with very little technical tuning. It is simultaneously capable of strictly unbiased rendering when total accuracy matters, and biased rendering when artistic freedom and shorter rendering time are paramount.\n\n# Features\n\nappleseed supports fully programmable shading via [Sony Pictures Imageworks' Open Shading Language](https://github.com/imageworks/OpenShadingLanguage) (OSL), RGB/spectral/mixed rendering, fast and robust transformation and deformation motion blur, state-of-the-art ray traced subsurface scattering, exhaustive Python and C++ APIs and many other production-oriented features.\n\n# Ecosystem\n\nAlong with the core renderer, the team is actively developing high quality integrations into Autodesk Maya and Autodesk 3ds Max. appleseed is also the default rendering engine of [Image Engine’s Gaffer](http://www.gafferhq.org/).\n\n# Timeline\n\nappleseed was founded in May 2009 by François Beaune, a former rendering engineer from the core R&D team at mental images (now NVIDIA).\n\nIn October 2011, the development of appleseed benefited from a technology sharing agreement with Jupiter Jazz Limited and received funding for one year. Since October 2012, appleseed relies on the continued effort of talented volunteers.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"MIT license (MIT)",
+         "image_url":"//lh3.googleusercontent.com/3AleC4JjHt0p0Bb4EYs7yP1fnuHDvzIuQ-xOrzPI2jPlDckKtnNMHu2rK8_pVaNyXIdLUHJgXPugNyPNbussl9KcaAQ35ZA",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/appleseedhq",
+         "blog_url":null,
+         "application_instructions":"# Skills\n\nappleseed is a large project that spans a variety of disciplines such as graphics and system programming, user interface design or applied physics. You can make meaningful contributions without being a rendering expert.\n\nHowever, appleseed and related applications are all written primarily in portable C++, consequently fluency with C++ is a requirement for all projects.\n\n# How to apply\n\n1.  You will first need to join our mailing list and present yourself. Tell us about projects you have been working on in your spare time (no school assignment), your past involvement with open source communities, why you chose appleseed, and the project you would be interested in tackling.\n2.  You will also need to fork appleseed’s repository and build appleseed on your machine. Please follow our detailed [build instructions](https://github.com/appleseedhq/appleseed/wiki/Building-appleseed). If you need help, please reach out on [appleseed-dev](https://groups.google.com/forum/#!forum/appleseed-dev) and we’ll be happy to get you going.\n3.  Finally, you will need to submit a small patch to appleseed, or choose and complete a small development task from our [issue tracker](https://github.com/appleseedhq/appleseed/issues), preferably one tagged as Easy. Please reach out to appleseed-dev if you need help to find the right task. The goal is to get a feeling for how collaboration would work between you and the rest of the team.\n\n# Community\n\nSince participating in an open source project is all about engagement with the community, we will value curious and highly motivated students.\n\nOur community is a safe, welcoming place to **everyone**. Please be respectful and relaxed :)",
+         "topic_tags":[
+            " computer graphics",
+            "3d",
+            "rendering",
+            "animation",
+            "vfx"
+         ],
+         "technology_tags":[
+            "c++",
+            "python",
+            "qt"
+         ],
+         "proposal_tags":[
+            "new feature",
+            "optimization",
+            "user interface",
+            "plugin",
+            "rendering core"
+         ],
+         "ideas_list":"https://github.com/appleseedhq/appleseed/wiki/List-of-Project-ideas-for-GSoC-2017",
+         "contact_method":"hello@appleseedhq.net",
+         "program_year":2017
+      },
+      {
+         "id":5365801306554368,
+         "name":"ArduPilot",
+         "slug":"ardupilot",
+         "website_url":"http://www.ardupilot.org",
+         "category":"other",
+         "contact_email":"ardupilot-gsoc@googlegroups.com",
+         "mailing_list":"http://ardupilot.org/dev/index.html",
+         "irc_channel":"https://gitter.im/ArduPilot/GSoC",
+         "tagline":"The worlds most advanced open source autopilot",
+         "precis":"Ardupilot is the most advanced, full-featured and reliable autopilot available, uniquely capable of controlling airplanes, multirotors, helicopters, rovers, boats and submarines.",
+         "description":"ArduPilot is the most advanced, full-featured and reliable open source autopilot software available.  It is the only autopilot software capable of controlling any vehicle system imaginable, from conventional airplanes, multirotors, and helicopters, to rovers and boats and even submarines.  Most recently it has been expanded to support new emerging vehicle types including quad-planes,  compound helicopters,  tilt-rotors and tilt wings VTOLs.\n\nArduPilot runs natively on a wide variety of hardware platforms from the very popular Pixhawk flight controller (32bit ARM) to the advanced Intel Aero linux flight controller (see full list here: http://ardupilot.org/copter/docs/common-autopilots.html).\n\nThe ArduPilot team is lead by an  experienced group of passionate and world class developers from all over the world with expertise in Extended Kalman Filters, control theory, embedded programming, Linux and much more.\n\nA welcoming and friendly group of developers that is happy to share their knowledge with you but also with too many interesting projects to complete on their own.  An engaged group of partner companies provides the hardware and financial support for the group.  They could use your help!",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 3.0 (GPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/ofP8Bbtu1ytHOUg97VbZKX74-IC22fq25CVDwCgqAo2fRXtUFeuL43ZIhGM1XAi2Tp2scsTV9kSJKZtIw8INvpTVMZPerw",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":null,
+         "blog_url":"http://ardupilot.org",
+         "application_instructions":"Please read through our [GSoC 2017 Prospective Student Guidelines](http://discuss.ardupilot.org/t/gsoc-2017-prospective-student-guidelines/15294) and its links  to make sure you are familiar with the program,  and join us on our [GSoC gitter channel](https://gitter.im/ArduPilot/GSoC) to express your interest.  \n\nIn addition you can also join our [GSOC mailing list](https://groups.google.com/forum/#!forum/ardupilot-gsoc) (You'll need to apply to be a member first before posting there) and post on [our discuss forum](http://discuss.ardupilot.org/c/google-summer-of-code). Ideally tell us which of the ideas on the [Ideas list](http://ardupilot.org/dev/docs/gsoc-ideas-list.html) interest you most or provide other areas you think you would be interested in working on.  Also please tell us if you've ever worked or played with Robotics, flown drones or used remote control toys in the past. Also include which programming languages you are proficient in (hopefully C++ and/or Python) and include any evidence you have of previous programming work.",
+         "topic_tags":[
+            "autopilot",
+            "robotics",
+            "uav",
+            "drones",
+            "rovers"
+         ],
+         "technology_tags":[
+            "c++",
+            "python",
+            "embedded",
+            "rtos",
+            "ros"
+         ],
+         "proposal_tags":[
+            "robotics",
+            "c++",
+            "autopilot",
+            "ros",
+            "iot",
+            "drone",
+            "drones",
+            "control theory"
+         ],
+         "ideas_list":"http://ardupilot.org/dev/docs/gsoc-ideas-list.html",
+         "contact_method":"ardupilot-gsoc@googlegroups.com",
+         "program_year":2017
+      },
+      {
+         "id":5842528113786880,
+         "name":"Babel",
+         "slug":"babel",
+         "website_url":"https://babeljs.io/",
+         "category":"languages",
+         "contact_email":"hi@henryzoo.com",
+         "mailing_list":null,
+         "irc_channel":"https://slack.babeljs.io",
+         "tagline":"Babel, the community driven compiler for writing next generation JavaScript",
+         "precis":"Babel is a community-driven tool that helps you when your supported environments don't support certain JavaScript features natively by compiling it down to a supported version.",
+         "description":"Babel helps you write the latest version of JavaScript, and is helping shape the future of the language itself. It's used at Facebook, Google, Netflix, and hundreds of other [companies](http://babeljs.io/users). It's downloaded more than [8 million times a month](https://www.npmjs.com/package/babel-core) on npm.\n\nWhen your target browsers (Chrome, Firefox, Safari, IE) don't support certain features natively, it helps you compile it down to a supported version.\n\nIn short, developers want to take advantage of the latest syntax in JavaScript before it's implemented in browsers, now. Because the version of JavaScript depends on the client's browser, we can't rely on the fact they are using an up to date browser.\n\n### Transition to Natively Support JavaScript\n\nBabel abstracts the browser away so that you can worry about writing your application rather than trying to figure out what features are supported in each one.\n\nFor example: if you support an older browser such as Internet Explorer 9, it won't have any of the features in ECMAScript 2015 (ES6), so Babel will transform your code into ES5 which is supported.\n\n```js\n[1, 2, 3].map(n => n + 2); // arrow functions!\n```\n\n```js\n[1, 2, 3].map(function (a) { // compiled to a regular function expression\n  return a+2;\n});\n```\n\nEfforts like https://github.com/babel/babel-preset-env means you can take advantage of the native browser support when possible.\n\nPlease read the tips below on how to get started and how to create a successful proposal!",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"MIT license (MIT)",
+         "image_url":"//lh3.googleusercontent.com/V6mqPfZmMH9xA8uDER5TmRin_TXl3Bj4mLBDcdHX_aTMmEK42M6Znh5h7MTDsPfyW3OAkThTHN0PY3mMSF_ByrKRt62pLQ",
+         "image_bg_color":"323330",
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/babeljs",
+         "blog_url":"https://babeljs.io/blog/",
+         "application_instructions":"This is our first year applying as a mentor organization at GSoC!\n\n## Prerequisites\n- Knowledge of Git, Pull Requests and a GitHub account\n- A good knowledge of JavaScript since Babel is written in JavaScript, as well as ES2015+\n- A general understanding of ASTs and how compilers work\n- It's required that you have already used Babel on a project or through another tool. If you don't have experience with it, we strongly suggest using it in a project before applying, otherwise you won't understand the context behind the decisions we make (why does this project need to exist and continue to exist). I believe we would favor those with more experience with the tool itself (and understand it's issues) rather than someone that hasn't used it before but just knows about compliers\n- Any code change (other than maybe the website) will require extensive tests and documentation, so you'll need to know how to write unit tests as well as explain what you project is doing for the user\n- Have a Slack account (explained below) to communicate with the mentors/community\n\n## Before applying, you should\n- Read our guide: https://github.com/babel/babel/wiki/GSoC-Application-Guide\n- Join our [Slack](http://slack.babeljs.io/) and say hi in our [#summer-of-code](https://babeljs.slack.com/messages/summer-of-code) channel if you have questions!\n- Follow us on twitter: [@babeljs](https://twitter.com/babeljs)\n- Star/Watch our main github repo: https://github.com/babel/babel\n- Check out our [docs website](https://babeljs.io/) and play around with our [REPL](https://babeljs.io/repl/#?babili=false&evaluate=false&lineWrap=false&presets=env&targets=&browsers=&builtIns=true&code=var%20name%20%3D%20%22Bob%22%2C%20time%20%3D%20%22today%22%3B%0A%60Hello%20%24%7Bname%7D%2C%20how%20are%20you%20%24%7Btime%7D%3F%60&experimental=true&loose=true&spec=true&playground=false&stage=0)\n- Read through [babel-handbook](https://github.com/thejameskyle/babel-handbook/blob/master/translations/en/README.md)",
+         "topic_tags":[
+            "compilers",
+            "ast",
+            "minifier",
+            "tc39"
+         ],
+         "technology_tags":[
+            "javascript",
+            "babel",
+            "nodejs"
+         ],
+         "proposal_tags":[
+            "tc39 proposal implementations",
+            "create babel-init",
+            "babel-minify",
+            "create babel --debug",
+            "other",
+            "website-repl"
+         ],
+         "ideas_list":"https://github.com/babel/babel/wiki/Google-Summer-of-Code-Proposals",
+         "contact_method":"hi@henryzoo.com",
+         "program_year":2017
+      },
+      {
+         "id":6293241017139200,
+         "name":"Bazel",
+         "slug":"bazel",
+         "website_url":"https://bazel.build",
+         "category":"languages",
+         "contact_email":"bazel-core@googlegroups.com",
+         "mailing_list":null,
+         "irc_channel":null,
+         "tagline":"Fast and correct build system for Google scale",
+         "precis":"Bazel is Google's own build tool, now open-sourced and publicly available in Beta.",
+         "description":"Bazel is Google's own build tool, now publicly available in Beta. Bazel has built-in support for building both client and server software, including client applications for both Android and iOS platforms. It also provides an extensible framework that you can use to develop your own build rules.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Apache License 2.0 (Apache-2.0)",
+         "image_url":"//lh3.googleusercontent.com/rBfUmIzjxP2eWfO31RwRjlc6KRII8lZ_8eaEeKs1TFiPpZ0EBOGgET5HHJJlcDzkKk0iJwHoEwYGrPtjhlsqtKSOQPeXevo",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/bazelbuild",
+         "blog_url":"https://bazel.build/blog/index.html",
+         "application_instructions":"We welcome work on all aspects of Bazel. \n\nYou can find some project ideas on our Ideas page.\n\nGeneral information about how to contribute to Bazel can be found here: https://bazel.build/contributing.html\n\nBazel is written in Java, and some of the tools around Bazel are written in Go, so you should be familiar with at least one of those languages. Some experience with Python is also recommended, since our [extension language](https://bazel.build/versions/master/docs/skylark/concepts.html) is a subset of Python.",
+         "topic_tags":[
+            "development tools",
+            "build systems"
+         ],
+         "technology_tags":[
+            "java",
+            "linux",
+            "go"
+         ],
+         "proposal_tags":[
+            "language support",
+            "ide integration",
+            "editor services",
+            "optimization",
+            "visualization"
+         ],
+         "ideas_list":"https://github.com/bazelbuild/bazel/wiki/Project-Ideas",
+         "contact_method":"bazel-core@googlegroups.com",
+         "program_year":2017
+      },
+      {
+         "id":5655149629407232,
+         "name":"BeagleBoard.org Foundation",
+         "slug":"beagleboardorg-foundation",
+         "website_url":"https://beagleboard.org",
+         "category":"languages",
+         "contact_email":"gsoc@beagleboard.org",
+         "mailing_list":"http://bbb.io/gsocml",
+         "irc_channel":"http://bbb.io/gsocchat",
+         "tagline":"open hardware physical computing for makers, educators and professionals",
+         "precis":"Through Linux and other open source tools, BeagleBoard.org seeks to make enabling computers to interact with the physical world as simple as coding a web page",
+         "description":"BeagleBoard.org is an open source community of experienced hackers, hobbyists and engineers who are enthusiastic about building powerful, open ARM-based systems completely programmable through your web browser. BeagleBoard.org’s vision is to improve access to small, low-power computing platforms that can be embedded into new creations using easy to use development tools, such as its self-hosted, web-based IDE. The hardware designs of all Beagle boards are open source with all schematics, bills-of-materials, layouts, etc. shared for building other devices. The software is also open source and is generated by the community. Compiler tools are free and the boards are available at a low cost.\n\nBoards will be provided for free to any student participating in a BeagleBoard.org-related GSoC project.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 2.0 (GPL-2.0)",
+         "image_url":"//lh3.googleusercontent.com/2-O0EszhGjLyeAZUx3hqgqDKix4I2tL5r3RdFdfEduRneMzMArwvuAsT8srPOy-kYDc2ZQogOQrbIonJA7eebRPruDUjDxZe",
+         "image_bg_color":null,
+         "gplus_url":"https://plus.google.com/+beagleboard",
+         "twitter_url":"https://twitter.com/beagleboardorg",
+         "blog_url":"https://beagleboard.org/blog",
+         "application_instructions":"1. Students should follow the \"general requirements\" on the [Ideas page](http://bbb.io/gsocideas).\n2. There is a [proposal template](http://elinux.org/BeagleBoard/GSoC/ProposalTemplate) to help collaboration on the proposal ahead of submission, if desired.\n3. No \"what–I-built-over-my-summer-vacation\" projects.\n\nTemplate:\n# About you\n+ _IRC_:\n+ _Github_:\n+ _School_:\n+ _Country_:\n+ _Primary language_ (We have mentors who speak multiple languages):\n+ _Typical work hours_ (We have mentors in various time zones):\n+ _Previous GSoC participation_: Provide list of URLs for previous participation or tell us why you want to participate here. No previous experience required.\n\n# About your project\n_Project name_:\n\n## Description\nIn 10-20 sentences, what are you making, for whom, why and with what technologies (programming languages, etc.)? (We are looking for open source SOFTWARE submissions.)\n\n## Timeline\nProvide a development timeline with a milestone each of the 11 weeks. (A realistic timeline is critical to our selection process.)\n\n2017-06-06: Milestone #1\n\n## Experience and approach\nIn 5-15 sentences, convince us you will be able to successfully complete your project in the timeline you have described.\n\n## Contingency\nWhat will you do if you get stuck on your project and your mentor isn’t around?\n\n## Benefit\nIf successfully completed, what will its impact be on the BeagleBoard.org community? Include quotes from BeagleBoard.org community members who can be found on http://beagleboard.org/discuss and http://bbb.io/gsocchat.\n\n# Suggestions\nIs there anything else we should have asked you?",
+         "topic_tags":[
+            "real time",
+            "robotics",
+            "iot",
+            "physical computing",
+            "coprocessing"
+         ],
+         "technology_tags":[
+            "javascript",
+            "linux",
+            "beaglebone",
+            "python",
+            "c"
+         ],
+         "proposal_tags":[
+            "pru",
+            "kernel",
+            "rtos",
+            "arm",
+            "coprocessor",
+            "userspace-io",
+            "getting-started"
+         ],
+         "ideas_list":"http://bbb.io/gsocideas",
+         "contact_method":"gsoc@beagleboard.org",
+         "program_year":2017
+      },
+      {
+         "id":5912941485359104,
+         "name":"Beam Community",
+         "slug":"beam-community",
+         "website_url":"https://beamcommunity.github.io/",
+         "category":"languages",
+         "contact_email":"contact@process-one.net",
+         "mailing_list":"https://groups.google.com/forum/#!forum/beam-community",
+         "irc_channel":"https://beamcommunity.github.io/",
+         "tagline":"From distributed systems, to robust servers and language design on the Erlang VM",
+         "precis":"The BEAM Community is a group of projects that run on the Erlang VM. Our goal is to host relevant projects in the Erlang and Elixir communities.",
+         "description":"The BEAM Community is a group of OSS projects that run on the Erlang VM. Our goal is to host relevant projects in the Erlang community, making it easy for those projects to participate in the Google Summer\nof Code and for interested students to pick their best choice. The Erlang VM was originally designed by Ericsson to support distributed, fault-tolerant, soft-real-time, non-stop applications.\n\nMany companies around the world like Amazon, Heroku and Activision use the Erlang VM in their stack and open source projects like ejabberd, Riak, Phoenix, CouchDB, Zotonic and many more are built on top of it. Our currently hosted projects include the Elixir programming language, Disco, a distributed computing framework originated from Nokia, ejabberd, a robust XMPP server used largely around the world and others. This gives students a wide range of choices, that goes from working on distributed systems, to maintaining robust servers and language design.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Apache License 2.0 (Apache-2.0)",
+         "image_url":"//lh3.googleusercontent.com/BL-9tp7Yajdcf_HBlg4_aNLngwOma5QA9LFP5Hf7puXNb5r-pd9rb6DA0dUVVWvRp8SaWJ7QaLeiZSVWZj2oxPkLrhwOPH0",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":null,
+         "blog_url":null,
+         "application_instructions":"Now is a great time to get started! Go over our Projects / Ideas list and pick the projects and ideas that interest you the most! Also, subscribe to our mailing list and join us at #beam-community on\nirc.freenode.net\n\nStudents should pick their projects and submit proposals from March 20, 2017 to April 3, 2017. We recommend students to work closely with mentors in order to craft the best proposals. Our mailing list is the best place to ask questions and get more details about our projects!",
+         "topic_tags":[
+            "realtime",
+            "communication system",
+            "database",
+            "clustering"
+         ],
+         "technology_tags":[
+            "erlang",
+            "elixir",
+            "lisp",
+            "xmpp"
+         ],
+         "proposal_tags":[
+            "erlang",
+            "elixir",
+            "lisp",
+            "xmpp",
+            "ejabberd",
+            "zotonic"
+         ],
+         "ideas_list":"https://github.com/beamcommunity/beamcommunity.github.com/wiki",
+         "contact_method":"contact@process-one.net",
+         "program_year":2017
+      },
+      {
+         "id":6753972695072768,
+         "name":"BeeWare Project",
+         "slug":"beeware-project",
+         "website_url":"http://pybee.org",
+         "category":"languages",
+         "contact_email":"contact@pybee.org",
+         "mailing_list":null,
+         "irc_channel":"https://gitter.im/pybee",
+         "tagline":"The IDEs of Python. Tools for cross-platform Python application development.",
+         "precis":"Want to write an app in Python for your laptop, iPhone, Android, tablet, set top box, or watch? BeeWare has all the tools you'll need.",
+         "description":"# The IDEs of Python\nPython has proven itself as a highly capable language - approachable for newcomers, but powerful in the hands of experts. The BeeWare Project aims to take the power of Python as a language, and use it to enable users of all skill levels to develop applications with native user interfaces; to do for mobile and desktop user-facing software the same thing that [Django](https://djangoproject.com) has done for web software. This means giving users a set of tools and libraries that enables them to develop rich, native user interfaces, and deploy them to their devices, including:\n\n* Tools to enable Python to run on different devices,\n* Tools to package a Python project so it can run on those devices,\n* Libraries to access the native capabilities of devices,\n* Tools to help develop, debug, and deploy these projects.\n\n# Python native\nIf Python isn't available as a first-class option on a platform, we'll do whatever is necessary to make Python available as a development language. And when we have the opportunity to embrace Python idiom for an API or a design, we're going to do just that. \n\n# Platform native\nIt's easy to use themes to achieve cross-platform. However, it's easy to spot apps that have been built using themes - they're the ones that don't behave quite like any other app. BeeWare uses native widgets and native functionality, rather than using a theme-based approach to application development. We also distribute our tools and libraries using platform-native distribution channels, such as app stores.\n\n# More than just code\nWe're not just about software, though. We also aim to be a project with a social conscience. We aim to develop and maintain a diverse and inclusive community, and we have a Code of Conduct that is rigorously enforced. We also aspire to develop a healthy and sustainable community - one that is aware of mental health issues of its participants, and provides the resources for people to start engaging, and continue to engage with the community.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"BSD 3-Clause \"New\" or \"Revised\" License (BSD-3-Clause)",
+         "image_url":"//lh3.googleusercontent.com/q9j-rVpc9hO-RcN0qJ4FxVm7RDZZVi_lCPT_Uy-7mjKjU5bjyLT1od7cz6ndebuHnL1BledS7Up-jUfP-FN-4RpQKbviqg",
+         "image_bg_color":"eceeef",
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/pybeeware",
+         "blog_url":"http://pybee.org/news/",
+         "application_instructions":"To begin the application process, open a ticket on the appropriate repository on Github. The community will then evaluate your application and provide feedback. Once we're happy with your application, you'll be encouraged to submit it through the formal GSoC process. \n\nWe'll be looking for a few things in your application:\n\n* A concrete task in mind along with a solid idea of what will constitute \"success\".\n\n* A detailed design specification. The more complex your idea, the more detailed your design specification will need to be.\n\n* A schedule, including a detailed work breakdown and major milestones. This schedule should be broken down into time blocks no longer than 2 weeks. You should also avoid any blocks with tasks like \"write tests\" or \"write documentation\". Testing and documentation are integral parts of the development process, and should be part of any task estimates.\n\n* Details about yourself. This includes your academic history, but also any project work or contributions you've made to other open source projects. This is especially important if you're proposing something especially ambitious, because you'll need to convince us that you're up to the task.\n\nWhen you contribute code, you will be expected to adhere to the same contribution guidelines as any other code contributor. This means you will be expected to provide extensive tests and documentation for any feature you add, you will be expected to participate in community discussion about your proposed feature.",
+         "topic_tags":[
+            "ui",
+            "ide",
+            "cross-platform"
+         ],
+         "technology_tags":[
+            "python",
+            "mobile",
+            "ios",
+            "android"
+         ],
+         "proposal_tags":[
+            "voc",
+            "batavia",
+            "toga",
+            "briefcase",
+            "ios",
+            "android",
+            "windows",
+            "linux",
+            "macos",
+            "ouroboros"
+         ],
+         "ideas_list":"https://github.com/pybee/pybee.github.io/wiki/GSoC-Project-Ideas",
+         "contact_method":"contact@pybee.org",
+         "program_year":2017
+      },
+      {
+         "id":5743574256713728,
+         "name":"Berkman Klein Center for Internet and Society at Harvard University",
+         "slug":"berkman-klein-center-for-internet-and-society-at-harvard-university",
+         "website_url":"https://cyber.harvard.edu",
+         "category":"web",
+         "contact_email":"gsoc@cyber.harvard.edu",
+         "mailing_list":null,
+         "irc_channel":"https://cyber.harvard.edu/gsoc/Main_Page#Contact_Us",
+         "tagline":"exploring cyberspace, sharing in its study & pioneering its development",
+         "precis":"The Berkman Klein Center for Internet & Society at Harvard University is dedicated to exploring, understanding, and shaping the development of the digitally-networked environment.",
+         "description":"The Berkman Klein Center for Internet & Society at Harvard University is dedicated to exploring, understanding, and shaping the development of the digitally-networked environment. A diverse, interdisciplinary community of scholars, practitioners, technologists, policy experts, and advocates, we seek to tackle the most important challenges of the digital age while keeping a focus on tangible real-world impact in the public interest. Our faculty, fellows, staff and affiliates conduct research, build tools and platforms, educate others, form bridges and facilitate dialogue across and among diverse communities. \n\nMore information at https://cyber.harvard.edu.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 3.0 (GPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/4Zi3kaREoxIYBZYdAO4tTCxEVeK6bgnSDluCBJ2vtZjKzSTY2b4kHGS0l2kUZ-zvObf3bflAb7ap7_UU_onKY5U9vHfEZA",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/@bkcharvard",
+         "blog_url":"https://cyber.harvard.edu",
+         "application_instructions":"So as to have well thought out and robust project proposals we ask that students only apply to one project with our organization.  \n\nWe ask students to adhere to the following template for applying to projects.\nApplication template\nContact Information\nName:\nCountry:\nSchool and degree:\nEmail:\nPhone:\nInterested Berkman project(s):\nWhich method of communication do you prefer? (i.e. in-person, email, chat, video conference, etc.):\n \nAbout You\n1. If you have a link to a resume/CV/LinkedIn profile, include it here.\n2. Please describe yourself, including your development background and specific expertise.\n3. What do you hope to gain through the process of participating in GSoC, and specifically by contributing to a Berkman project?\n4. Why you are interested in the Berkman coding project(s) you stated above?\n5. Have you reviewed the Important Dates and Times for GSoC 2017?\n6. Do you have any significant conflicts with the listed schedule? If so, please list them here.\n7. Do you understand this is a serious commitment, equivalent to a full-time paid summer internship or summer job?\n8. We strongly prefer students that provide code samples, ideally in a \"social coding\" site like Google Code, GitHub, SourceForge, or Gitorious. Please provide a link to code you've written, whether it's a zip file / tarball you host on your own or your Github profile.\n\nWe ask that you follow the project proposal template can be found here: https://cyber.harvard.edu/gsoc/Application_Template",
+         "topic_tags":[
+            "digital rights",
+            "internet access",
+            "security and privacy",
+            "law",
+            " web"
+         ],
+         "technology_tags":[
+            "ruby on rails",
+            "meteor.js",
+            "d3",
+            "elasticsearch",
+            "javascript "
+         ],
+         "proposal_tags":[
+            "lumen",
+            "internet monitor",
+            "teem",
+            "swellrt",
+            "tag team",
+            "question tool",
+            "curricle",
+            "librarybox"
+         ],
+         "ideas_list":"https://cyber.harvard.edu/gsoc",
+         "contact_method":"gsoc@cyber.harvard.edu",
+         "program_year":2017
+      },
+      {
+         "id":5768612708089856,
+         "name":"Blender Foundation",
+         "slug":"blender-foundation",
+         "website_url":"http://www.blender.org",
+         "category":"graphics",
+         "contact_email":"ton@blender.org",
+         "mailing_list":"http://lists.blender.org/mailman/listinfo/bf-committers/",
+         "irc_channel":"http://wiki.blender.org/index.php/Community:Chat",
+         "tagline":"Free and open source 3D creation for artists and teams",
+         "precis":"Free and open source 3D creation for artists and teams",
+         "description":"Blender is being made by 100s of active volunteers from all around the world; by studios and individual artists, professionals and hobbyists, scientists and students, vfx experts and animators, and so on.\n\nAll of them are united by an interest to have access to a fully free/open source 3D creation pipeline. Blender Foundation supports and facilitates these goals - with an important role of the Foundation spin-off Blender Institute - but still depends on the online community to make it happen.\n\nWe invite students to think of ways to help us with this further. If your passion is with 3D coding, creativity tools, making animation movies, 3d gaming, scientific simulation, or anything related to Computer Graphics in general, feel welcome to join us!",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 3.0 (GPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/YmeG1MmdW_hNFHN85jpUXyN963WENugUQWw9EVlmYVwpjxYjmF_C0la48Nt8kRzlVNeCnDjiAv6eegtp0YjV8mARkFRHgVg",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/blender_org",
+         "blog_url":"http://code.blender.org",
+         "application_instructions":"We are looking for students who are willing to learn, have good coding skills and, most importantly, have a keen interest in 3D creation pipelines and open source software development in general.\n\nBefore applying, please check with our ideas page, for requirements for acceptance, and for tips and examples of previous successful Summer of Code projects.\n\nhttps://wiki.blender.org/index.php/Dev:Ref/GoogleSummerOfCode/2017/Ideas \n\nThere are a number of things you can do to help your odds:\n* Write a well thought out proposal that shows you understand what you want to do, and have reasonable expectations about what can be accomplished in the time you will have available.\n* Show evidence of past experience or achievements related to the proposal.\n* Make a useful patch against Blender - this show that you can successfully read, edit, and compile our code.\n* Come with own ideas, bring in your own past research or experience.\n\nDiscuss your application with us and get some feedback you can chat with us on IRC and post a link to your proposal to our mailing list, and of course we will give feedback in the GSoC web-interface too.\n\nContinue reading here, on the Blender wiki:\n\nhttps://wiki.blender.org/index.php/Dev:Ref/GoogleSummerOfCode/2017/Students",
+         "topic_tags":[
+            "3d",
+            "animation",
+            "graphics",
+            "modeling",
+            "vfx"
+         ],
+         "technology_tags":[
+            "opengl",
+            "opencl",
+            "python",
+            "c",
+            "c++"
+         ],
+         "proposal_tags":[
+            "modeling",
+            "vfx",
+            "tools",
+            "interface",
+            "animation",
+            "rendering",
+            "cycles",
+            "file i/o",
+            "optimization",
+            "simulation"
+         ],
+         "ideas_list":"https://wiki.blender.org/index.php/Dev:Ref/GoogleSummerOfCode/2017/Ideas",
+         "contact_method":"ton@blender.org",
+         "program_year":2017
+      },
+      {
+         "id":4839090517180416,
+         "name":"Boost C++ Libraries",
+         "slug":"boost-c-libraries",
+         "website_url":"http://www.boost.org/",
+         "category":"languages",
+         "contact_email":"gsoc-admin@boost.org",
+         "mailing_list":"http://lists.boost.org/mailman/listinfo.cgi/boost",
+         "irc_channel":"http://www.boost.org/community/irc.html",
+         "tagline":"Boost provides free peer-reviewed portable C++ source libraries.",
+         "precis":"Boost provides free peer-reviewed portable C++ source libraries.",
+         "description":"Boost provides free peer-reviewed portable C++ source libraries.\n\nWe emphasize libraries that work well with the C++ Standard Library. Boost libraries are intended to be widely useful, and usable across a broad spectrum of applications. The Boost license encourages both commercial and non-commercial use.\n\nWe aim to establish \"existing practice\" and provide reference implementations so that Boost libraries are suitable for eventual standardization. Ten Boost libraries are included in the C++ Standards Committee's Library Technical Report (TR1) and in the new C++11 Standard. C++11 also includes several more Boost libraries in addition to those from TR1. More Boost libraries are proposed for standardization in C++17.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Boost Software License (BSL-1.0)",
+         "image_url":"//lh3.googleusercontent.com/J518K9mZ_PEmpvMBFD3_UyE6C-tlXBt5qy1dWqgfd8BmfmhyukwgyGM9UU9CVqHaQDEC1gP-0EwbuCXbPKZgpY91UZJQiJe2",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":null,
+         "blog_url":null,
+         "application_instructions":"Summarising https://svn.boost.org/trac/boost/wiki/SoC2017:\n1. Students should review the [list of ideas from previous GSoCs](https://svn.boost.org/trac/boost/wiki/SoCPrevious) and the archives of [the Boost developer's mailing list](http://www.boost.org/community/groups.html#main) relating to GSoC (tip: try searching boost-dev for subjects tagged [gsoc16] or [gsoc15] etc). [You may find this searchable archive of boost-dev useful](http://boost.2283326.n4.nabble.com/Boost-Dev-f2600599.html).\n2. If you wish to proceed, you need to join the Boost Developer's mailing list and find a mentor who will be an experienced Boost developer in one of the Boost libraries listed at http://www.boost.org/doc/libs/1_63_0/. Read [the Boost Discussion Policy](http://www.boost.org/community/policy.html) in full, and once read in full go to  http://lists.boost.org/mailman/listinfo.cgi/boost and subscribe.\n3. After as an absolute minimum reading all posts tagged **[gsoc16]**, students should write a well researched and intelligent message with **[gsoc16]** at the front of the subject line to that developer's mailing list seeking a mentor, and be as flexible as possible in finding a topic that both they and the mentor is interested in upon which to base a GSoC project proposal text to be submitted to Google.\n As a general rule, a well written and researched proposal to extend or improve an existing mature Boost library is likely to be much better received that student originated ideas for new libraries or facilities.\n4. Once a potential mentor and project idea is found, the student must write a project proposal which should follow [this submission template](https://svn.boost.org/trac/boost/wiki/SoCSubmissionTemplate).",
+         "topic_tags":[
+            "library"
+         ],
+         "technology_tags":[
+            "c++",
+            "c++11",
+            "c++14",
+            "boost"
+         ],
+         "proposal_tags":[
+            "c++"
+         ],
+         "ideas_list":"https://svn.boost.org/trac/boost/wiki/SoC2017",
+         "contact_method":"gsoc-admin@boost.org",
+         "program_year":2017
+      },
+      {
+         "id":6562918255558656,
+         "name":"Boston University / XIA",
+         "slug":"boston-university-xia",
+         "website_url":"https://github.com/AltraMayor/XIA-for-Linux/wiki",
+         "category":"cloud",
+         "contact_email":null,
+         "mailing_list":"http://groups.google.com/group/linux-xia",
+         "irc_channel":null,
+         "tagline":"Crowdsourcing the future Internet",
+         "precis":"Finding the successor of TCP/IP is the ultimate goal of our project. If you are a proficient C programmer, join our quest, learn new technologies, and, perhaps, create a few too.",
+         "description":"Finding the successor of TCP/IP is the ultimate goal of our project. To do so, we have developed a new protocol stack, XIA. To reach our ultimate goal, we are both refining our codebase and working to meet unfulfilled demands of real-world networking. For example, our current short-term goal is to develop a DDoS protection system, which we expect to deploy in production by the end of 2017. At the same time, we are adding state-of-the-art algorithms and data structures to increase the speed and flexibility of XIA. We hope that this iterative refinement will make XIA an enticing choice for the future of networking.\n\nThe XIA project was established in 2010 as a collaboration between Boston University (BU), Carnegie Mellon University, University of Wisconsin - Madison, and Duke University. Linux XIA, the native implementation of XIA in the Linux kernel, became a project member of Software Freedom Conservancy in 2016.\n\nOur previous GSoC students have taken advantage of the advanced knowledge they acquired to go on to graduate schools, to become some of our GSoC mentors, and to continue supporting free software. Pursuing GSoC with the Linux XIA team at BU could be a great way for you to acquire advanced skills and build connections towards a strong application to the Masters or Ph.D. program at the Computer Science department of Boston University.\n\nThe projects in our ideas list cater to students who are proficient in C programming and comfortable with advanced data structures.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 2.0 (GPL-2.0)",
+         "image_url":"//lh3.googleusercontent.com/x5M804Nx7W3qfj3sWGp1HjCqQdoRUEqIzGTpmm50waAjexr_L5g1BqakDLXI2X1_-o4CDrrAJCCGIExFCfmURGcBmtSJQqo",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":null,
+         "blog_url":null,
+         "application_instructions":"We have centralized the links to resources, a proposal example, and advice to help students to prepare their applications for our organization on the following page of our wiki: [GSoC proposal advice](https://github.com/AltraMayor/XIA-for-Linux/wiki/GSoC-proposal-advice \"GSoC proposal advice\").",
+         "topic_tags":[
+            "computer networking",
+            " future internet architecture",
+            " research"
+         ],
+         "technology_tags":[
+            "xia",
+            " linux kernel",
+            " c",
+            " advanced data structures"
+         ],
+         "proposal_tags":[
+            "gatekeeper priority queue",
+            "ethernet principal",
+            "other"
+         ],
+         "ideas_list":"https://github.com/AltraMayor/XIA-for-Linux/wiki/Ideas-list",
+         "contact_method":"http://groups.google.com/group/linux-xia",
+         "program_year":2017
+      },
+      {
+         "id":5733719949180928,
+         "name":"BRL-CAD",
+         "slug":"brl-cad",
+         "website_url":"http://brlcad.org",
+         "category":"graphics",
+         "contact_email":"devs@brlcad.org",
+         "mailing_list":"http://brlcad.org/wiki/Mailing_Lists",
+         "irc_channel":"http://brlcad.org/wiki/IRC",
+         "tagline":"& LibreCAD, OpenSCAD, STEPcode, LinuxCNC, FreeCAD, & Slic3r!  Computer Graphics.",
+         "precis":"BRL-CAD is partnered with several computer-aided technologies (CAx) including LibreCAD, OpenSCAD, STEPcode, LinuxCNC, FreeCAD, & Slic3r.  We do graphics, geometry, CAD, & more.",
+         "description":"This is the place to be if you want to work on computer graphics, 3D printing, 2D and 3D geometry, solid modeling, CAx (CAD/CAM/CAE/etc), visualization, or high-performance computing.  BRL-CAD is participating as an umbrella organization with several other open source computer-aided technologies (CAx):\n\n* [BRL-CAD](https://brlcad.org) for 3D solid modeling, ray tracing, and geometric analysis.\n* [LibreCAD](http://librecad.org) for 2D, specializing in blueprint-style drawings and draftings.\n* [OpenSCAD](http://openscad.org) for programmable 3D CAD geometry.\n* [STEPcode](http://stepcode.org) for parsing the complex STEP geometry file format.\n* [FreeCAD](https://www.freecadweb.org) for parametric modeling with engineering functionality.\n* [Slic3r](http://slic3r.org) for generating printing instructions for 3D printers.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"ISC License (ISC)",
+         "image_url":"//lh3.googleusercontent.com/1h6Iq7ZKIWVFem1-tjvIzrfa2bATE0yFuXXwe4Sny5K1Kx9W2CExBFMhFUHwhqZsRA9gQjHR82Q3JkhpalnEQVdrt0fIPtU",
+         "image_bg_color":"222",
+         "gplus_url":null,
+         "twitter_url":"http://twitter.com/BRL_CAD",
+         "blog_url":"http://brlcad.org/",
+         "application_instructions":"We make it really simple for you.\n\n[GET STARTED HERE](http://brlcad.org/wiki/Google_Summer_of_Code/Checklist)!",
+         "topic_tags":[
+            "cad",
+            "geometry",
+            "3d",
+            "ray tracing",
+            "visualization"
+         ],
+         "technology_tags":[
+            "c/c++",
+            "opencl",
+            "python",
+            "javascript",
+            "qt"
+         ],
+         "proposal_tags":[
+            "brl-cad",
+            "librecad",
+            "stepcode",
+            "openscad",
+            "linuxcnc",
+            "freecad",
+            "slic3r"
+         ],
+         "ideas_list":"http://brlcad.org/wiki/Google_Summer_of_Code/Project_Ideas",
+         "contact_method":"devs@brlcad.org",
+         "program_year":2017
+      },
+      {
+         "id":5664254020550656,
+         "name":"Cadasta",
+         "slug":"cadasta",
+         "website_url":"http://cadasta.org/",
+         "category":"end_user_applications",
+         "contact_email":"info@cadasta.org",
+         "mailing_list":"https://groups.google.com/a/cadasta.org/forum/#!forum/outreachy",
+         "irc_channel":"https://gitter.im/Cadasta/cadasta",
+         "tagline":"Transforming the way land & resource rights are documented, managed and stored.",
+         "precis":"Cadasta is working to build a future where, through technology and community partnership, land and resource rights are universally recognized and protected.",
+         "description":"Reviving Documentation of Property Rights  \n  \nCadasta Foundation is dedicated to the support, continued development and growth of the Cadasta Platform – an innovative, open source suite of tools for the collection and management of ownership, occupancy, and spatial data that meets the unique challenges of this process in much of the world.\n\nWe provide the tools and resources for testing new approaches to capturing land and resource rights data and promoting the adoption of ‘fit-for-purpose’ technology and processes. Incorporated as a non-profit, federally-recognized 501(c)(3) organization, Cadasta Foundation aims to simplify, modernize, and expedite the documentation of land and resource rights in places where it does not exist today.  \n  \nOur Approach\n\nA secure, cost effective global platform for the direct capture and documentation of land and resource rights.\nA collaborative ecosystem of partners using the Cadasta Platform to protect land and resource rights.\nA research and resource portal for the open sharing of knowledge, best practices and the use of our tools.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU Affero General Public License v3 (AGPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/LlL-mwlHMWANXrtPck51fU-5FfJaYZVBcsPsMmj_qQyh2zc-Zvk_DpZEVjCLsG7iFvo2JF4zfMokk9JgBZIZUieY4Lj-kw",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/CadastaOrg",
+         "blog_url":"http://cadasta.org/blog-page/",
+         "application_instructions":"# Cadasta Project Ideas\nIdeas for Cadasta projects are kept as Github issues. [Please review current potential projects there.](https://github.com/Cadasta/cadasta-project-ideas/issues?q=is%3Aissue+is%3Aopen+label%3A%22Google+Summer+of+Code%22)\n# Basics of Applying to GSoC with Cadasta\n\n* Review [Cadasta's website](http://cadasta.org/) to get an idea of why technology and land rights are important.\n* Introduce yourself [on our Gitter Group](https://gitter.im/Cadasta/cadasta)\n* Review the project description for the project you are interested\n* Make a small contribution. For Field Papers related projects, you should try to fix a small bug. For Android application projects, you should create a basic initial design. (Applications will not be considered without an initial contribution) Your contribution shows us a willingness to jump in and get involved. \n* Fill out the application on the Google Summer of Code website. \n\n# Selection Process\n\nApplications will be reviewed by the potential Cadasta mentors. The proposals will be ranked and the best ones will be selected. Some of the criteria used include: student's knowledge about the project, manageable timeline, demonstrated skills required for the project, availability of a mentor interested in guiding the project.",
+         "topic_tags":[
+            "web",
+            "land rights",
+            "mapping",
+            "geo",
+            "geospatial"
+         ],
+         "technology_tags":[
+            "python",
+            "django",
+            "javasc",
+            "javascipt"
+         ],
+         "proposal_tags":[
+            "field papers",
+            "new feature",
+            "enhancement"
+         ],
+         "ideas_list":"https://github.com/Cadasta/cadasta-project-ideas/wiki/Google-Summer-of-Code#cadasta-project-ideas",
+         "contact_method":"info@cadasta.org",
+         "program_year":2017
+      },
+      {
+         "id":6317890841083904,
+         "name":"Catrobat",
+         "slug":"catrobat",
+         "website_url":"http://www.catrobat.org",
+         "category":"languages",
+         "contact_email":"contact@catrobat.org",
+         "mailing_list":"https://groups.google.com/forum/?fromgroups#!forum/catrobat",
+         "irc_channel":"https://github.com/Catrobat/Catroid/wiki/Setup-working-environment",
+         "tagline":"Computational thinking for all through visual mobile programming frameworks",
+         "precis":"We want to enable especially teenagers to learn how to code and how to create their own games, animations or apps in a user-friendly framework by sticking together simple blocks.",
+         "description":"The Catrobat project develops useful frameworks to create games, animations, or apps easily within a short time. This set of creativity tools for smartphones, tablets, and browsers is inspired by the well-known Scratch framework by the Lifelong Kindergarten Group at the MIT Media Lab.\n\nThe motivation behind the project is that programming is an important cultural technique on the same level as mathematics and physics, from a practical as well as from a philosophical point of view. Our aim thus is to popularize the skills needed to program from an early age on in a fun and engaging way that will facilitate the spread of its adoption among young people all over the world.\n\nOur awarded Android app “Pocket Code” is currently the most famous outcome of the project. Without the need of any further devices, users have the possibility to create their first program directly on their mobile device in a “Lego-like” style with blocks in just a few steps. Pocket Code supports all common device sensors, provides special bricks for different robotic devices (Lego Mindstorms, Robotix Phiro,...) as well as for hardware devices such as the Arduino board or the Raspberry Pi, and of course offers elements of programming languages such as variables, if-statements, concurrency, etc.\n\nWe also work on frameworks for other OS and on making it available on browsers. That’s why developers of different fields help us to keep our products up to date to the current needs of the users. Motivated by prizes (such as the Lovie Award, the Austrian National Innovation Award or the Re-Imagine Education Award) and being featured by different programs (like Google Play for Education or code.org) our team is working on many different subprojects and extensions which will be released in the coming years. Over 400 developers already contributed to our project on different topics such as App-Development, Web-Technologies, Graphics, Usability, Internationalization, or Design.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 3.0 (GPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/6jlNe2ME_lXaI0L_9bSuohl-rQnaF-dWgk4ovoeboq1pPR1BKXVZ73uQAihHy-tf0qj3HBSJXf2tK2qSf63IiWQbdCneO78",
+         "image_bg_color":null,
+         "gplus_url":"https://plus.google.com/communities/116816272940643231129",
+         "twitter_url":"http://twitter.com/Pocket_Code",
+         "blog_url":null,
+         "application_instructions":"Please use the template on http://catrob.at/gsoc17instructions for your proposal. You'll find all necessary information within the template!",
+         "topic_tags":[
+            "education",
+            "programming tools",
+            "app development",
+            "web applications",
+            "scratch"
+         ],
+         "technology_tags":[
+            "android",
+            "java",
+            "html5",
+            "ios",
+            "web"
+         ],
+         "proposal_tags":[
+            "refactoring",
+            "new features",
+            "redesign",
+            "ios",
+            "html5"
+         ],
+         "ideas_list":"http://catrob.at/gsoc17",
+         "contact_method":"contact@catrobat.org",
+         "program_year":2017
+      },
+      {
+         "id":4894818279882752,
+         "name":"cBioPortal for Cancer Genomics",
+         "slug":"cbioportal-for-cancer-genomics",
+         "website_url":"http://cbioportal.org/",
+         "category":"science_and_medicine",
+         "contact_email":null,
+         "mailing_list":"https://groups.google.com/forum/#!forum/cbioportal-gsoc",
+         "irc_channel":null,
+         "tagline":"Developing open source solutions for precision medicine for cancer patients",
+         "precis":"The cBioPortal for Cancer Genomics is one of the most popular online resource for integrative analysis and visualization of cancer genomics data.",
+         "description":"# What is cBioPortal?\nThe cBioPortal for Cancer Genomics is a resource designed to provide broad community access to cancer genomic data. It provides a unique user\u00ad-friendly and \"biology\u00ad-centric computational user interface\", with the goal of making genomic data more easily accessible to translational scientists, biologists, and clinicians. The interface was explicitly built and continues to evolve with careful usability studies involving multiple biological and clinical users, and an active and engaged user base.\n\n# Who is using cBioPortal? \nThe [public instance of cBioPortal](http://www.cbioportal.org/) is now one of the most popular online resources for cancer genomics data and attracts more than 3,000 unique visitors (cancer researchers and clinicians) per day. The two papers documenting the cBioPortal ([Cerami et al. Cancer Discov. 2012](http://cancerdiscovery.aacrjournals.org/content/2/5/401.abstract) & [Gao et al. Sci. Signal. 2013](http://www.ncbi.nlm.nih.gov/pubmed/23550210)) have been cited more than 1,900 and 1,400 times, respectively, since their publication. There are more than 30 actively used cBioPortal instances in hospitals, universities, pharmaceutical companies, and other institutes all over the globe. Notably, cBioPortal has been adopted as the analysis and visualization platform by [AACR GENIE](http://blog.aacr.org/aacr-project-genie-the-sharing-economy-comes-to-the-clinic/), an international multi-institutional data-sharing project to catalyze precision oncology. \n\n# Who are we?\nWe are a group of software engineers, bioinformaticians, and cancer biologists building software solutions for precision medicine for cancer patients. Our overall goal is to build infrastructure to support clinical decisions for personalized cancer treatment by utilizing “big data” of cancer genomics and patient clinical profiles. Our multi-institutional team currently has more than 30 active members, primarily from [Memorial Sloan Kettering Cancer Center](https://www.mskcc.org/), [the Dana-Farber Cancer Institute](http://www.dana-farber.org/), [Princess Margaret Cancer Centre](http://www.theprincessmargaret.ca/), [Children's Hospital of Philadelphia](http://www.chop.edu/), and [The Hyve, a bioinformatics company from the Netherlands](http://thehyve.nl/).",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Affero GNU Public License",
+         "image_url":"//lh3.googleusercontent.com/Tj41PVxwI490LluPz42bUPDMoqxxEL9kbxd9KkAGWvqvWT9b-kpCpazFP6MI9YyjIBD7tLAWm-X0yugqAZAnzoHoDNNpIOfP",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/cbioportal",
+         "blog_url":null,
+         "application_instructions":"* Get familar with the [cBioPortal](http://cbioportal.org) and it's [codebase](https://github.com/cBioPortal/cbioportal/).\n* Develop your project proposal based on one of [the ideas](https://github.com/cBioPortal/GSoC/issues). Please feel free to come up with your own project idea.\n* If you have any questions about any of the ideas, please comment in the issues on GitHub. For general questions, you may also join the [cBioPortal GSoC discussion forum](https://groups.google.com/forum/#!forum/cbioportal-gsoc).\n* Start with the [proposal template](https://github.com/cBioPortal/GSoC/wiki/template). \n* **Submit your proposal early**. We will start to provide feedbacks to proposals once they are submitted.",
+         "topic_tags":[
+            "cancer",
+            "bioinformatics",
+            "big data",
+            "genomics",
+            "biology"
+         ],
+         "technology_tags":[
+            " javascript",
+            "java",
+            "web",
+            "reactjs",
+            "web services"
+         ],
+         "proposal_tags":[
+            "cbioportal",
+            "pipeline",
+            "java",
+            "javascript",
+            "cancer genomics",
+            "reactjs"
+         ],
+         "ideas_list":"https://github.com/cBioPortal/GSoC/wiki/ideas",
+         "contact_method":"https://groups.google.com/forum/#!forum/cbioportal-gsoc",
+         "program_year":2017
+      },
+      {
+         "id":6301119262228480,
+         "name":"CCExtractor Development",
+         "slug":"ccextractor-development",
+         "website_url":"https://www.ccextractor.org",
+         "category":"graphics",
+         "contact_email":"gsoc@ccextractor.org",
+         "mailing_list":"",
+         "irc_channel":"http://www.ccextractor.org/doku.php?id=public:general:support",
+         "tagline":"Tools for a subtitled world.",
+         "precis":"CCExtractor is the standard open source tool to generate subtitle files. Getting better all the time, still lots of things to do.",
+         "description":"Whether it's because you are learning a new language, have hearing problems or just at a loud place, subtitles are an essential part of enjoying TV and movies for a a lot of people. There's plenty of tools to manage audio/video, but it comes to subtitles, the few tools that exist are closed source and extremely expensive. CCExtractor is the one tool that is free, portable, open source and community managed that can take a recording from a TV show and generate an external subtitle file for it. \nIf you regularly watch content with subtitles you download from fan sites - you should know that the source file is most likely generated by CCExtractor. If you are a student in a university that uses subtitles for natural language study, you should know that most likely we are involved somehow. \nWhile we already support subtitles from North America, Europe, Australia and more, our world map is not yet complete. We are actively looking for students that want to help us fill the gaps.\nWe also want to automate many of the processes that are currently done manually, such as achieving perfect sync, or word by word (karaoke like) sync.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 2.0 (GPL-2.0)",
+         "image_url":"//lh3.googleusercontent.com/bmn8lDMD4wTb6piHiXGhNunekaab5EJZKM4ElBVjVc9CvWsbRGJDA5Czeci9r5q3Zp0BFg00I-Z3alE4zAy7UEf7BN6ecw0",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":null,
+         "blog_url":null,
+         "application_instructions":"Key things when writing your proposal (but make sure you visit our website for more details):\n\n- Explain what you do want to do, why it is important to you, and why it is important or useful to us.\n- Explain how you intend to accomplish the goal, in enough detail that makes it clear that you know what you are talking about. For example, “I will modify the CCExtractor binary so that it's able to convert audio to text with perfect accuracy” is the same thing as sending your proposal to the trash. You need to have a plan.\n- Detail the timeline, week by week, explaining the deliverables for each week (pay special attention to the milestones within the GSoC timeline itself, of course) and how we should validate the results.\n- Detail what kind of support you will need for us. For example, if you are going to need test streams, hardware, access to a server, etc, let us know, so we can plan ahead.\n- Detail your expected working hours in UTC.\n- If you are going to be using 3rd party libraries (that's OK), make sure to validate that their license is compatible with GPLv2 (which is ours). List the libraries in your proposal. Check that they are multiplatform. If you will need to extend those libraries in any way please explain. In this case, your proposal should include time to get that extension submitted to the maintainers (we love to contribute to other projects).",
+         "topic_tags":[
+            "subtitles",
+            "television",
+            "movies",
+            "media"
+         ],
+         "technology_tags":[
+            "c",
+            "python",
+            "raspberry pi",
+            "linux",
+            "visual studio"
+         ],
+         "proposal_tags":[
+            "c",
+            "feature",
+            "subtitles",
+            "improvement",
+            "bugfix",
+            "optimization"
+         ],
+         "ideas_list":"https://ccextractor.org/public:gsoc:ideas_page_for_summer_of_code_2017",
+         "contact_method":"gsoc@ccextractor.org",
+         "program_year":2017
+      },
+      {
+         "id":6702807445929984,
+         "name":"Ceph",
+         "slug":"ceph",
+         "website_url":"http://ceph.com",
+         "category":"data_and_databases",
+         "contact_email":"pmcgarry@redhat.com",
+         "mailing_list":"http://ceph.com/irc#lists",
+         "irc_channel":"http://ceph.com/irc",
+         "tagline":"The Future of Storage",
+         "precis":"The Future of Storage",
+         "description":"Ceph is an object storage based free software storage platform that stores data on a single distributed computer cluster, and provides interfaces for object-, block- and file-level storage. Ceph aims primarily to be completely distributed without a single point of failure, scalable to the exabyte level, and freely available.\n\nCeph replicates data and makes it fault-tolerant, using commodity hardware and requiring no specific hardware support. As a result of its design, the system is both self-healing and self-managing, aiming to minimize administration time and other costs.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 2.0 (GPL-2.0)",
+         "image_url":"//lh3.googleusercontent.com/U871xC10LwZMj4AkX4I3Ul6nx2zTyI5QUHItw4Uv9aCb98NYwvTeB2pq0SskU-JfcxVnDOUsleHOvtL-J-CQkqrY9hh2hQ",
+         "image_bg_color":null,
+         "gplus_url":"https://plus.google.com/+Cephstorage",
+         "twitter_url":"https://twitter.com/ceph",
+         "blog_url":"http://ceph.com/community/blog/",
+         "application_instructions":"* Read all Ceph GSoC pages\n* Find / create project of interest\n* Get in touch with org admin / mentor\n* Read about [Contributing](https://github.com/ceph/ceph/blob/master/CONTRIBUTING.rst) to Ceph\n* Submit a patch for Ceph\n* Write your application\n* Submit your application to Google before the dealine",
+         "topic_tags":[
+            "cloud storage",
+            "storage"
+         ],
+         "technology_tags":[
+            "c++",
+            "python",
+            "object-storage"
+         ],
+         "proposal_tags":[
+            "rados",
+            "rbd",
+            "rgw",
+            "cephfs",
+            "librados",
+            "bindings",
+            "ceph-mgr",
+            "mon",
+            "osd",
+            "misc"
+         ],
+         "ideas_list":"http://ceph.com/gsoc2017-ideas",
+         "contact_method":"pmcgarry@redhat.com",
+         "program_year":2017
+      },
+      {
+         "id":4978158764818432,
+         "name":"CERN-HSF",
+         "slug":"cern-hsf",
+         "website_url":"http://hepsoftwarefoundation.org/activities/gsoc.html",
+         "category":"science_and_medicine",
+         "contact_email":"hep-software-foundation-google-summer-of-code@googlegroups.com",
+         "mailing_list":"http://hepsoftwarefoundation.org/activities/gsoc.html",
+         "irc_channel":null,
+         "tagline":"CERN-HEPSoftwareFoundation, umbrella organization for particle physics in GSoC",
+         "precis":"CERN-HSF (High Energy Physics Software Foundation) is an umbrella organization for all high-energy physics-related projects in GSoC. CERN-SFT has participated in GSoC since 2011.",
+         "description":"CERN-HSF (High Energy Physics Software Foundation) is the umbrella organization for high-energy physics-related projects in GSoC. The HEP Software Foundation (http://hepsoftwarefoundation.org/) facilitates the coordination of common international efforts in high-energy physics software and computing. \n\nCERN (European Organization for Nuclear Research, http://www.cern.ch) has participated in GSoC since 2011 as CERN-SFT group that provides common software for CERN's experiments. This year the program has expanded to include many software projects from the whole field of high-energy physics. The vast majority of our GSoC projects do not require any physics knowledge.\n\nThe experiments at CERN, such as the Large Hadron Collider, the world’s largest and most powerful particle accelerator  http://home.cern/topics/large-hadron-collider) try to answer fundamental questions about the Universe. For example, what is the nature of mass? What are the elementary building blocks of the Universe? What was the early Universe like? What is the nature of dark matter and dark energy? Why is there an asymmetry between matter and antimatter? In 2012, LHC experiments have announced the discovery of a new particle, the Higgs Boson, that helps explain how particles obtain mass. Also, CERN is the birthplace of the World Wide Web. Today, particle physicists are working on analyzing the data from the experiments to study the properties of the newly discovered particle and to search for new physics, such as dark matter or extra dimensions. This requires a lot of sophisticated software.\n\nThe open-source high-energy physics projects to which students can contribute during GSoC span many high-energy physics software projects: detector and accelerator simulation (Falcon, Geant4, GeantV, Pythia, SixTrack), data analysis (ROOT, TMVA, scikit-HEP, Go-HEP), event reconstruction (CMS Tracking), data management (transfer2go) and many others. We look forward to your contributions!",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU Library or \"Lesser\" General Public License version 2.1 (LGPL-2.1)",
+         "image_url":"//lh3.googleusercontent.com/MaZ7SYtsdE1uxLAsOnRZpUgLO1QxUte95_dQuEsfxhMJBDEfCZJlypvDy3Sg70ayF-dAh3STjlCHWX2lWQdyo4SsdBay",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":null,
+         "blog_url":null,
+         "application_instructions":"http://hepsoftwarefoundation.org/activities/gsoc.html",
+         "topic_tags":[
+            "particle physics",
+            "high-energy physics",
+            "machine learning",
+            "physics",
+            "big data"
+         ],
+         "technology_tags":[
+            "python",
+            "c/c++",
+            "machine learning",
+            "data analysis",
+            "parallel algorithms"
+         ],
+         "proposal_tags":[
+            "root",
+            "tmva",
+            "geant4",
+            "geantv",
+            "scikit-hep",
+            "sixtrack",
+            "falcon",
+            "cms",
+            "atlas",
+            "pythia"
+         ],
+         "ideas_list":"http://hepsoftwarefoundation.org/activities/gsoc.html",
+         "contact_method":"hep-software-foundation-google-summer-of-code@googlegroups.com",
+         "program_year":2017
+      },
+      {
+         "id":6472441615351808,
+         "name":"Chapel",
+         "slug":"chapel",
+         "website_url":"http://chapel-lang.org",
+         "category":"languages",
+         "contact_email":"chapel_info@cray.com",
+         "mailing_list":"http://chapel.cray.com/developers.html",
+         "irc_channel":"http://chapel.cray.com/developers.html",
+         "tagline":"a Productive Parallel Programming Language",
+         "precis":"Chapel is an open-source programming language designed for productive parallel computing at scale.",
+         "description":"# About Chapel\n\nChapel is an open-source programming language designed for productive parallel computing at scale. Chapel is implemented with portability in mind, permitting Chapel to run on multicore desktops and laptops, commodity clusters, and the cloud, in addition to the high-end supercomputers for which it was designed. Chapel's design and development are being led by Cray Inc. in collaboration with academia, computing centers, and industry. Chapel offers a unique experience for students to work on projects involving high-performance computing, parallel programming, and compiler development.\n\n# Core features\n\n**Native Parallelism**\n\nChapel supports parallelism at the language level. For instance, Chapel provides a \"coforall\" loop, which is similar to a \"for\" loop and creates a separate task per iteration of the loop body. These explicit parallelism features make it easier to reason about the parallelism in your algorithm and program.\n\n**Data and Task Locality**\n\nWhen working on a large machine, the location of some data relative to the task which uses it or other data with which it must work plays a key role in performance. Chapel provides features which allow you to control that placement, both within a data structure and outside it.\n\n**Multiresolution Philosophy**\n\nChapel is designed around a multiresolution philosophy, permitting users to initially write very abstract code and then incrementally add more detail until they are as close to the machine as their needs require.\n\n**Modern Language Features**\n\nChapel supports code reuse and rapid prototyping via object-oriented design, type inference, and features for generic programming.\n\n**Interoperability**\n\nExisting code from other languages can be integrated into Chapel programs (or vice-versa) via interoperability features.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Apache License 2.0 (Apache-2.0)",
+         "image_url":"//lh3.googleusercontent.com/ouhiO9cOmNc2otF9_uh-s1fRB4kbfn9-x9gjGtLmY2DccpHt3zWa1gUS17PrDZzpm0L1djadVeO9yOZ2501T2udHmY0LsF4",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/chapellanguage",
+         "blog_url":"https://www.facebook.com/ChapelLanguage",
+         "application_instructions":"Please see: http://chapel.cray.com/gsoc/apply.html",
+         "topic_tags":[
+            "programming languages",
+            "compilers",
+            "high performance computing",
+            "distributed computing",
+            "parallel computing"
+         ],
+         "technology_tags":[
+            "chapel",
+            "python",
+            "high performance computing",
+            "c",
+            "c++"
+         ],
+         "proposal_tags":[
+            "libraries and applications",
+            "compatibility",
+            "compiler",
+            "runtime",
+            "infrastructure",
+            "other"
+         ],
+         "ideas_list":"http://chapel.cray.com/gsoc/ideas.html",
+         "contact_method":"chapel_info@cray.com",
+         "program_year":2017
+      },
+      {
+         "id":4906659840262144,
+         "name":"Checker Framework",
+         "slug":"checker-framework",
+         "website_url":"https://checkerframework.org/",
+         "category":"languages",
+         "contact_email":"checker-framework-dev@cs.washington.edu",
+         "mailing_list":"https://groups.google.com/forum/#!forum/checker-framework-gsoc",
+         "irc_channel":null,
+         "tagline":"Preventing programming errors before they happen, via easy-to-use verification",
+         "precis":"We build tools for programmers, to prevent run-time errors at compile time.  These aren't just bug-finding tools.  Our tools give a proof, but are easy to use.",
+         "description":"We are a group of developers who are passionate about code quality.\nWe have built an innovative lightweight verification tool called the\n[Checker Framework](https://checkerframework.org/).\n\nThe Checker Framework helps you prevent bugs at development time,\nbefore they escape to production.  It is based on the idea of\n_pluggable type-checking_.  Pluggable type-checking replaces a\nprogramming language's built-in type system with a more powerful,\nexpressive one.\n\nJava's type system prevents some bugs, such as `int count =\n\"hello\";`.  However, it does not prevent other bugs, such as null\npointer dereferences, concurrency errors, disclosure of private\ninformation, incorrect internationalization, out-of-bounds indices, and\nso forth.\n\nThe Checker Framework enables you to create a more powerful type\nsystem and use it in place of Java's.  The more powerful type system\nis not just a bug-finding tool:  it is a verification tool that gives\na guarantee that no errors (of certain types) exist in your program.\nEven though it is powerful, it is easy to use.  It follows the\nstandard typing rules that programmers already know, and it fits into\ntheir workflow.  We have created around 20 [new type\nsystems](https://checkerframework.org/manual/#introduction), and other\npeople have created [many\nmore](https://checkerframework.org/manual/#third-party-checkers).\n\nThe Checker Framework is popular:  it is successfully used on hundreds\nof projects at Google, on Wall Street, and in other companies from big\nto small.  It it attractive to programmers who care about their craft\nand the quality of their code.  The Checker Framework is the\nmotivation for Java's type annotations feature.  Talks on it have\nreceived multiple awards at conferences such as JavaOne.  With this\nwidespread use, there is a need for people to help with the project:\neverything from bug fixes, to new features, to case studies, to IDE\nintegration.  We welcome your contribution!\n\nPlease see our [ideas list](https://checkerframework.org/gsoc-2017-ideas.html) for [how to get started](https://checkerframework.org/gsoc-2017-ideas.html#get-started).",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"MIT license (MIT)",
+         "image_url":"//lh3.googleusercontent.com/GZt2-5AlJv9iEpwGkNRDL1cLb6ejHDluSzSp8KEKj_eL0fvVJPukXU8Vw1K_s606n2BdzNUVedgkUu3xet5oTIB7D7oWBwY",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":null,
+         "blog_url":"http://programanalysis.blogspot.com/",
+         "application_instructions":"Why should you join this project?  It's popular, so you will have an\nimpact.  It makes code more robust and secure, which is a socially\nimportant purpose.  Past GSOC students have had great success, such as\none (David Lazar) who became a graduate student at MIT; other students\non the project have published papers in scientific conferences.  You\nwill get to scratch your own itch by creating tools that solve\nproblems that frustrate you.  And, we have a lot of fun on this\nproject!\n\nDetailed application instructions appear on our [ideas page](https://checkerframework.org/gsoc-2017-ideas.html#apply).\n\nHowever, as described there, the best way to impress us is by [trying the Checker Framework](https://checkerframework.org/gsoc-2017-ideas.html#get-started) and telling us what you learned.\n\nTo [get started](https://checkerframework.org/gsoc-2017-ideas.html#get-started):\n\n * Read parts of the [Checker Framework manual](https://checkerframework.org/manual/); note section [How to read this manual](https://checkerframework.org/manual/#how-to-read-this-manual).\n * Choose a type system, and a Java project that you wish to verify.\n * Run the checker on the program; see section [Tips about writing annotations](https://checkerframework.org/manual/#tips-about-writing-annotations).\n * Tell us the outcome.\n\nThis process is sure to yield some insight about the program or the type-checker.  (And, many people find it fun:  it's like a puzzle to figure out how to express the correctness of the code.)\n\nLet us know what you found, and/or submit issues or pull requests to our [GitHub\nproject](https://github.com/typetools/checker-framework/issues).\n\nFeel free to ask us questions.  We are happy to work with you to make your application more competitive.",
+         "topic_tags":[
+            "programmer productivity",
+            "software engineering",
+            "verification"
+         ],
+         "technology_tags":[
+            "java"
+         ],
+         "proposal_tags":[
+            "new type system",
+            "case study",
+            "supporting tool",
+            "ui or build system support"
+         ],
+         "ideas_list":"https://checkerframework.org/gsoc-2017-ideas.html",
+         "contact_method":"checker-framework-dev@cs.washington.edu",
+         "program_year":2017
+      },
+      {
+         "id":6255237871435776,
+         "name":"Checkstyle",
+         "slug":"checkstyle",
+         "website_url":"http://checkstyle.sourceforge.net/",
+         "category":"languages",
+         "contact_email":"checkstyle@googlegroups.com",
+         "mailing_list":"https://groups.google.com/forum/#!forum/checkstyle-devel",
+         "irc_channel":"https://gitter.im/checkstyle/checkstyle",
+         "tagline":"Dev tool to help programmers write Java code that adheres to a coding standard.",
+         "precis":"Checkstyle is a development tool to help programmers write Java code that is easy to read and adheres to a coding standard.",
+         "description":"Checkstyle is a development tool to help programmers write Java code that is easy to read and adheres to a coding standard. Our utility automates the process of checking Java code to spare humans of this boring (but important) task. This makes it ideal for projects that want to enforce a coding standard. Each and every check also forces our users who are not familiar with these standards to read them and makes them think about why these standards exist.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU Library or \"Lesser\" General Public License version 2.1 (LGPL-2.1)",
+         "image_url":"//lh3.googleusercontent.com/bYJdc1mSAAxngSHWAGZgIU0enr1ObuRKSA5wZSOxWUvXXS4LIxCuuwtCpcWirwZGdIyLPwuW8uPwQOcUbwtzkkLAedukKhQk",
+         "image_bg_color":null,
+         "gplus_url":"https://plus.google.com/108692338295483568100",
+         "twitter_url":"https://twitter.com/checkstyle_java",
+         "blog_url":null,
+         "application_instructions":"1) We make a preference to students that already know our code. It is never too late to start cooperation/contribution to Checkstyle . 2) Choose one more project 3) Describe your skills (CV format), by special paragraph list implemented issues in Checkstyle issue tracker that are fixed by you. 4) Propose a solution for a project with a plan and draft time estimation",
+         "topic_tags":[
+            "static code analysis\u200e",
+            "code review tool",
+            "coding standards",
+            " coding conventions"
+         ],
+         "technology_tags":[
+            " java",
+            "antlr"
+         ],
+         "proposal_tags":[
+            "new feature, optimization, analysis"
+         ],
+         "ideas_list":"https://github.com/checkstyle/checkstyle/wiki/Checkstyle-GSoC-2017-Project-Ideas",
+         "contact_method":"checkstyle@googlegroups.com",
+         "program_year":2017
+      },
+      {
+         "id":5734549993553920,
+         "name":"Classical Language Toolkit",
+         "slug":"classical-language-toolkit",
+         "website_url":"http://cltk.org",
+         "category":"other",
+         "contact_email":"kyle@kyle-p-johnson.com",
+         "mailing_list":"https://groups.google.com/forum/#!forum/classical-language-toolkit",
+         "irc_channel":"https://gitter.im/cltk/cltk",
+         "tagline":"NLP for the ancient world",
+         "precis":"The Classical Language Toolkit brings state–of–the–art natural language processing to the languages and literatures of the ancient world.",
+         "description":"Due to how academic disciplines have evolved over the past 200 years, our earliest civilizations are often studied in isolation from one another. This is tragic, for today we know that the ancient world – from Rome to Mesopotamia to India to China – consisted of deeply interconnected networks of ideas, technologies, art, and beliefs.\n\nWe have developed the Classical Language Toolkit (CLTK) because we believe it will revolutionize the study of the ancient world. It will do so by removing barriers to entry for those doing natural language processing (NLP) in Classical languages (namely, the surviving literature of the entirety of Eurasia and north Africa, from roughly 3000 B.C. to A.D. 1500). As a framework for multidisciplinary research, the CLTK will help scholars of tomorrow discover the shared origins of what were once thought disparate cultures.\n\nAs software, the CLTK is a suite of NLP tools suited to the special needs of ancient languages. We have have three goals: The most basic is to offer low-level libraries for doing NLP in particular Classical languages (e.g., Ancient Greek, Sanskrit). Developed with an extensible architecture, our code is easily hacked to support new languages. Second, the CLTK offers tools for students and scholars to do reproducible scientific research. For instance, it has version–controlled linguistic corpora and a suite of functions for stylometrics. Third, it is a framework for multidisciplinary language research. With pre–trained models (such as Word2Vec for vector space models, Moses for machine translation, and LDA for topic modeling), we now provide (or will soon) easy–to–use tools to capture the transmission and evolution of knowledge, from the earliest human societies to the dawn of the modern era.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"MIT license (MIT)",
+         "image_url":"//lh3.googleusercontent.com/mPW7xNGfV6zRQW74cTVBmxeKKwM0no6K1Pr9Gw-VTffk_O15Dl2_41xoExM0e_v54pRBJKE99eQ6A1XRv9DmngX8R4f9i24",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/diyclassics",
+         "blog_url":"http://cltk.org/blog",
+         "application_instructions":"See our [Project ideas page](https://github.com/cltk/cltk/wiki/Project-ideas#gsoc-projects) for a list of GSOC tasks that are suited to three months' work for a beginning–to–intermediate programmer or language student. What follows is a high–level overview of these projects and a few tips in applying. Most work will be done in the Python and JavaScript languages, of which a beginner's or intermediate knowledge is expected.\n\nIf you know a Classical language that is not yet supported well by the CLTK (e.g., Hebrew, Sanskrit, Chinese), you may follow the pattern set by the current Greek and Latin libraries. See the Projects page on the wiki for ideas of what a good application will include. See also [the CLTK docs](http://docs.cltk.org) for what we can already do for a given language.\n\nThe other family of tasks regards the CLTK's in–development website, the Classical Language Archive ([in Meteor and React](https://github.com/cltk/cltk_frontend)) and API ([in Python's Flask framework](https://github.com/cltk/cltk_api_v2)). See our description of the frontend, experiment with the live demo, and explain in your application which functionality you would most like to see added, why, and how you will do so over the course of three months.\n\nThe CLTK's GSoC mentors may not be able to reply to all enquiries, however the best way to ensure a good response is to submit, as early as possible, a draft application essay, in which you explain the resources you will use, the order in which you will do your work, and a timeline. For the website project, email [Luke Hollis](mailto:lukehollis@gmail.com); for the add-a-language project, email [Kyle P. Johnson, Ph.D.](mailto:kyle@kyle-p-johnson.com).",
+         "topic_tags":[
+            "nlp",
+            "ai",
+            "machine",
+            "machine learning",
+            "machine trans"
+         ],
+         "technology_tags":[
+            " python",
+            "javascript"
+         ],
+         "proposal_tags":[
+            "website",
+            "api",
+            "core-cltk"
+         ],
+         "ideas_list":"https://github.com/cltk/cltk/wiki/Project-ideas#gsoc-projects",
+         "contact_method":"kyle@kyle-p-johnson.com",
+         "program_year":2017
+      },
+      {
+         "id":5049238594519040,
+         "name":"CLiPS, University of Antwerp",
+         "slug":"computational-linguistics-psycholinguistics-research-group-clips-university-of-antwerp",
+         "website_url":"http://www.clips.uantwerpen.be",
+         "category":"data_and_databases",
+         "contact_email":"tom@organisms.be",
+         "mailing_list":null,
+         "irc_channel":"http://www.clips.uantwerpen.be:3001",
+         "tagline":"Computational (Psycho)Linguistics",
+         "precis":"Language technology research (fundamental & applied) on text analytics and text mining topics such as sentiment analysis, computational stylometry and cybersecurity applications.",
+         "description":"The Computational Linguistics & Psycholinguistics Research Group of the University of Antwerp (CLiPS, http://www.clips.uantwerpen.be) focuses on applications of statistical and machine learning methods, trained on corpus data, to explain human language acquisition and processing data, and to develop automatic text analysis systems that are accurate, efficient, and robust enough to be used in practical applications.\n\nThere are 3 subgroups to CLiPS: (1) the sociolinguistics group studies language variation in different demographic groups. The (2) psycholinguists research the effect of cochlear implantation on child language acquisition. This description focuses on the (3) computational linguistics subgroup.\n\nCurrent research at CLiPS' Computational Linguistics Group focuses on developing tools that can extract data from social media messages, such as fine-grained sentiment analysis, and the detection of subversive behavior on social network sites (sexually transgressive behavior, hate speech, ...). Furthermore, CLiPS is well known for its work on computational stylometry and has developed state-of-the-art technology for authorship attribution, as well as author profiling, i.e. the detection of  personality, age and gender of the author of a text, based on personal writing style. Another line of research at CLiPS focuses on computational psycholinguistics and researches psychologically plausible models of child language acquisition and bilinguality. CLiPS also researches and develops tools for biomedical text mining.\n\nOver the years, CLiPS has established a strong reputation in the application of machine learning methods on a variety of language technology problems for a wide range of languages. To capitalize on this reputation, a spin-off company, Textgain (textgain.com), was founded in 2015 that aims to bring CLiPS technology to the market for commercial purposes.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"BSD 3-Clause \"New\" or \"Revised\" License (BSD-3-Clause)",
+         "image_url":"//lh3.googleusercontent.com/NdwCmC2DSdz8DBs8sKVr6rYnB37Tbs4IANYFrlknePLhtRw_tGiQab0p73TbPceTSRccqIVKtJCeruUGdJ2nnudgPr4R0sZu",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/clipsua",
+         "blog_url":null,
+         "application_instructions":"*Prerequisites*\n\nPrior experience in the field of language technology is desirable, but not strictly required. A computational linguist needs to have a passion for coding as well as language as an object of study. We have ample experience supervising students with backgrounds in linguistics as well as computer science and we are very welcoming to different profiles. As long as you have a keen interest in cracking one of the toughest computational nuts out there, language technology, and you have the coding skills (preferably Python) to match, we will find a place for you in the team. Other desirable skills include a creative mind, empathic social skills, and the stern eye of a skeptic. Is this you? Get in touch!\n\n*How to apply*\n\nSend an engaging text outlining a (rough) idea of how you think you can contribute. Don’t be shy about any crazy or overly ambitious you may have. Feel free to include any on-line references to Blogger, Twitter, GitHub, … you want to share with us. \n\nDetailed guidelines can be found here (Google Docs): \nhttps://goo.gl/BwAQgM\n\n*What we offer*\n\nWe are a nice, friendly and welcoming community and look forward to teach as well as learn from the people we work with.",
+         "topic_tags":[
+            "text analytics",
+            "machine learning",
+            "computational linguistics",
+            "artificial intelligence",
+            "data mining"
+         ],
+         "technology_tags":[
+            "python",
+            "machine learning",
+            "mongodb",
+            "javascript "
+         ],
+         "proposal_tags":[
+            "computational linguistics",
+            "text analytics",
+            "text mining",
+            "predictive analytics",
+            "machine learning",
+            "data mining",
+            "data visualization",
+            "deep learning",
+            "language technology",
+            "artificial intelligence"
+         ],
+         "ideas_list":"http://www.clips.uantwerpen.be/projects/gsoc-2017",
+         "contact_method":"tom@organisms.be",
+         "program_year":2017
+      },
+      {
+         "id":5995379624509440,
+         "name":"Clojure",
+         "slug":"clojars-community-committee",
+         "website_url":"http://clojure.org",
+         "category":"languages",
+         "contact_email":null,
+         "mailing_list":"http://groups.google.com/group/clojure",
+         "irc_channel":"http://clojurians.net/",
+         "tagline":"Supporting the Clojure and ClojureScript ecosystem",
+         "precis":"Clojure is a dynamic and functional general-purpose programming language that primarily targets the Java Virtual Machine and JavaScript.",
+         "description":"Clojure is a dynamic programming language that targets the Java Virtual Machine (JVM), JavaScript, and Microsoft’s .NET framework. It is designed to be a general-purpose language, combining the approachability and interactive development of a scripting language with an efficient and robust infrastructure for multithreaded programming. Clojure is a dialect of Lisp, and shares with Lisp the code-as-data philosophy and a powerful macro system. Clojure is predominantly a functional programming language, and features a rich set of immutable, persistent data structures. When mutable state is needed, Clojure offers a software transactional memory system and reactive Agent system that ensure clean, correct, multithreaded designs.\n\nClojure, as a GSoC mentoring organization, includes projects from all parts of the Clojure ecosystem, from IDE tooling to logic programming libraries.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Eclipse Public License 1.0 (EPL-1.0)",
+         "image_url":"//lh3.googleusercontent.com/vfI6hGusU-4QtTTgGpY5rDBDSadplG5Y_Hl7AvR4n4nDNYghCgWtJl3KU2FaJYD3Xo-9NACZMho4-j1oxqOjAsJcHETdIIg",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/ClojureGSoC",
+         "blog_url":"http://clojure-gsoc.org/",
+         "application_instructions":"# Contact info\n\n- Name\n- Location/time zone\n- E-mail\n- IRC name *optional*\n- Clojurians slack name *optional*\n- Twitter name *optional*\n\n# Project information\n\n- Title\n- Synopsis: 1-2 paragraph description of your project\n- Qualifications: Why can you do this project?\n- Community benefits: How would your project help the Clojure community?\n- Deliverables: What quantifiable results should your project produce?\n- Schedule: GSoC officially runs from 30 May–29 Aug, a period of 13 weeks.\n  Please create a detailed plan about what you hope to accomplish over this time, ideally in 1- to 2- week segments.\n\n# Other commitments\n\n- Does the GSoC conflict with exams at your university?\n- Do you have any other significant summer plans?\n- Are you applying to any other internships (outside of GSoC) or summer employment?\n\n# Other information\n\n- Why Clojure?\n- How did you hear about Clojure and GSoC?\n- Have you developed or contributed to open source projects, if so, which ones?\n- Are you applying as a student to another GSoC organization?",
+         "topic_tags":[
+            "programming language",
+            "development tools",
+            "compilers",
+            "functional programming",
+            "build systems"
+         ],
+         "technology_tags":[
+            "clojure",
+            "clojurescript",
+            "jvm",
+            "javascript",
+            "functional programming"
+         ],
+         "proposal_tags":[
+            "clojure",
+            "clojurescript",
+            "tooling",
+            "typed clojure(script)",
+            "web",
+            "mobile",
+            "node.js"
+         ],
+         "ideas_list":"http://clojure-gsoc.org/project-ideas.html",
+         "contact_method":"http://clojurians.net/",
+         "program_year":2017
+      },
+      {
+         "id":6540924424290304,
+         "name":"Cloud Native Computing Foundation (CNCF)",
+         "slug":"cloud-native-computing-foundation-cncf",
+         "website_url":"https://www.cncf.io/",
+         "category":"cloud",
+         "contact_email":"info@cncf.io",
+         "mailing_list":"https://www.cncf.io/community",
+         "irc_channel":"http://slack.cncf.io/",
+         "tagline":"The CNCF is a nonprofit committed to the development of cloud native technology",
+         "precis":"The CNCF is a open source nonprofit foundation committed to the development of cloud native technology and hosts projects such as Kubernetes, Prometheus and Fluentd.",
+         "description":"The Cloud Native Computing Foundation (CNCF) is a nonprofit organization committed to advancing the development of cloud native technology and services by creating a new set of common container technologies informed by technical merit and end user value, and inspired by Internet-scale computing. As a shared industry effort, CNCF members represent container and cloud technologies, online services, IT services and end user organizations focused on promoting and advancing the state of cloud native computing for the enterprise.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Apache License 2.0 (Apache-2.0)",
+         "image_url":"//lh3.googleusercontent.com/1u3B5mPomv4oWl45hy70YHuhtssyR_gAh5IaYK2dxjQ-SUon7_W4aGJH3P5tMyFiELu8m009xLjhTjuHgPBt_865zgcbrsfo",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/cloudnativefdn",
+         "blog_url":"https://www.cncf.io/newsroom/blog",
+         "application_instructions":"The instructions to apply can be found here: https://github.com/cncf/soc\n\nThey can also interact with the org admins and mentors there.\n\nStudents can also find project ideas here: https://docs.google.com/spreadsheets/d/1Dg8LhFt4ky-z1Fg16BNLd9m1tue3QnAHeCc9MPmUuDg/edit#gid=0",
+         "topic_tags":[
+            "cloud",
+            "cloud native",
+            "monitoring",
+            "logging",
+            "tracing"
+         ],
+         "technology_tags":[
+            "kubernetes",
+            "go",
+            "prometheus",
+            "fluentd",
+            "grpc"
+         ],
+         "proposal_tags":[
+            "new feature",
+            "kubernetes",
+            "prometheus",
+            "linkerd",
+            "opentracing",
+            "grpc",
+            "fluentd"
+         ],
+         "ideas_list":"https://github.com/cncf/soc",
+         "contact_method":"info@cncf.io",
+         "program_year":2017
+      },
+      {
+         "id":5427409970003968,
+         "name":"CloudCV",
+         "slug":"cloudcv",
+         "website_url":"http://cloudcv.org",
+         "category":"cloud",
+         "contact_email":"gsoc@cloudcv.org",
+         "mailing_list":"https://groups.google.com/forum/#!forum/cloudcv",
+         "irc_channel":"https://gitter.im/Cloud-CV",
+         "tagline":"Building platforms for reproducible AI research",
+         "precis":"CloudCV is a young open source platform to make AI research reproducible by making it easy for researchers to build, compare and share state-of-the-art AI algorithms with everyone.",
+         "description":"CloudCV is a young open source cloud platform  started in 2013 by students and faculty from Machine Learning and Perception Lab at Virginia Tech (now at Georgia Tech) with the aim to make AI research more reproducible. At CloudCV, we are building tools that enables researchers to build, compare and share start-of-the-algorithms. We believe that one shouldn’t have to be an AI expert to have access to cutting edge vision algorithms. Likewise, researchers shouldn’t have to worry about building a service around their deep learning models to showcase and share it with others.  \n\nCloudCV consists of three major platforms: \n\n**Origami** is a AI-as-a-service solution that allows researchers to easily convert their deep learning models into an online service that is widely accessible to everyone without the need to setup the infrastructure, resolve the dependencies, and build a web service around the deep learning model. By lowering the barrier to entry to latest AI algorithms, we provide developers, researchers and students the ability to access any model using a simple REST API call.\n\n**Fabrik** is an online collaborative platform to build, visualize and train deep learning models by a simple drag-and-drop approach. It allow researchers to collaboratively develop and debug models using a web GUI that allows importing, editing and exporting networks from widely popular frameworks like Caffe and Keras.\n\n**EvalAI** is an evaluation server that will host AI challenges like Visual Question Answering, Image Captioning. In recent years, it has become increasingly difficult to compare an algorithm solving a given task with other existing approaches. These comparisons suffer from minor differences in algorithm implementation, use of non-standard dataset splits and different evaluation metrics. By providing a central leaderboard and submission interface, we make it easier for researchers to reproduce the results mentioned in the paper and perform reliable & accurate quantitative analysis.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 3.0 (GPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/kL1VyMKkoJl04xEQV0yoQOfBXCpHUZgpZrC9Ta0Cq7PD6NwoGcXCNCeCz2IVyBgkXjxy9rrN_CjdLxsUXy0JV8M4HP0nfhY",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"",
+         "blog_url":"",
+         "application_instructions":"Follow these general steps to apply to our organization.\n\n**Join the CloudCV google groups / gitter channel and introduce yourself.**    \nhttps://gitter.im/Cloud-CV    \nhttps://groups.google.com/forum/#!forum/cloudcv\n\nNot only do we get to know you, but you can get feedback on project ideas and get help as you start working with our codebase. Don't hesitate to ask anything and participate in the discussion. This is your go-to destinations if you need help with anything, don't be afraid if you don't know git for example. We'll teach you everything that is needed, the only required thing from you is enthusiasm and willingness to learn new things. Also feel free to help fellow participants with their doubts.\n\n**Review our ideas page** to see if you find a project that is interesting to you.You can learn about each project, it's prerequisites, open issues and detailed instructions on how to contribute/ apply to this project idea here:  \nhttps://gsoc.cloudcv.org   \nhttps://github.com/Cloud-CV/GSoC-Ideas/issues\n\n**Start early on your application.** The students application require you to write a proposal for a project idea. You should follow the guidelines and application template here:  \nhttps://github.com/Cloud-CV/GSoC-Ideas/wiki/GSOC-2017-Proposal-Template  \n\n**We require that you have successfully submitted at-least one pull request** to one of the CloudCV repositories:  \nhttps://github.com/Cloud-CV  \nDetailed guide about the patch requirement can be found here:  \nhttps://github.com/Cloud-CV/GSoC-Ideas/wiki/Patch-Requirement",
+         "topic_tags":[
+            "artificial intelligence",
+            "machine learning",
+            "computer vision",
+            "web development",
+            "cloud computing"
+         ],
+         "technology_tags":[
+            " python",
+            "django",
+            "angularjs",
+            "reactjs",
+            " deep learning"
+         ],
+         "proposal_tags":[
+            "fabrik",
+            "evalai",
+            "origami",
+            "cloudcv_webapp"
+         ],
+         "ideas_list":"http://gsoc.cloudcv.org",
+         "contact_method":"gsoc@cloudcv.org",
+         "program_year":2017
+      },
+      {
+         "id":6234667528224768,
+         "name":"CMU Sphinx",
+         "slug":"cmu-sphinx",
+         "website_url":"http://cmusphinx.sourceforge.net/",
+         "category":"graphics",
+         "contact_email":"cmusphinx-gsoc@lists.sourceforge.net",
+         "mailing_list":"https://sourceforge.net/p/cmusphinx/mailman/",
+         "irc_channel":"http://cmusphinx.sourceforge.net/wiki/communicate",
+         "tagline":"Fast, Accurate, Flexible Open Source Speech Recognition",
+         "precis":"The CMU Sphinx project is a leading automatic speech recognition project in the open source world.",
+         "description":"Since being released as open source code in 1999, CMU Sphinx provides a platform for building speech recognition applications. It's used in desktop control software, telephony platforms, intelligent houses, computer-assisted language learning tools, information retrieval and mobile applications. Traditionally, CMUSphinx provides support for low-resource and underdeveloped languages.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"BSD 2-Clause \"Simplified\" or \"FreeBSD\" License (BSD-2-Clause)",
+         "image_url":"//lh3.googleusercontent.com/CCBrc1-aLO2ql0N7GT0tyoIMzj3JjYCyJDJdee2fFyWT1JJfFZ0yHqJ71o9wMYupC15MD_6SJX4kmg7NifrTuXQfFWZ-ztQV",
+         "image_bg_color":"ffffff",
+         "gplus_url":"",
+         "twitter_url":"",
+         "blog_url":"http://cmusphinx.sourceforge.net/",
+         "application_instructions":"Please see http://cmusphinx.sourceforge.net/wiki/summerofcodestudents\r\nSee also http://cmusphinx.sourceforge.net/wiki/develop",
+         "topic_tags":[
+            "speech recognition",
+            "user interface",
+            "real time",
+            "education",
+            "pronunciation"
+         ],
+         "technology_tags":[
+            "c",
+            "cross-platform",
+            "hidden markov models",
+            "javascript ",
+            " python"
+         ],
+         "proposal_tags":[
+            "new feature",
+            "optimization",
+            "pronunciation training",
+            "diphones",
+            "ros",
+            "acoustic models",
+            "wiktionary",
+            "speaker verification",
+            "cnn-lstm",
+            "development support"
+         ],
+         "ideas_list":"http://cmusphinx.sourceforge.net/wiki/projectideas",
+         "contact_method":"cmusphinx-gsoc@lists.sourceforge.net",
+         "program_year":2017
+      },
+      {
+         "id":6598177990901760,
+         "name":"coala",
+         "slug":"coala",
+         "website_url":"https://coala.io",
+         "category":"languages",
+         "contact_email":null,
+         "mailing_list":"https://github.com/coala/coala/wiki/Mailing-Lists",
+         "irc_channel":"http://coala.io/chat",
+         "tagline":"Linting and Fixing Code for All Languages",
+         "precis":"coala provides a common command-line interface for linting and fixing all your code, regardless of the programming languages you use.",
+         "description":"# coala: Language Independent Code Analysis\n\ncoala provides a common command-line interface for linting and fixing all your code, regardless of the programming languages you use. It allows users to analyse projects containing multiple languages with just one tool, using just one configuration and seeing just one user interface.\n\n## How does it work?\n\nWith coala, you create just one configuration file. It can be separated into sections that run independently to fit different scenarios. Using different bears (which are coala's modules) users can work with a wide range of existing tools, wrapped by bears, and native analysis routines. This enables users to check their python code for pep8 conformity, calculate complexity for their java code,  find code duplicates in the C code and check the documentation for spelling errors, while making sure the commits follow the set guidelines.\nAll controlled via one configuration file, run with one command and served in the same user interface.\n\n## For Users\n\ncoala offers a unified static code analysis suite. It can be used as a simple standalone testing suite, pre-commit hook and CI tool.\nBesides the normal user interactive mode, there is a non interactive mode for CI, a html output mode, to view results in the browser, and JSON output if you want to integrate coala into your own system. If implemented, coala even offers to automatically fix problems.\n\n## For Developers\n\nYou can easily write your own bears. coala is written with ease of extension in mind. That means: no big boilerplate, just write one small object with one routine, add the parameters you like and see how coala automates the organisation of settings, user interaction and execution parallelisation.\n\n## For Newcomers\n\ncoala offers a great newcomer experience with an in depth step by step guide for your first contribution, extensive documentation of the whole workflow and fast and easy communication over the gitter channel.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Affero GNU Public License",
+         "image_url":"//lh3.googleusercontent.com/WbQZ28FFe1fjF8nl3n3s7WaIA47dnpDpTdFRba3Y9iW34XtHL2PQanntLbUdmADFI_rjGwb6xX6ABMqLQtthAgOJW71ZFsA",
+         "image_bg_color":"ffffff",
+         "gplus_url":"",
+         "twitter_url":"https://twitter.com/coala_analyzer",
+         "blog_url":"https://blog.coala.io",
+         "application_instructions":"Please read our FAQ at http://projects.coala.io/#/faq carefully and get started with our newcomer tutorial at https://coala.io/newcomer as well as being active on https://coala.io/chat.",
+         "topic_tags":[
+            "code analysis"
+         ],
+         "technology_tags":[
+            "python"
+         ],
+         "proposal_tags":[
+            "vulture",
+            "rstcheck",
+            "jetbrains",
+            "coala",
+            "gitmate"
+         ],
+         "ideas_list":"https://projects.coala.io/",
+         "contact_method":"http://coala.io/chat",
+         "program_year":2017
+      },
+      {
+         "id":5710059888705536,
+         "name":"Computational Biology @ University of Nebraska-Lincoln",
+         "slug":"computational-biology-university-of-nebraska-lincoln",
+         "website_url":"http://helikarlab.org",
+         "category":"science_and_medicine",
+         "contact_email":"helikarlab-gsoc@googlegroups.com",
+         "mailing_list":null,
+         "irc_channel":null,
+         "tagline":"Development of software technologies for biomedical research and applications.",
+         "precis":"Our organization develops tools for bioinformatics and computational biology research. Our goal is to further knowledge in health through data visualization and analysis.",
+         "description":"Our group works at the interface of computer science, biology, and mathematics by applying computational approaches to the seas of data in biomedical research. One of the main interests of our group is the development of technologies to make large-scale computational approaches accessible and more collaborative to a wider scientific audience. Our recent web-based technology, Cell Collective, enables scientists from across the globe to construct and simulate large-scale computational models of biological systems in a highly collaborative fashion. This software enables biomedical researchers to study the dynamics of biological systems (e.g., cells) under both healthy and diseased conditions. Cell Collective provides a unique environment for real-time, interactive simulations to enable users to analyze and visualize the multitude of effects a disease-related malfunction can have on the rest of the cell.\n\nOther technologies developed by our organization include cost-effective mobile disease monitoring devices, interactive on-line tissue sample analysis, an interactive statistical analysis platform for teaching life sciences students about data analysis, etc.\n\nOur group consists of computer scientists, biochemists, biologists, bioinformaticians, as well as mathematicians, creating an unique environment of diverse skills, integrated by a single interest point.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 3.0 (GPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/vqKL7e-vMwLTNy63_E5IQrqBLJ9b2opTDWpB1srukLt7gEMyAZunIJ1Rt6eveHBdQAgN1oA_l4LgKZFK6bCPR3j8a3UuWcA",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/biocollective",
+         "blog_url":null,
+         "application_instructions":"(Also available here: https://goo.gl/sR2tnN)\n\nAs part of the application process, we would like to know who you are and how you think. Incorporate the following into your application:\n\n1. Your information\n1a. Name, email, and website (optional)\n\n2. Brief background: education and relevant work experience\n\n3. Your programming interests and strengths\n3a. What are your languages of choice?\n3b. Any prior experience with open source development?\n3c. What do you want to learn this summer?\n\n4. Your interest and background in biology, bioinformatics, or computational biology.\n4a. Any prior exposure to biology or bioinformatics? (Not required but helpful)\n4b. Any interest in learning a bit of biology this summer?\n\n5. Your ideas for a project (an original idea or one expanded from our Ideas Page)\n5a. Provide as much detail as possible\n5b. Strong applicants include an implementation plan and timeline (hint!)\n5c. Refer to and link to other projects or products that illustrate your ideas\n5d. Identify possible hurdles and questions that will require more research/planning\n\n6. Your commitment this summer\n6a. When do your classes and exams finish?\n6b. Do you have any other school-related activities scheduled during the coding period?\n6c. Do you have a full- or part-time job or internship this summer?\n6d. How many hours per week do have available for GSoC?\n\n7. Submit your application through the GSoC Site as explained here: https://developers.google.com/open-source/gsoc/resources/manual",
+         "topic_tags":[
+            "computational biology",
+            "bioinformatics",
+            "network biology",
+            "systems biology",
+            "image analysis"
+         ],
+         "technology_tags":[
+            "javascript",
+            "react",
+            "java",
+            "webgl",
+            "mysql"
+         ],
+         "proposal_tags":[
+            "bioinformatics",
+            "computational biology",
+            "network biology",
+            "systems biology"
+         ],
+         "ideas_list":"http://helikarlab.org/GSoC2017.html",
+         "contact_method":"helikarlab-gsoc@googlegroups.com",
+         "program_year":2017
+      },
+      {
+         "id":5092439766335488,
+         "name":"Conversations.im",
+         "slug":"conversationsim",
+         "website_url":"https://conversations.im",
+         "category":"end_user_applications",
+         "contact_email":"daniel@siacs.eu",
+         "mailing_list":null,
+         "irc_channel":"https://conversations.im/j/gsoc@conference.conversations.im",
+         "tagline":"Federated, end-to-end encrypted instant messaging based on XMPP/OMEMO",
+         "precis":"Conversations started out as an easy to use Jabber client for the Android platform but quickly became an umbrella project for all sorts of UX improvements to the XMPP ecosystem.",
+         "description":"Conversations.im originally started out as an easy to use Jabber/XMPP client for the Android platform specifically targeted at end users and people who are new to XMPP. To achieve this end, a big priority of the project is great UX. Being an XMPP client, Conversations aims to be fully compatible with XMPP clients on other platforms such as Gajim on Window & Linux as well as ChatSecure on iOS.\n\nThe Conversations project is very involved in driving progress in the XMPP-based instant messaging sphere. We make use of bleeding-edge protocol extensions where available, but more than that, we are also actively developing novel approaches to yet unsolved problems. We are not afraid to try new things and our active community is always willing to try out prototype implementations. Furthermore, members of the Conversations team are also part of the XMPP Standards Foundation to standardize newly developed approaches for modern, mobile friendly XMPP.\nOne very successful example of such innovation is OMEMO encryption, which is now supported by 5+ popular XMPP clients and was originally developed for Conversations as a GSoC project.\n\nOver time, the Conversations project also developed various tools to make life easier for end users and also make the XMPP world more approachable for new comers. For example we developed the XMPP Compliance Tester that tests public servers for compatibility with the latest XMPP extensions to help users [pick a good server](https://gultsch.de/compliance_ranked.html).",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 3.0 (GPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/JK1B_AT1W-F-Nj0DTOaR6iIhLpa3cO5WlOfSibVgiJq9DMYtk-XdtESm3EiZiOB1hNbGYzHF00cerv5SbD95zXPfs5kYYoTP",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":null,
+         "blog_url":null,
+         "application_instructions":"Applicants must create an XMPP account to communicate with our team and engage with the community. Applicants are also encouraged to use Conversations as their XMPP client to get an idea of the look and feel of our software.\nFrom a technical standpoint applicants are highly encouraged to implement a small task from our issue tracker to demonstrate that they are familiar with the code base and have the ability to build the project. Those teaser tasks are marked with a [gsoc-teaser](https://github.com/siacs/Conversations/labels/gsoc-teaser) label on Github.",
+         "topic_tags":[
+            "instant messaging",
+            "real time",
+            "usabilty",
+            "ui",
+            "ux"
+         ],
+         "technology_tags":[
+            "xmpp",
+            "java",
+            "android",
+            "javafx",
+            "python"
+         ],
+         "proposal_tags":[
+            "new feature",
+            "port",
+            "xmpp extension"
+         ],
+         "ideas_list":"https://conversations.im/gsoc.html",
+         "contact_method":"daniel@siacs.eu",
+         "program_year":2017
+      },
+      {
+         "id":5455007710183424,
+         "name":"Copyleft Games",
+         "slug":"copyleft-games",
+         "website_url":"https://www.copyleftgames.org/",
+         "category":"graphics",
+         "contact_email":null,
+         "mailing_list":null,
+         "irc_channel":"https://gsoc.copyleftgames.org/",
+         "tagline":"Game libraries, frameworks, and development toolkits",
+         "precis":"We produce libraries, engines, frameworks, and development tools for producing games, especially as part of educational environments.",
+         "description":"Many of us got our start in programming with game development, we strive to keep this tradition alive for the next generation.\n\nPySoy\n=====\nThis is our flagship 3d game engine. Its designed to allow developers to instantly see the result of code as they write it in Python. The engine has been ported to Android and RaspberryPi, and has been used in classrooms around the world, but still needs quite a bit of work for mainstream acceptance.\n\nVoxGL\n=====\nThis is an experimental new \"voxel\" engine, similar to Minecraft, designed to run in the browser.\n\nLightMelody\n===========\nThis is a fork of the LoudMouth XMPP client library which we are adapting for game networking.\n\nplayerd\n=======\nThis is an experimental cross-platform input management service. The end goal is to give games a high-level abstraction of input that can be supported by a wide variety of devices.\n\nWebchat\n=======\nStarted as part of our Google Code-in program, our javascript-based webchat needs some major work to bring it up to modern standards. We would like to spawn this into a separate project usable as the basis for game websites and our own project websites.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 3.0 (GPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/GneE1Q-h9bTBvNwPgLYSypwTNnH_kUGM1qPEUsYyTEh7yd01xaTouZYdBNTUArwpEzkYQFYDgqkrJVFU19K2exAYri_FKa8",
+         "image_bg_color":null,
+         "gplus_url":"https://plus.google.com/+CopyleftGamesOrg",
+         "twitter_url":null,
+         "blog_url":null,
+         "application_instructions":"Introduction\n============\nTell us a bit about yourself and your interest in software freedom.\n\nWe seek out and welcome people from diverse communities to participate in our organization, both as part of Google Summer of Code and as volunteers. If you are part of an under-represented minority in the FOSS community you may choose to disclose this as it will weigh favorably during the selection process.\n\nPlease do not include any of the following details: Your school, year, area of study, awards, or work history. These factors do not affect our decision and are best left out.\n\nSummary\n=======\nIntroduce your project in 1-2 paragraphs. Your full proposal should be hosted elsewhere.\n\nTimeline\n========\nYour timeline should include the following three milestones: Start, Midterm, and Final. For \"Start\" you should include one or more small projects, ideally related to your proposed project, to get your feet wet during the community bonding period.\n\nAvailability\n============\nDisclose any potential conflicts to your ability to participate in Google Summer of Code, eg internships you've applied to, upcoming dates for exams, or work obligations. These are not necessarily disqualifications but will require further discussion.\n\nContact Information\n===================\nPlease include your email address, XMPP address, timezone, and a phone number that we can reach you at.",
+         "topic_tags":[
+            "graphics",
+            "networking",
+            "web",
+            "education"
+         ],
+         "technology_tags":[
+            "python",
+            "opengl",
+            "javascript",
+            "c",
+            "xmpp"
+         ],
+         "proposal_tags":[
+            "pysoy",
+            "lightmelody",
+            "voxgl",
+            "playerd",
+            "webchat",
+            "other"
+         ],
+         "ideas_list":"https://gsoc.copyleftgames.org/",
+         "contact_method":"https://gsoc.copyleftgames.org/",
+         "program_year":2017
+      },
+      {
+         "id":6256528802709504,
+         "name":"DBpedia",
+         "slug":"dbpediaspotlight",
+         "website_url":"http://dbpedia.org",
+         "category":"data_and_databases",
+         "contact_email":"dbpedia-developers@lists.sourceforge.net",
+         "mailing_list":"http://wiki.dbpedia.org/get-involved",
+         "irc_channel":"http://wiki.dbpedia.org/gsoc2017",
+         "tagline":"a Large, Multilingual, Semantic Knowledge Graph",
+         "precis":"The DBpedia Extraction Framework builds knowledge bases with information from Wikipedia, Wikimedia Commons, Wikidata.\nIt serves as a central hub for the Web of data.",
+         "description":"*Almost every major Web company has now announced its work on a Knowledge Graph: Google’s Knowledge Graph, Yahoo!’s Web of Objects, Microsoft's Satori Graph, Walmart Lab’s Social Genome, and Facebook’s Entity Graph, just to cite the biggest ones.*\n\n# DBpedia\n**DBpedia** is a community-run project that has been working on a **free**, **open-source** Knowledge Graph **since 2006**!\n\nDBpedia currently describes **38.3 million** *“things”* of **685** different *“types”* in **128** languages, with over **4 billion** *“facts”*. It is interlinked to many other datasets. The knowledge in DBpedia is exposed through a technology stack called *Linked Data*, which has been revolutionizing the way applications interact with the Web: with Linked Data technologies, all APIs are interconnected via standard Web protocols and languages.\n\n# The Web of data\nSuch *Web of data* provides useful knowledge that can complement the *Web of documents* in many ways. See, for instance, how bloggers tag their posts or assign them to categories in order to organize and interconnect their blog posts. This is a very simple way to connect unstructured text to a structure (hierarchy of tags). For more advanced examples, see how **BBC** has created the *World Cup 2010 website* by interconnecting textual content and facts from their knowledge base.\n\nOr, more recently, did you see that **IBM's Watson used DBpedia data to win the Jeopardy challenge**?\n\n# DBpedia Spotlight\n\n**DBpedia Spotlight** is an open source text annotation tool that connects text to Linked Data by marking names of things in text (we call that *spotting*) and selecting between multiple interpretations of these names (we call that *disambiguation*). For example, `Washington` can be interpreted in more than 50 ways including a state, a government or a person. You can already imagine that this is not a trivial task, especially when we're talking about millions of things and hundreds of types.\n\n# We are regularly growing our community through GSoC and can deliver more and more opportunities to you.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Apache License 2.0 (Apache-2.0)",
+         "image_url":"//lh3.googleusercontent.com/MbAauPhNexXIa2AbDR3udLm0cWJVr_qhds1xMkuLuaoXQju7ffB2I2r433-GVq4JRAYnFCRuUI36Dccgdn8dhWLzo0nHzA",
+         "image_bg_color":null,
+         "gplus_url":"https://plus.google.com/communities/106164282465567855607",
+         "twitter_url":"https://twitter.com/dbpedia",
+         "blog_url":"http://blog.dbpedia.org",
+         "application_instructions":"All the details here:\n\nhttp://wiki.dbpedia.org/gsoc2017",
+         "topic_tags":[
+            "natural language processing",
+            "big data",
+            "semantic web",
+            "data science",
+            "knowledge extraction"
+         ],
+         "technology_tags":[
+            " java",
+            "scala",
+            "graph",
+            "nosql",
+            "rdf"
+         ],
+         "proposal_tags":[
+            "nlp",
+            "bot",
+            "entity classification",
+            "extraction"
+         ],
+         "ideas_list":"http://wiki.dbpedia.org/ideas/ideas/scope:all/sort:activity-desc/tags:gsoc17",
+         "contact_method":"dbpedia-developers@lists.sourceforge.net",
+         "program_year":2017
+      },
+      {
+         "id":6057085084106752,
+         "name":"Discourse",
+         "slug":"discourse",
+         "website_url":"http://www.discourse.org/",
+         "category":"social_communications",
+         "contact_email":"team@discourse.org",
+         "mailing_list":"https://github.com/discourse/discourse/wiki/Contact",
+         "irc_channel":"https://github.com/discourse/discourse/wiki/Contact",
+         "tagline":"Civilized discussion for your community.",
+         "precis":"Discourse is an open source messaging board, co-founded by Jeff Atwood, the former co-founder of StackOverflow. We have 20k+ stars on GitHub and thousands of live forums.",
+         "description":"### What is Discourse?\n\nDiscourse is the 100% open source discussion platform built for the next decade of the Internet. It works as:\n\n- a mailing list\n- a discussion forum\n- a long-form chat room\n\n### What’s different about it?\n\nDiscourse is a from-scratch reboot, an attempt to reimagine what a modern Internet discussion platform should be today, in a world of ubiquitous smartphones, tablets, Facebook, and Twitter.\n\n### We’re civilized.\n\nOur unique \"trust levels\" system means that the community builds a natural immune system to defend itself from trolls, bad actors, and spammers — and the most engaged community members can assist in the governance of their community. We put a trash can on every street corner with a simple, low-friction flagging system. Positive behaviors are encouraged through likes and badges. We gently, constantly educate members in a just-in-time manner on the universal rules of civilized discourse.\n\n### Uncompromisingly open source.\n\nThere is only one version of Discourse – the awesome open source version. There’s no super secret special paid commercial version with better or more complete features. Because Discourse is 100% open source, now and forever, it belongs to you as much as it belongs to us. That’s how community works.\n\nEverything that most communities would want is included out of the box; a giant collection of complex plugins should not be required to have a great experience.\n\n### Further reading:\n\n- https://www.discourse.org/faq/\n- http://www.discourse.org/faq/customers/\n- https://blog.discourse.org/2017/02/discourses-fourth-birthday/\n- https://blog.discourse.org/2017/01/discourse-1-7-released/\n- https://meta.discourse.org/",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 2.0 (GPL-2.0)",
+         "image_url":"//lh3.googleusercontent.com/71wwarEm9iegPe-Eo08gEqcB9YthMDXXk1rogWwFoCXmqQVJTlLnKPrcNherWfX5L9nVvdowbWx3wnls5BCm50xrs_D55egb",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/discourse",
+         "blog_url":"http://blog.discourse.org",
+         "application_instructions":"*   **Are you joining for the right reasons?** Read “[Reasons why you shouldn’t hack on open source projects](http://blog.codecombat.com/reasons-why-you-shouldnt-hack-on-open-source-projects)” AND \"[The ideal GSoC applicant](http://blog.discourse.org/2016/03/the-ideal-gsoc-applicant/)\" carefully. If you’re not passionate about what we’re doing, the work will suffer.\n\n*   **Let’s avoid rookie mistakes**. Read “[DOs and DON’Ts of GSoC (for students)](http://google-opensource.blogspot.no/2011/03/dos-and-donts-of-google-summer-of-code.html \"DOs and DON\")“.\n\n*   **What’s your idea?** Decide which [idea(s)](https://github.com/discourse/discourse/wiki/GSoC-2016-Ideas-List) you want to work on. Feel free to `@mention` the username of relevant mentors listed in the ideas list to get their attention.\n\n*   **Orientate yourself.** Have you contributed to Discourse before, made a pull request or a plugin? Some projects demand greater expertise than others. In any case, make sure that you have a firm understanding of key Discourse concepts before you apply to any Discourse project. Browse the source code, especially the parts relevant to your project idea(s), and be sure you’ll be capable of integrating your idea into the existing project.\n\n*   **Familiarise yourself with Git & GitHub** You should be familiar with common Git workflows before GSoC starts.\n\nFor further instructions, including an application template, please see:\nhttps://github.com/discourse/discourse/wiki/GSoC-Application-Guide",
+         "topic_tags":[
+            "asynchronous",
+            "forum",
+            "community",
+            " real time",
+            "web development"
+         ],
+         "technology_tags":[
+            "ruby on rails",
+            "ember",
+            " ruby",
+            "javascipt",
+            "html/css"
+         ],
+         "proposal_tags":[
+            "plugin",
+            "core feature",
+            "enhancement"
+         ],
+         "ideas_list":"https://github.com/discourse/discourse/wiki/Summer-of-Code-2017-Ideas-List",
+         "contact_method":"team@discourse.org",
+         "program_year":2017
+      },
+      {
+         "id":5855739005370368,
+         "name":"Django Software Foundation",
+         "slug":"django-software-foundation",
+         "website_url":"https://www.djangoproject.com",
+         "category":"web",
+         "contact_email":null,
+         "mailing_list":"https://docs.djangoproject.com/en/dev/internals/mailing-lists/#django-developers",
+         "irc_channel":"https://docs.djangoproject.com/en/dev/internals/contributing/new-contributors/",
+         "tagline":"The web framework for perfectionists with deadlines.",
+         "precis":"Django is a high-level Python Web framework originally designed to build high-performing, elegant Web applications quickly.",
+         "description":"Django is a high-level Python Web framework originally developed at the Lawrence-Journal World. Django was designed to handle two challenges: the intensive deadlines of a newsroom and the stringent requirements of the experienced Web developers who wrote it. It lets you build high-performing, elegant Web applications quickly.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"BSD 3-Clause \"New\" or \"Revised\" License (BSD-3-Clause)",
+         "image_url":"//lh3.googleusercontent.com/twQq4nkyOWdVNpbNqStJ3KQQ1C_e12eo1NtNKnhyE7F8zFQzQ0V4O2lp2DAUEUXUEQkslTbuYuAe2i7HxBeZ-ehU_-FbaQ",
+         "image_bg_color":"092e20",
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/djangoproject/",
+         "blog_url":"https://www.djangoproject.com/weblog/",
+         "application_instructions":"We'll be looking for a few things in your application:.\n\n* You'll need to have a concrete task in mind along with a solid idea of what will constitute \"success\" (you tell us).\n* If your proposal is a single large feature, library or site, you'll need to present a detailed design specification. This proposal should be posted to ​django-developers, where it can be refined until it is accepted by the developer community.\n* We'll want to know a bit about you -- links to previous work are great, if any. If you're proposing something ambitious, you'll need to convince us that you're up to the task.\n* You'll also need to provide us with a schedule, including a detailed work breakdown and major milestones so your mentor can know if and when to nag you :)\n\nHere's an example of an accepted proposal from a previous year:\n​https://gist.github.com/chrismedrela/82cbda8d2a78a280a129\n\nWhen you contribute code, you will be expected to adhere to the same contribution guidelines as any other code contributor. This means you will be expected to provide extensive tests and documentation for any feature you add, you will be expected to participate in discussion on ​django-developers when your topic of interest is raised. If you're not already familiar with ​Django's contribution guidelines, now would be a good time to read them - even if you're not applying to work on Django core directly, we'll still want the same level of contribution.",
+         "topic_tags":[
+            "web",
+            "web development"
+         ],
+         "technology_tags":[
+            "python",
+            "django"
+         ],
+         "proposal_tags":[
+            "new feature",
+            "optimization"
+         ],
+         "ideas_list":"http://code.djangoproject.com/wiki/SummerOfCode2017",
+         "contact_method":"https://docs.djangoproject.com/en/dev/internals/contributing/new-contributors/",
+         "program_year":2017
+      },
+      {
+         "id":5186660074520576,
+         "name":"Drupal",
+         "slug":"drupal",
+         "website_url":"https://www.drupal.org/",
+         "category":"web",
+         "contact_email":"lechleider.matthew@gmail.com",
+         "mailing_list":"https://groups.drupal.org/google-summer-code",
+         "irc_channel":"http://drupal.org/irc#drupal-google",
+         "tagline":"Drupal is a Free, Open, Modular CMS written in PHP. Let's make something amazing",
+         "precis":"Drupal is an open source content mgmt platform powering millions of sites and app. It’s built, used, and supported by an active and diverse community of people around the world.",
+         "description":"Drupal is content management software. It's used to make many of the websites and applications you use every day. Drupal has great standard features, like easy content authoring, reliable performance, and excellent security. But what sets it apart is its flexibility; modularity is one of its core principles. Its tools help you build the versatile, structured content that dynamic web experiences need. It's also a great choice for creating integrated digital frameworks. You can extend it with any one, or many, of thousands of add-ons. Modules expand Drupal's functionality. Themes let you customize your content's presentation. Distributions are packaged Drupal bundles you can use as starter-kits. Mix and match these components to enhance Drupal's core abilities. Or, integrate Drupal with external services and other applications in your infrastructure. No other content management software is this powerful and scalable. The Drupal project is open source software. Anyone can download, use, work on, and share it with others. It's built on principles like collaboration, globalism, and innovation. It's distributed under the terms of the GNU (GPL). There are no licensing fees, ever. Drupal will always be free. The Drupal community is one of the largest open source communities in the world. We're more than 1,000,000 passionate developers, designers, trainers, strategists, coordinators, editors, and sponsors working together. We build Drupal, provide support, create documentation, share networking opportunities, and more. Our shared commitment to the open source spirit pushes the Drupal project forward. New members are always welcome. Drupal 8 is the biggest update in Drupal's history. Creating content is easier. Every built-in theme is responsively designed. It's available in 100 languages, and its integration tools make it a great hub for complex ecosystems. More than 4,500 people, companies, and organizations contributed their time, experience, and imagination.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 2.0 (GPL-2.0)",
+         "image_url":"//lh3.googleusercontent.com/0QdYdqprYNxS-9BI8F8kAEU0q99jMqKnhuE-2bq2TdrDK-P5bcrZnBb7fumow6WG47QHSF1L18EkpuIMaNvgO-81rJtzIA",
+         "image_bg_color":null,
+         "gplus_url":"https://plus.google.com/113325464728592995596",
+         "twitter_url":"https://twitter.com/drupal",
+         "blog_url":"https://www.drupal.org/planet",
+         "application_instructions":"Welcome, GSoC students! Please read Drupal's getting started guide for students @ https://www.drupal.org/node/2415225 completely which will provide you with all the necessary information before applying. You should join Drupal's GSoC group @ https://groups.drupal.org/google-summer-code and add your name under the \"Interested Students\" section of our Task Organization Wiki @ https://groups.drupal.org/node/515848. Don't hesitate to get in touch with us if you have any questions. If you wish to chat with us in real-time, join our IRC channel #drupal-google @Freenode. Remember, \"don't ask to ask\". All students are required to complete Drupal Ladder for GSoC students @ http://drupalladder.org/ladder/47217ef7-9bf5-4c7f-926f-aeee247aac78 which is a step-by-step guide designed to give students an introduction to Drupal. All applications must follow Drupal's application template @ https://groups.drupal.org/node/411293. If you wish to look at some of the sample successful applications from the previous years, you can find them @ https://groups.drupal.org/node/459223. But remember that these are provided to be used merely as inspiration material, and not resources to copy from.",
+         "topic_tags":[
+            "web",
+            " web development",
+            " content management",
+            " object-oriented",
+            " cms"
+         ],
+         "technology_tags":[
+            "php",
+            " symfony",
+            " sql",
+            " javascript",
+            " drupal 8"
+         ],
+         "proposal_tags":[
+            "drupal 8 port",
+            "new module",
+            "new features",
+            "migration",
+            "module port"
+         ],
+         "ideas_list":"https://groups.drupal.org/node/515848",
+         "contact_method":"lechleider.matthew@gmail.com",
+         "program_year":2017
+      },
+      {
+         "id":4901344189087744,
+         "name":"Eclipse Vert.x",
+         "slug":"eclipse-vertx",
+         "website_url":"http://vertx.io",
+         "category":"languages",
+         "contact_email":"vertx-enquiries@googlegroups.com",
+         "mailing_list":"http://vertx.io/community/",
+         "irc_channel":"http://vertx.io/community/",
+         "tagline":"Eclipse Vert.x is a tool-kit for building reactive applications on the JVM",
+         "precis":"Vert.x is a tool-kit for building reactive applications on the JVM.",
+         "description":"Vert.x is a polyglot event-driven application framework that runs on the Java Virtual Machine.\n\nThe application framework includes these features:\n\n* Polyglot. Application components can be written in Java, JavaScript, Groovy, Ruby, Ceylon.\n* Simple concurrency model. All code is single threaded, freeing from the hassle of multi-threaded programming.\n* Simple, asynchronous programming model for writing truly scalable non-blocking applications.\n* Distributed event bus that spans the client and server side. The event bus even penetrates into in-browser JavaScript allowing to create so-called real-time web applications.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"Apache License 2.0 (Apache-2.0)",
+         "image_url":"//lh3.googleusercontent.com/3JVEeOFDKBIQD0TnTpCiOSaDJyuakwEPbRzaNAo2HH0NOfZBJRqgTSthEBzicuoK2xHT3ywIWPmn6oQMHOWjH3EzcJ5IJ_E",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/vertx_project",
+         "blog_url":"http://vertx.io/blog",
+         "application_instructions":"If you are interested in working with the Eclipse Vert.x organization, please send a mail to vertx-enquiries@googlegroups.com.\n\nTo submit your proposal, use the Eclipse Vert.x organisation. Don't forget to read the tips at the end of the idea list page.\n\nIf you have questions, feel free to chat with us on IRC (freenode server, #vertx channel).",
+         "topic_tags":[
+            "reactive",
+            "unopionated",
+            "polyglot",
+            "distributed",
+            "high performance computing"
+         ],
+         "technology_tags":[
+            "java",
+            "reactive extensions",
+            "kotlin",
+            "microservices",
+            "event-loop"
+         ],
+         "proposal_tags":[
+            "devops",
+            "web",
+            "reative programing",
+            "polyglot",
+            "data clients",
+            "http2",
+            "java9",
+            "security",
+            "performance",
+            "distributed tracing"
+         ],
+         "ideas_list":"http://vertx.io/gsoc/",
+         "contact_method":"vertx-enquiries@googlegroups.com",
+         "program_year":2017
+      },
+      {
+         "id":6174333933191168,
+         "name":"Elm Software Foundation",
+         "slug":"elm-software-foundation",
+         "website_url":"http://elm-lang.org/",
+         "category":"languages",
+         "contact_email":"info@elm-lang.org",
+         "mailing_list":"https://groups.google.com/forum/#!forum/elm-discuss",
+         "irc_channel":"http://elmlang.herokuapp.com/",
+         "tagline":"A delightful functional language for reliable webapps.",
+         "precis":"Elm is a functional language that compiles to JavaScript, competing with projects like React. Elm has a very strong emphasis on simplicity, ease-of-use, and quality tooling.",
+         "description":"Elm is a functional language that compiles to JavaScript. It competes with projects like React as a tool for creating websites and web apps. Elm has a very strong emphasis on simplicity, ease-of-use, and quality tooling.\n\nThe overall goal is to combine:\n\n  - A devotion to communication, design, and user experience.\n  - Strong theoretical foundations.\n\nExamples of these goals in practice include the following.\n\n\n# No Runtime Exceptions\n\nUnlike hand-written JavaScript, Elm code does not produce runtime exceptions in practice. Instead, Elm uses type inference to detect problems during compilation and give [friendly hints](http://elm-lang.org/blog/compilers-as-assistants). This way problems never make it to your users. NoRedInk has 90k+ lines of Elm, and after more than a year in production, it still has not produced a single runtime exception.\n\n# Great Performance\n\nElm has its own virtual DOM implementation, designed for simplicity and speed. All values are immutable in Elm, and [the benchmarks](http://elm-lang.org/blog/blazing-fast-html-round-two) show that this helps us generate particularly fast JavaScript code.\n\n# Enforced Semantic Versioning\n\nElm can detect all API changes automatically thanks to its type system. We use that information to force everything in [our package catalog](http://package.elm-lang.org) to follow [semantic versioning](https://github.com/elm-lang/elm-package/#version-rules) precisely. No more surprises in PATCH releases!",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"BSD 3-Clause \"New\" or \"Revised\" License (BSD-3-Clause)",
+         "image_url":"//lh3.googleusercontent.com/LxEcA2k7Z8znbn0ArrgSjSHuw1U-UWT-rQJAELzF30MnPaN2mGlBhBzRgGoA2nBsr83Q87d7UAWKlVRMToQ3L3QoMoeJYTs",
+         "image_bg_color":null,
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/elmlang",
+         "blog_url":"http://elm-lang.org/blog",
+         "application_instructions":"We prefer technical projects with significant learning opportunities.\n\n\n# Topic\n\n**From a community and social perspective**, the best projects will result in:\n\n  - You learn a lot through your project.\n  - We will learn alongside you through mentorship.\n  - All this new knowledge is shared with the community!\n\n\n**From a technical perspective**, [this list](https://github.com/elm-lang/projects/) suggests many projects, but for GSoC, we strongly prefer projects that explore a deep well of existing knowledge. For example:\n\n  - Optimizations like monomorphization and escape analysis\n  - Editor tooling like [elmjutsu](https://atom.io/packages/elmjutsu)\n  - Pushing the state of WebGL in Elm\n\nYou can spend a whole career in each of these topics, and there are significant technical and conceptual challenges for beginners and experts alike. The documentation generated alone will be extremely valuable!\n\n\n# Details\n\nYou should share the following information:\n\n  - What have you done with Elm? How are you involved with the community?\n  - What general project categories are you most interested in?\n  - Why are you interested in those categories?\n  - Outline (at a high level) one or two specific projects that you would be excited to work on.\n\nYou can also optionally share:\n\n  - Personal Projects, not necessarily related to what you want to learn right now!\n  - Writing samples: blog posts, github issue, mailing list exchanges, etc.\n\nDo not worry if you skip these. Part of the goal of this program is to build these skills!",
+         "topic_tags":[
+            "functional programming",
+            "compilers",
+            "web applications",
+            "programming languages",
+            "user interface"
+         ],
+         "technology_tags":[
+            "elm",
+            "javascript",
+            "haskell"
+         ],
+         "proposal_tags":[
+            "webgl",
+            "compiler",
+            "editor tooling"
+         ],
+         "ideas_list":"https://github.com/elm-lang/projects/",
+         "contact_method":"info@elm-lang.org",
+         "program_year":2017
+      },
+      {
+         "id":6574993514168320,
+         "name":"Environmental Data And Governance Initiative",
+         "slug":"environmental-data-and-governance-initiative",
+         "website_url":"https://envirodatagov.org/",
+         "category":"data_and_databases",
+         "contact_email":"EnviroDGI@protonmail.com",
+         "mailing_list":"",
+         "irc_channel":"https://archivers-slack.herokuapp.com/",
+         "tagline":"International network addressing threats to US environmental & energy policy",
+         "precis":"Environmental Data and Governance Initiative (EDGI) uses research and online tools to monitor, document, and respond to the undermining of evidence-based environmental governance.",
+         "description":"**Open Monitoring, Documenting, and Responding to the Removal of Environmental Data**\n\nThe Environmental Data and Governance Initiative (EDGI) leverages research and online tools to monitor, document, and respond to the anticipated undermining of evidence-based environmental governance. EDGI is committed to tracking changes to US federal environmental management and governance, in a range of agencies including EPA, NOAA, NASA, USGS, OSHA, DoE and BLM, among many others.\n\nEDGI brings together North American social scientists, environmental and physical scientists, lawyers, and other information and environmental professionals to document and advocate for the vital importance of evidence-based environmental policy. Through three core working groups EDGI analyzes changes to federal agencies' 1) funding and regulation, 2) personnel and research and 3) **public data**.\n\nThrough the third working group, EDGI has been a leading partner in the international effort to preserve and track federal environmental data, and support environmental scientists, non-profit organizations, and foundations by making this data publicly available. We are also indexing millions of government web pages on a weekly basis, tracking changes to them, and producing regular reports. With data collection efforts well underway and supported by many hundreds of volunteers at events across North America, our focus now turns to building first-rate tools to support our work. We need deep thinkers to develop protocols for the resilient, sustainable, accessible, distributed data storage networks of the future; machine learning experts to sift through millions of web pages to find the most important changes; and security specialists to protect the privacy of our volunteers and ensure the integrity of our data. We believe this work is essential to preserving the integrity of scientific research in the US, and also builds a new level of transparency and government accountability to citizens.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"GNU General Public License version 3.0 (GPL-3.0)",
+         "image_url":"//lh3.googleusercontent.com/ydkJguL73OO_YZhxaLJCfLbrbZeBwE-ezmEe98gMHSADF_f1rIvJHBApBd82X9jfrPMlU5Lqy67fgZtuRSaqT597UHY_8w",
+         "image_bg_color":"f4f4f4",
+         "gplus_url":null,
+         "twitter_url":"https://twitter.com/EnviroDGI",
+         "blog_url":"https://envirodatagov.org/blog/",
+         "application_instructions":"See our [ideas page](https://envirodatagov.org/gsoc/) for detailed explanation of the application process, as well as our template below.\n\nOur [GitHub overview](https://github.com/edgi-govdata-archiving/overview) has descriptions and links to all our projects and codebases. We are looking for committed students with a strong personal or professional motivation for undertaking this work. You need to be able to work collaboratively with your mentor and with the distributed team of volunteers working in the area you've chosen. Experience with open source projects and science or policy advocacy groups is a substantial plus. In general, energy, serious commitment, experience with teamwork, and thoughtful attention are as important to us as technical skills (which are also crucial!). If you're interested in participating, demonstrate that by forking our code, installing our tools, contributing to our repos, filing/commenting on issues, etc! \n\n****\n## Application Template\n\n### Student\n\n**Name:** \n\n**Affiliation:** \n\n**Location:** \n\n**GitHub handle:** \n\n**Slack handle:** \n\n**Email:** \n\n**Other Contact:**  \n\n### Project Details\n\n**Project Title:**  \n\n**Project Abstract/Summary (<20 words):**  \n\n**Describe the need your project fills:**  \n\n**Describe how your project meets this need:**  \n\n**Milestones/Timeline:**  \n\n**Deliverables:**  \n\n**Resources:**  \n\n**Setup:**  \n\n**Ongoing involvement:**  \n\n### Student Experience\n\n**Previous Experience:**\n\n**Open Source Project(s) you are working on or would like to:**\n\n**Teamwork:**\n\n**Interests:**\n\n**Commitment:**",
+         "topic_tags":[
+            "crawling",
+            "api",
+            "open data",
+            "machine learning",
+            "open science"
+         ],
+         "technology_tags":[
+            "python",
+            "javascript",
+            "ruby on rails",
+            "google cloud",
+            "go"
+         ],
+         "proposal_tags":[
+            "new feature",
+            "research",
+            "analysis",
+            "visualization",
+            "protocols",
+            "distributed storage",
+            "machine learning",
+            "user interface"
+         ],
+         "ideas_list":"https://envirodatagov.org/gsoc/",
+         "contact_method":"EnviroDGI@protonmail.com",
+         "program_year":2017
+      },
+      {
+         "id":5622162267308032,
+         "name":"Fedora Project",
+         "slug":"fedora-project",
+         "website_url":"https://getfedora.org/",
+         "category":"operating_systems",
+         "contact_email":"summer-coding@lists.fedoraproject.org",
+         "mailing_list":"https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org",
+         "irc_channel":"https://webchat.freenode.net/?channels=#fedora-summer-coding",
+         "tagline":"Fedora Linux is built on the foundations of Freedom, Friends, Features, & First",
+         "precis":"Advance Free/Open Source Software/Content. Fedora is more than just one technology or concept it is a larger collaborative community.",
+         "description":"The three elements of the Fedora mission are clear:\n\n* The Fedora Project always strives to lead, not follow.\n* The Fedora Project consistently seeks to create, improve, and spread free/libre code and content.\n* The Fedora Project succeeds through shared action on the part of many people throughout our community. \n\nThe Fedora Project's core values, or Foundations, are Freedom, Friends, Features, & First.  Read more about them here: https://fedoraproject.org/wiki/Foundations\n\nA key component of this is our **Community**.  This community, which you will join as an participant in Google Summer of Code, is creating a platform that supports the work of a diverse audience. Your contributions can affect people you've never met in situations you've never dreamed of.  The Fedora  community includes software engineers, artists, system administrators,  web designers, writers, speakers, and translators -- all of whom will be  happy to help you get started.\n\nFull project description available here: https://fedoraproject.org/wiki/Overview\n\nWe believe that all contributors should be excellent to each other.  By creating an environment for constructive contribution, we can more  effectively and successfully compare and challenge different ideas to  find the best solutions for advancement, while building the size,  diversity, and strength of our community.",
+         "tags":[
+
+         ],
+         "primary_open_source_license":"MIT license (MIT)",
+         "image_url":"//lh3.googleusercontent.com/rITs2QAeFZCdCQ115j3CTVGAx8XjjHyjhOIZsmrjmrns55C04GsRbIFoAoN3HO2UrP139zSLwJD0pLbdguuuDLL_HkYvvA4",
+         "image_bg_color":null,
+         "gplus_url":"https://plus.google.com/+Fedora",
+         "twitter_url":"https://twitter.com/fedora",
+         "blog_url":"https://communityblog.fedoraproject.org",
+         "application_instructions":"Our application process is described completely here: https://fedoraproject.org/wiki/GSOC_2017/Student_Application_Process\n\nIn general, we are looking for students to describe both their understanding of the project they are choosing (or their complete project if they are proposing one) and to help us understand why they are the best candidate for the project.  This also includes helping us understand their availability and level of commitment.  While prior experience with Fedora is ideal, it is not a selection requirement.",
+         "topic_tags":[
+            "linux distribution",
+            "upstream",
+            "community",
+            "web development",
+            "realtime messaging"
+         ],
+         "technology_tags":[
+            "python",
+            "linux",
+            "git",
+            "postgres",
+            "ansible"
+         ],
+         "proposal_tags":[
+            "continuous integration/deployment (ci/cd)",
+            "development:python",
+            "web services",
+            "metrics",
+            "messaging",
+            "community",
+            "development:web / app development",
+            "infrastructure:authentication/fas/krb5",
+            "development:general",
+            "propose your own idea"
+         ],
+         "ideas_list":"https://fedoraproject.org/wiki/Summer_coding_ideas_for_2017",
+         "contact_method":"summer-coding@lists.fedoraproject.org",
+         "program_year":2017
+      }
+   ]
+}
