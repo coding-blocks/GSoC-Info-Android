@@ -6,4 +6,16 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+
+    <string name="hello_world">Hello world!</string>
+
+
+    <string name="user_exists">User already logged in</string>
+    <string name="sign_in_facebook">Sign in with Facebook</string>
+    <string name="sign_in_google">Sign in with Google</string>
+    <string name="logout_text">Sign out</string>
+    <string name="facebook_app_id">116092692359761</string>
+    <string name="fb_login_protocol_scheme">fb116092692359761</string>
+    <string name="server_client_id">309026882172-bckgevviebb7kveqskk3geglhmikb5sm.apps.googleusercontent.comstring</string>
 </resources>
