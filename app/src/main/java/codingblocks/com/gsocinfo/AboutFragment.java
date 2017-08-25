@@ -17,10 +17,6 @@ import java.util.ArrayList;
 
 public class AboutFragment extends Fragment {
 
-    private ArrayList<String> date = new ArrayList<>();
-    private ArrayList<String> title = new ArrayList<>();
-    private ArrayList<String> description = new ArrayList<>();
-
     public static AboutFragment newInstance() {
 
         Bundle args = new Bundle();
@@ -35,43 +31,10 @@ public class AboutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_about, container, false);
 
-        date.add("27-01-2017");
-        date.add("27-01-2017");
-        date.add("27-01-2017");
-        date.add("27-01-2017");
-        date.add("27-01-2017");
-        date.add("27-01-2017");
-        date.add("27-01-2017");
-        date.add("27-01-2017");
-        date.add("27-01-2017");
-        date.add("27-01-2017");
-
-        title.add("Hey, this is a title");
-        title.add("Hey, this is a title");
-        title.add("Hey, this is a title");
-        title.add("Hey, this is a title");
-        title.add("Hey, this is a title");
-        title.add("Hey, this is a title");
-        title.add("Hey, this is a title");
-        title.add("Hey, this is a title");
-        title.add("Hey, this is a title");
-        title.add("Hey, this is a title");
-
-        description.add("Hi, I'm the description");
-        description.add("Hi, I'm the description");
-        description.add("Hi, I'm the description");
-        description.add("Hi, I'm the description");
-        description.add("Hi, I'm the description");
-        description.add("Hi, I'm the description");
-        description.add("Hi, I'm the description");
-        description.add("Hi, I'm the description");
-        description.add("Hi, I'm the description");
-        description.add("Hi, I'm the description");
-
         RecyclerView recyclerView = view.findViewById(R.id.rv_timeline);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        TimelineAdapter timelineAdapter = new TimelineAdapter(date, title, description);
+        TimelineAdapter timelineAdapter = new TimelineAdapter();
 
         recyclerView.setAdapter(timelineAdapter);
         return view;

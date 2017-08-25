@@ -9,4 +9,5 @@
     tools:context="codingblocks.com.gsocinfo.AboutActivity"
     tools:showIn="@layout/app_bar_about">
 
+
 </android.support.constraint.ConstraintLayout>

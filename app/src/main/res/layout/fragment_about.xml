@@ -7,6 +7,10 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_timeline"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
