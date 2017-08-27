@@ -16,7 +16,6 @@
         app:line="@color/colorAccent"/>
 
     <android.support.v7.widget.CardView
-        android:background="?attr/selectableItemBackground"
         android:id="@+id/cardview_timeline"
         app:cardCornerRadius="8dp"
         android:layout_width="match_parent"
@@ -29,6 +28,9 @@
         android:layout_marginStart="16dp"
         android:layout_gravity="center_vertical"
         app:cardElevation="1dp"
+        android:foreground="?android:selectableItemBackground"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
         app:contentPadding="15dp">
 
     <LinearLayout
@@ -50,8 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:id="@+id/text_timeline_title"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
+            style="@style/Title"
             tools:text="Order Successfully Completed"/>
 
         <android.support.v7.widget.AppCompatTextView
@@ -59,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:id="@+id/text_timeline_description"
-            android:textColor="@android:color/black"
+            style="@style/Subtitle"
             tools:text="Order details are as follows"/>
 
     </LinearLayout>

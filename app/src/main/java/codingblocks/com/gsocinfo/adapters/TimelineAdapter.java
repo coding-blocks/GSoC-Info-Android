@@ -50,7 +50,7 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
         holder.date.setText(date.get(position));
         if (position == lastCheckedPosition){
             int colorFrom = Color.WHITE;
-            int colorTo = context.getResources().getColor(R.color.colorAccent);
+            int colorTo = Color.WHITE;
             ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
             colorAnimation.setDuration(300); // milliseconds
             colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

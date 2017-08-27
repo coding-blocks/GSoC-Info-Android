@@ -24,9 +24,7 @@
                 android:id="@+id/question_faq"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
+               style="@style/Title"
                 tools:text="This is a question?" />
 
             <TextView
@@ -35,8 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
-                android:textSize="14sp"
-                android:textColor="@android:color/black"
+               style="@style/Subtitle"
                 tools:text="This is a multi ,ine answer.\nThis has multiple lines" />
 
         </LinearLayout>

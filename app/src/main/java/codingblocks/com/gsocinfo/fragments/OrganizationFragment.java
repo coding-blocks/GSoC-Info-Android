@@ -3,8 +3,8 @@ package codingblocks.com.gsocinfo.fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +33,7 @@ public class OrganizationFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_org, container, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.rv_org);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
 
         OrgAdapter orgAdapter = new OrgAdapter();
         recyclerView.setAdapter(orgAdapter);

@@ -1,5 +1,8 @@
 package codingblocks.com.gsocinfo.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -17,7 +20,7 @@ public class Organizations {
         return results;
     }
 
-    public class Organization{
+    public static class Organization implements Parcelable{
 
         @SerializedName("id")
         private Long id;
@@ -67,6 +70,41 @@ public class Organizations {
         private String contactMethod;
         @SerializedName("program_year")
         private Integer programYear;
+
+        protected Organization(Parcel in) {
+            name = in.readString();
+            slug = in.readString();
+            websiteUrl = in.readString();
+            category = in.readString();
+            contactEmail = in.readString();
+            mailingList = in.readString();
+            tagline = in.readString();
+            precis = in.readString();
+            description = in.readString();
+            primaryOpenSourceLicense = in.readString();
+            imageUrl = in.readString();
+            gplusUrl = in.readString();
+            twitterUrl = in.readString();
+            blogUrl = in.readString();
+            applicationInstructions = in.readString();
+            topicTags = in.createStringArrayList();
+            technologyTags = in.createStringArrayList();
+            proposalTags = in.createStringArrayList();
+            ideasList = in.readString();
+            contactMethod = in.readString();
+        }
+
+        public static final Creator<Organization> CREATOR = new Creator<Organization>() {
+            @Override
+            public Organization createFromParcel(Parcel in) {
+                return new Organization(in);
+            }
+
+            @Override
+            public Organization[] newArray(int size) {
+                return new Organization[size];
+            }
+        };
 
         public Long getId() {
             return id;
@@ -261,6 +299,34 @@ public class Organizations {
         }
 
 
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel parcel, int i) {
+            parcel.writeString(name);
+            parcel.writeString(slug);
+            parcel.writeString(websiteUrl);
+            parcel.writeString(category);
+            parcel.writeString(contactEmail);
+            parcel.writeString(mailingList);
+            parcel.writeString(tagline);
+            parcel.writeString(precis);
+            parcel.writeString(description);
+            parcel.writeString(primaryOpenSourceLicense);
+            parcel.writeString(imageUrl);
+            parcel.writeString(gplusUrl);
+            parcel.writeString(twitterUrl);
+            parcel.writeString(blogUrl);
+            parcel.writeString(applicationInstructions);
+            parcel.writeStringList(topicTags);
+            parcel.writeStringList(technologyTags);
+            parcel.writeStringList(proposalTags);
+            parcel.writeString(ideasList);
+            parcel.writeString(contactMethod);
+        }
     }
 
 }

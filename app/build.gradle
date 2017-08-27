@@ -27,6 +27,13 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
+//    FastAdapter
+    /**
+     compile('com.mikepenz:fastadapter:2.6.3@aar') {transitive = true}compile 'com.mikepenz:fastadapter-commons:2.6.3@aar'
+     compile 'com.mikepenz:fastadapter-extensions:2.6.3@aar'
+     compile 'com.mikepenz:materialize:1.0.3@aar'
+     **/
+
     compile 'com.android.support:appcompat-v7:26.0.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:design:26.0.1'
@@ -41,25 +48,16 @@ dependencies {
     compile 'com.google.firebase:firebase-database:10.0.1'
     compile 'com.google.firebase:firebase-crash:10.0.1'
     compile 'com.google.firebase:firebase-messaging:10.0.1'
-    compile "com.android.support:support-v4:26.0.1"
+    compile 'com.android.support:support-v4:26.0.1'
     compile 'com.google.android.gms:play-services-auth:10.0.1'
     compile 'com.facebook.android:facebook-android-sdk:4.22.1'
-    compile 'com.android.support:support-v4:26.0.0-alpha1'
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.daimajia.slider:library:1.1.5@aar'
-
-//    FastAdapter
-    /**
-    compile('com.mikepenz:fastadapter:2.6.3@aar') {
-        transitive = true
-    }
-    compile 'com.mikepenz:fastadapter-commons:2.6.3@aar'
-    compile 'com.mikepenz:fastadapter-extensions:2.6.3@aar'
-    compile 'com.mikepenz:materialize:1.0.3@aar'
-    **/
-
+    compile 'com.android.support:support-vector-drawable:26.+'
     testCompile 'junit:junit:4.12'
 }
+
+
 
 
 apply plugin: 'com.google.gms.google-services'

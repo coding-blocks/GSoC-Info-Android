@@ -59,7 +59,7 @@ public class FaqAdapter extends RecyclerView.Adapter<FaqAdapter.FaqHolder> {
         h.answer.setVisibility(View.VISIBLE);
         h.answer.startAnimation(animationDown);
         int colorFrom = Color.WHITE;
-        int colorTo = context.getResources().getColor(R.color.colorAccent);
+        int colorTo = Color.WHITE;
         ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
         colorAnimation.setDuration(300); // milliseconds
         colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

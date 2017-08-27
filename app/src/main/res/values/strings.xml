@@ -18,4 +18,8 @@
     <string name="facebook_app_id">116092692359761</string>
     <string name="fb_login_protocol_scheme">fb116092692359761</string>
     <string name="server_client_id">309026882172-bckgevviebb7kveqskk3geglhmikb5sm.apps.googleusercontent.comstring</string>
+    <string name="title_activity_org_detail">OrgDetailActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

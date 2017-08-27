@@ -5,4 +5,7 @@ package codingblocks.com.gsocinfo.model;
  */
 
 public class Project {
+
+
+
 }
