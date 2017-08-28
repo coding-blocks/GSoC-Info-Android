@@ -51,7 +51,9 @@ public class AboutActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container_about, AboutFragment.newInstance())
+                .commit();
         String json = null;
         try {
             InputStream inputStream = getAssets().open("org.json");
@@ -70,9 +72,6 @@ public class AboutActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container_about, AboutFragment.newInstance())
-                .commit();
     }
 
     @Override

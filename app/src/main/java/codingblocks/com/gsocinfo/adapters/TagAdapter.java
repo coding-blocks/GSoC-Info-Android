@@ -47,7 +47,7 @@ public class TagAdapter extends RecyclerView.Adapter<TagAdapter.TagViewHolder>{
 
         public TagViewHolder(View itemView) {
             super(itemView);
-            chipView = (TextView) itemView;
+            chipView = itemView.findViewById(R.id.chip_org_detail);
         }
     }
 
