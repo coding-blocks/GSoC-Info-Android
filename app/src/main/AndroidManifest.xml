@@ -24,9 +24,11 @@
             </intent-filter>
 
         </activity>
+
         <activity
             android:name=".activities.OrgDetailActivity"
-            android:label="@string/title_activity_org_detail"></activity>
+            android:label="@string/title_activity_org_detail"
+            android:parentActivityName=".activities.AboutActivity" />
     </application>
 
 </manifest>

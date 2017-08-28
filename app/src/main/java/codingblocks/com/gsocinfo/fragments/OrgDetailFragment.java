@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
@@ -44,6 +45,8 @@ public class OrgDetailFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_org_details,container,false);
         Intent i = getActivity().getIntent();
         Organizations.Organization organization = i.getParcelableExtra(ORG_TAG);
+
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(organization.getName());
 
         ImageView orgIcon = view.findViewById(R.id.org_detail_image);
 

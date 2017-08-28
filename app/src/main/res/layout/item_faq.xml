@@ -7,10 +7,10 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
         android:id="@+id/cardview_faq"
-        android:animateLayoutChanges="true"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
 
         <LinearLayout
             android:id="@+id/faq_linear_layout"
@@ -22,18 +22,18 @@
 
             <TextView
                 android:id="@+id/question_faq"
+                style="@style/Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-               style="@style/Title"
                 tools:text="This is a question?" />
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/answer_faq"
+                style="@style/Subtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
-               style="@style/Subtitle"
+                android:visibility="gone"
                 tools:text="This is a multi ,ine answer.\nThis has multiple lines" />
 
         </LinearLayout>

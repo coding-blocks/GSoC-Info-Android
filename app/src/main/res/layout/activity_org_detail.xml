@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/side_nav_bar"
     tools:context="codingblocks.com.gsocinfo.activities.OrgDetailActivity">
 
     <FrameLayout
@@ -19,7 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/colorAccent"
+        app:itemIconTint="@color/colorPrimary"
         app:menu="@menu/navigation" />
 
 </LinearLayout>
