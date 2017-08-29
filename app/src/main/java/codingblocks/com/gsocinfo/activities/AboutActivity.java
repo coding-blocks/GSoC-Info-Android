@@ -13,8 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.google.firebase.auth.FirebaseAuth;
-
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -119,10 +117,6 @@ public class AboutActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container_about, FaqFragment.newInstance())
                     .commit();
-        }else if(id == R.id.nav_logout){
-            FirebaseAuth auth  = FirebaseAuth.getInstance();
-            auth.signOut();
-            finish();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

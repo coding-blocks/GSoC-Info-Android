@@ -65,7 +65,7 @@ public class OrgDetailFragment extends Fragment {
 
         tags.addAll(organization.getTechnologyTags());
         tags.addAll(organization.getTopicTags());
-
+        tags.addAll(organization.getProposalTags());
         techAdapter = new TagAdapter(tags);
 
         techRv.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.HORIZONTAL));
