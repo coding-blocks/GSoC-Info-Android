@@ -33,7 +33,7 @@ dependencies {
      compile 'com.mikepenz:fastadapter-extensions:2.6.3@aar'
      compile 'com.mikepenz:materialize:1.0.3@aar'
      **/
-
+    compile 'com.commonsware.cwac:anddown:0.4.0'
     compile 'com.android.support:design:26.0.1'
     compile 'com.android.support:cardview-v7:26.0.1'
     compile 'com.android.support:recyclerview-v7:26.0.1'

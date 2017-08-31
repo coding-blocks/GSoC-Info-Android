@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 
 import codingblocks.com.gsocinfo.model.Organizations;
+import codingblocks.com.gsocinfo.model.Projects;
 
 
 /**
@@ -15,10 +16,20 @@ public class Constants {
 
     private static Organizations organizations;
 
+    private static Projects projects;
+
     public static void setOrganizations(String json) {
         Gson gson = new Gson();
-
         Constants.organizations = gson.fromJson(json, Organizations.class);
+    }
+
+    public static ArrayList<Projects.Project> getProjects() {
+        return projects.getResults();
+    }
+
+    public static void setProjects(String json) {
+        Gson gson = new Gson();
+        Constants.projects = gson.fromJson(json, Projects.class);
     }
 
     public static ArrayList<Organizations.Organization> getOrganizations(){
@@ -32,7 +43,7 @@ public class Constants {
         title.add("Organizations Announced");
         title.add("Student Application Period");
         title.add("Application Review Period");
-        title.add("Student Projects Announced");
+        title.add("Student Projectsss Announced");
         title.add("Community Bonding");
         title.add("Coding");
         title.add("Evaluations");

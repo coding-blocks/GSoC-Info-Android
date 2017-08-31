@@ -12,12 +12,6 @@
     </item>
 
     <item
-        android:bottom="50dp"
-        android:drawable="@drawable/stars_background"
-        android:left="200dp"
-        android:top="50dp" />
-
-    <item
         android:bottom="10dp"
         android:drawable="@drawable/satellite"
         android:left="140dp"

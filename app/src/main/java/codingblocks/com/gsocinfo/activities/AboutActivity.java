@@ -21,6 +21,7 @@ import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.fragments.AboutFragment;
 import codingblocks.com.gsocinfo.fragments.FaqFragment;
 import codingblocks.com.gsocinfo.fragments.OrganizationFragment;
+import codingblocks.com.gsocinfo.fragments.ProjectFragment;
 
 public class AboutActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -52,8 +53,9 @@ public class AboutActivity extends AppCompatActivity
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container_about, AboutFragment.newInstance())
                 .commit();
-        String json = null;
+
         try {
+            String json;
             InputStream inputStream = getAssets().open("org.json");
             int size = inputStream.available();
             byte[] buffer = new byte[size];
@@ -65,16 +67,25 @@ public class AboutActivity extends AppCompatActivity
             e.printStackTrace();
         }
 
-    }
+        String json1;
+        InputStream inputStream1 = null;
+        try {
+            inputStream1 = getAssets().open("projects.json");
+            int size1 = inputStream1.available();
+            byte[] buffer1 = new byte[size1];
+            inputStream1.read(buffer1);
+            inputStream1.close();
+            json1 = new String(buffer1, "UTF-8");
+            Constants.setProjects(json1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -112,7 +123,9 @@ public class AboutActivity extends AppCompatActivity
                     .replace(R.id.container_about, OrganizationFragment.newInstance())
                     .commit();
         } else if (id == R.id.nav_projects) {
-
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.container_about, ProjectFragment.newInstance())
+                    .commit();
         } else if (id == R.id.nav_faq) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container_about, FaqFragment.newInstance())

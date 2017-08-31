@@ -1,8 +1,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:drawable="@drawable/stars_background" />
+    <item android:drawable="@color/colorPrimary" />
     <item
-        android:drawable="@drawable/mountains_landscape"
+        android:drawable="@drawable/bg_mountains"
         android:top="100dp" />
 
 </layer-list>

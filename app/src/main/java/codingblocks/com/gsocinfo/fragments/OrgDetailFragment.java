@@ -6,10 +6,13 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.commonsware.cwac.anddown.AndDown;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +48,14 @@ public class OrgDetailFragment extends Fragment {
         TextView orgDetails = view.findViewById(R.id.org_detail_details);
         TextView orgTitle = view.findViewById(R.id.org_detail_title);
 
-        orgDetails.setText(organization.getDescription().replaceAll("(\\? )|(\\! )|(\\. )", "$0\n")); //Replace every period with newline
+        AndDown andDown=new AndDown();
+
+        String orgDesc = organization.getDescription();
+//                .replaceAll("(\\? )|(\\! )|(\\. )", "$0\n"); //Replace every period with newline
+
+        orgDesc = andDown.markdownToHtml(orgDesc);  //Todo : do this while inserting to db
+
+        orgDetails.setText(Html.fromHtml(orgDesc));
         orgTitle.setText(organization.getTagline());
         RecyclerView techRv = view.findViewById(R.id.techTagRecyclerView);
         TagAdapter techAdapter;
