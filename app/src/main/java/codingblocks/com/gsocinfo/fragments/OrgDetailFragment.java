@@ -4,16 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,21 +42,13 @@ public class OrgDetailFragment extends Fragment {
         Intent i = getActivity().getIntent();
         Organizations.Organization organization = i.getParcelableExtra(ORG_TAG);
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(organization.getName());
-
-        ImageView orgIcon = view.findViewById(R.id.org_detail_image);
-
-        TextView orgDesc = view.findViewById(R.id.org_detail_desc);
         TextView orgDetails = view.findViewById(R.id.org_detail_details);
         TextView orgTitle = view.findViewById(R.id.org_detail_title);
 
         orgDetails.setText(organization.getDescription().replaceAll("(\\? )|(\\! )|(\\. )", "$0\n")); //Replace every period with newline
         orgTitle.setText(organization.getTagline());
-        Picasso.with(getContext()).load(organization.getImageUrl()).into(orgIcon);
-        orgDesc.setText(organization.getPrecis());
         RecyclerView techRv = view.findViewById(R.id.techTagRecyclerView);
         TagAdapter techAdapter;
-
         List<String> tags = new ArrayList<>();
 
         tags.addAll(organization.getTechnologyTags());

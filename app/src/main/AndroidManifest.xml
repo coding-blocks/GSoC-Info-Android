@@ -25,9 +25,9 @@
 
         <activity
             android:name=".activities.OrgDetailActivity"
-            android:label="@string/title_activity_org_detail"
             android:launchMode="singleTop"
-            android:parentActivityName=".activities.AboutActivity" />
+            android:parentActivityName=".activities.AboutActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
