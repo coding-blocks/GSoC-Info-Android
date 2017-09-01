@@ -5,10 +5,30 @@
     android:background="@drawable/side_nav_bar"
     android:orientation="vertical">
 
-    <com.daimajia.slider.library.SliderLayout
+    <ViewFlipper
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:id="@+id/sliderView" />
+        android:autoStart="true"
+        android:flipInterval="2500"
+        android:inAnimation="@anim/slide_in_right"
+        android:outAnimation="@anim/slide_out_left"
+        android:background="@color/colorPrimary"
+        android:id="@+id/sliderView" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/apply_xml"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/code_xml"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/share_xml"/>
+
+    </ViewFlipper>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_timeline"

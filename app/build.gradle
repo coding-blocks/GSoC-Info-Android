@@ -44,8 +44,6 @@ dependencies {
     compile 'com.google.firebase:firebase-core:10.0.1'
     compile 'com.google.firebase:firebase-crash:10.0.1'
     compile 'com.android.support:support-v4:26.0.1'
-    compile 'com.nineoldandroids:library:2.4.0'
-    compile 'com.daimajia.slider:library:1.1.5@aar'
     compile 'com.android.support:support-vector-drawable:26.0.0-alpha1'
     testCompile 'junit:junit:4.12'
 }
