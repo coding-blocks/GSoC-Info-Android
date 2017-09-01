@@ -54,6 +54,8 @@ public class AboutActivity extends AppCompatActivity
                 .replace(R.id.container_about, AboutFragment.newInstance())
                 .commit();
 
+        // TODO: 01/09/17 : Move this to DB later on
+
         try {
             String json;
             InputStream inputStream = getAssets().open("org.json");
@@ -63,24 +65,27 @@ public class AboutActivity extends AppCompatActivity
             inputStream.close();
             json = new String(buffer, "UTF-8");
             Constants.setOrganizations(json);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-        String json1;
-        InputStream inputStream1 = null;
-        try {
-            inputStream1 = getAssets().open("projects.json");
+            String json1;
+            InputStream inputStream1 = getAssets().open("projects.json");
             int size1 = inputStream1.available();
             byte[] buffer1 = new byte[size1];
             inputStream1.read(buffer1);
             inputStream1.close();
             json1 = new String(buffer1, "UTF-8");
             Constants.setProjects(json1);
+
+            String json2;
+            InputStream inputStream2 = getAssets().open("main_page.json");
+            int size2 = inputStream2.available();
+            byte[] buffer2 = new byte[size2];
+            inputStream2.read(buffer2);
+            inputStream2.close();
+            json2 = new String(buffer2, "UTF-8");
+            Constants.setMainPage(json2);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @Override

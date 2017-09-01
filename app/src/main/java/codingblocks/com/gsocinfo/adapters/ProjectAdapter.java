@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +16,6 @@ import java.util.List;
 
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.model.Projects;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * Created by harshit on 26/08/17.
@@ -53,7 +50,6 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
 
     @Override
     public int getItemCount() {
-        Log.e(TAG, "getItemCount: " + projects.size());
         return projects.size();
     }
 

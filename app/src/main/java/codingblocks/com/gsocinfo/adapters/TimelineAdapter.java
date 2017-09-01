@@ -1,87 +1,72 @@
 package codingblocks.com.gsocinfo.adapters;
 
-import android.animation.ValueAnimator;
 import android.content.Context;
-import android.graphics.Color;
-import android.os.Build;
-import android.support.graphics.drawable.ArgbEvaluator;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.github.vipulasri.timelineview.LineType;
 import com.github.vipulasri.timelineview.TimelineView;
 
 import java.util.ArrayList;
 
 import codingblocks.com.gsocinfo.Constants;
 import codingblocks.com.gsocinfo.R;
+import codingblocks.com.gsocinfo.model.MainPage;
 
 /**
  * Created by harshit on 25/08/17.
  */
 
-public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adapter<TimelineAdapter.TimelineHolder> {
+public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private Context context;
     private ArrayList<String> date = Constants.generateDate(),
-    title = Constants.generateTitle(), description = Constants.generateDescription();
-
-    private int lastCheckedPosition = -1;
+            title = Constants.generateTitle(),
+            description = Constants.generateDescription();
+    private MainPage mainPage = Constants.getMainPage();
+    private static final int HEADER = 123;
 
     @Override
-    public TimelineHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         this.context = parent.getContext();
-        View view = View.inflate(context, R.layout.item_timeline, null);
-        return new TimelineHolder(view, viewType);
+        View view;
+        if (viewType == HEADER) {
+            view = View.inflate(context, R.layout.item_card_about, null);
+            return new AboutHolder(view);
+        } else {
+            view = View.inflate(context, R.layout.item_timeline, null);
+            return new TimelineHolder(view, viewType);
+        }
     }
 
     @Override
-    public long getItemId(int position) {
-        return super.getItemId(position);
-    }
-
-    @Override
-    public void onBindViewHolder(final TimelineHolder holder, int position) {
-
-        holder.description.setText(description.get(position));
-        holder.title.setText(title.get(position));
-        holder.date.setText(date.get(position));
-        if (position == lastCheckedPosition){
-            int colorFrom = Color.WHITE;
-            int colorTo = Color.WHITE;
-            ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
-            colorAnimation.setDuration(300); // milliseconds
-            colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-
-                @Override
-                public void onAnimationUpdate(ValueAnimator animator) {
-                    holder.title.setTextSize(18);
-                    holder.date.setTextSize(16);
-                    holder.description.setTextSize(18);
-                    holder.cardView.setBackgroundColor((int) animator.getAnimatedValue());
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        holder.cardView.setElevation(6);
-                    }
-                }
-
-            });
-            colorAnimation.start();
-        }else{
-            holder.title.setTextSize(16);
-            holder.date.setTextSize(14);
-            holder.description.setTextSize(16);
-            holder.cardView.setBackgroundColor(Color.WHITE);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                holder.cardView.setElevation(1);
-            }
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
+        if (holder instanceof TimelineHolder) {
+            ((TimelineHolder) holder).description.setText(description.get(position));
+            ((TimelineHolder) holder).title.setText(title.get(position));
+            ((TimelineHolder) holder).date.setText(date.get(position));
+        } else if (holder instanceof AboutHolder) {
+            ((AboutHolder) holder).about.setText(mainPage.getCopy().getNumberOfStudents() + " STUDENTS, " +
+                    mainPage.getCopy().getNumberOfStudentCountries() + " COUNTRIES,\n" +
+                    mainPage.getCopy().getNumberOfYears() + " YEARS, " + mainPage.getCopy().getNumberOfOrganizations()
+                    + " OPEN SOURCE ORGANIZATIONS");
+            ((AboutHolder) holder).linesOfCode.setText(mainPage.getCopy().getNumberOfLinesOfCode());
+            ((AboutHolder) holder).overView.setText(mainPage.getCopy().getHomepageIntroParagraph());
         }
     }
 
     @Override
     public int getItemViewType(int position) {
-        return TimelineView.getTimeLineViewType(position,getItemCount());
+        if (position == 0) {
+            return HEADER;
+        } else if (position == getItemCount() - 1) {
+            return LineType.END;
+        }
+        return TimelineView.getTimeLineViewType(position - 1, getItemCount());
     }
 
     @Override
@@ -89,10 +74,21 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
         return date.size();
     }
 
-    public class TimelineHolder extends RecyclerView.ViewHolder{
+    public class AboutHolder extends RecyclerView.ViewHolder {
+        TextView overView, linesOfCode, about;
+
+        public AboutHolder(View itemView) {
+            super(itemView);
+            overView = itemView.findViewById(R.id.overView);
+            linesOfCode = itemView.findViewById(R.id.linesOfCode);
+            about = itemView.findViewById(R.id.textAbout);
+        }
+    }
+
+    public class TimelineHolder extends RecyclerView.ViewHolder {
 
         TimelineView timelineView;
-        AppCompatTextView title,description,date;
+        AppCompatTextView title, description, date;
         CardView cardView;
 
         public TimelineHolder(View itemView, int viewType) {
@@ -103,14 +99,8 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
             date = itemView.findViewById(R.id.text_timeline_date);
             cardView = itemView.findViewById(R.id.cardview_timeline);
             timelineView.initLine(viewType);
-            cardView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    lastCheckedPosition = getAdapterPosition();
-                    notifyDataSetChanged();
-                }
-            });
         }
+
     }
 
 }

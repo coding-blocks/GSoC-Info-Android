@@ -6,36 +6,37 @@
     android:orientation="vertical">
 
     <ViewFlipper
+        android:id="@+id/sliderView"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:autoStart="true"
+        android:background="@color/colorPrimary"
         android:flipInterval="2500"
         android:inAnimation="@anim/slide_in_right"
-        android:outAnimation="@anim/slide_out_left"
-        android:background="@color/colorPrimary"
-        android:id="@+id/sliderView" >
+        android:outAnimation="@anim/slide_out_left">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/apply_xml"/>
+            android:src="@drawable/apply_xml" />
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/code_xml"/>
+            android:src="@drawable/code_xml" />
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/share_xml"/>
+            android:src="@drawable/share_xml" />
 
     </ViewFlipper>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_timeline"
-        android:paddingLeft="16dp"
-        android:paddingRight="8dp"
-        android:paddingEnd="8dp"
-        android:paddingStart="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

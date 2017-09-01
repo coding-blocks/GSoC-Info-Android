@@ -38,7 +38,6 @@ public class AboutFragment extends Fragment {
 
         TimelineAdapter timelineAdapter = new TimelineAdapter();
 
-
         recyclerView.setAdapter(timelineAdapter);
         return view;
     }
