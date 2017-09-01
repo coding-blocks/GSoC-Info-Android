@@ -24,10 +24,11 @@ public class ProjectFragment extends Fragment {
 
     int beg = 0, end = 20;
 
-    public static ProjectFragment newInstance() {
+    public static ProjectFragment newInstance(@Nullable String org) {
 
         Bundle args = new Bundle();
-
+        if (org != null)
+            args.putString("ORG", org);
         ProjectFragment fragment = new ProjectFragment();
         fragment.setArguments(args);
         return fragment;
@@ -44,19 +45,33 @@ public class ProjectFragment extends Fragment {
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(projectAdapter);
         final ArrayList<Projects.Project> projectArrayList = Constants.getProjects();
-        projectAdapter.setData(projectArrayList.subList(beg, end));
-        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                int totalItemCount = linearLayoutManager.getItemCount();
-                int lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition();
-                if (totalItemCount <= (lastVisibleItem + 5) && totalItemCount < projectArrayList.size()) {
-                    projectAdapter.setData(projectArrayList.subList(end+1,end + 20));
+
+        String org = getArguments().getString("ORG");
+
+        // TODO: 01/09/17  : Run this query from DB
+
+        if (org != null) {
+            ArrayList<Projects.Project> projects = new ArrayList<>();
+            for (Projects.Project p : Constants.getProjects()) {
+                if (p.getOrganization().getName().equals(org)) {
+                    projects.add(p);
                 }
             }
-        });
-
+            projectAdapter.setData(projects);
+        } else {
+            projectAdapter.setData(projectArrayList.subList(beg, end));
+            recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+                @Override
+                public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                    super.onScrolled(recyclerView, dx, dy);
+                    int totalItemCount = linearLayoutManager.getItemCount();
+                    int lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition();
+                    if (totalItemCount <= (lastVisibleItem + 5) && totalItemCount < projectArrayList.size()) {
+                        projectAdapter.setData(projectArrayList.subList(end + 1, end + 20));
+                    }
+                }
+            });
+        }
         return v;
 
     }

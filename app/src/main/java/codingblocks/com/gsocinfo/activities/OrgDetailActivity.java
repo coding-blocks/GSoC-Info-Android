@@ -18,11 +18,14 @@ import com.squareup.picasso.Picasso;
 
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.fragments.OrgDetailFragment;
+import codingblocks.com.gsocinfo.fragments.ProjectFragment;
 import codingblocks.com.gsocinfo.model.Organizations;
 
 import static codingblocks.com.gsocinfo.adapters.OrgAdapter.ORG_TAG;
 
 public class OrgDetailActivity extends AppCompatActivity {
+
+    private Organizations.Organization organization;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +34,7 @@ public class OrgDetailActivity extends AppCompatActivity {
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent i = getIntent();
-        final Organizations.Organization organization = i.getParcelableExtra(ORG_TAG);
+        organization = i.getParcelableExtra(ORG_TAG);
         final CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
         AppBarLayout appBarLayout = findViewById(R.id.app_bar_layout);
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
@@ -71,7 +74,7 @@ public class OrgDetailActivity extends AppCompatActivity {
                 case 0 :
                     return OrgDetailFragment.newInstance();
                 case 1:
-                    return OrgDetailFragment.newInstance();
+                    return ProjectFragment.newInstance(organization.getName());
                 default:
                     return null;
             }

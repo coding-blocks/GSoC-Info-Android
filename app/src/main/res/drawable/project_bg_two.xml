@@ -3,6 +3,9 @@
 
     <item android:drawable="@color/project_two" />
 
-    <item android:drawable="@drawable/project_bg_2" android:right="40dp" android:bottom="20dp" />
+    <item
+        android:bottom="40dp"
+        android:drawable="@drawable/project_bg_2"
+        android:right="20dp" />
 
 </layer-list>

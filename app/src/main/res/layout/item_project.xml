@@ -7,7 +7,7 @@
     android:layout_marginRight="8dp"
     android:layout_marginTop="4dp"
     android:layout_marginBottom="4dp"
-    android:layout_height="180dp"
+    android:layout_height="200dp"
     android:orientation="vertical">
 
     <FrameLayout
@@ -17,7 +17,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:id="@+id/lLayoutProject"
             android:padding="16dp">
@@ -26,8 +26,7 @@
                 android:id="@+id/studentName"
                 style="@style/Title"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:textColor="#fff"
                 tools:text="Student Name" />
 
@@ -35,43 +34,40 @@
                 android:id="@+id/projectName"
                 style="@style/Subtitle"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:textColor="#fff"
                 tools:text="Project name" />
 
             <TextView
-                style="@style/Subtitle"
+                style="@style/Title"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="Organization"
                 android:textColor="#fff" />
 
             <TextView
                 android:id="@+id/orgName"
-                style="@style/Title"
+                style="@style/Subtitle"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:textColor="#fff"
                 tools:text="Organization Name" />
 
             <TextView
-                style="@style/Subtitle"
+                style="@style/Title"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:textColor="#fff"
-                tools:text="Mentor" />
+                android:text="Mentor" />
 
             <TextView
                 android:id="@+id/mentorName"
-                style="@style/Title"
+                style="@style/Subtitle"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:textColor="#fff"
+                android:maxLines="2"
+                android:ellipsize="end"
                 tools:text="Organization Name" />
 
         </LinearLayout>
@@ -79,10 +75,12 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
+            android:layout_gravity="top|end"
             android:id="@+id/linkImage"
             android:background="@null"
             android:padding="16dp"
+            android:layout_margin="4dp"
+            android:foreground="?attr/selectableItemBackground"
             app:srcCompat="@drawable/project_link" />
 
     </FrameLayout>

@@ -45,7 +45,13 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
         holder.studentName.setText(currProject.getStudent().getDisplayName());
         holder.projectName.setText(currProject.getTitle());
         holder.orgName.setText(currProject.getOrganization().getName());
-        holder.projectMentor.setText(currProject.getAssigneeDisplayNames().get(0));
+        holder.projectMentor.setText("");
+        for (int i = 0; i < currProject.getAssigneeDisplayNames().size(); i++) {
+            if (i == currProject.getAssigneeDisplayNames().size() - 1)
+                holder.projectMentor.append(currProject.getAssigneeDisplayNames().get(i));
+            else
+                holder.projectMentor.append(currProject.getAssigneeDisplayNames().get(i) + ", ");
+        }
     }
 
     @Override
