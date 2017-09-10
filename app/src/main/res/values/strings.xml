@@ -24,4 +24,8 @@
     <string name="title_notifications">Notifications</string>
     <string name="orgTitle">Organization</string>
     <string name="orgProject">Projects</string>
+    <string name="org_key">ORGANIZATIONS</string>
+    <string name="project_key">PROJECTS</string>
+    <string name="student_key">STUDENTS</string>
+    <string name="main_page">MAIN_PAGE</string>
 </resources>

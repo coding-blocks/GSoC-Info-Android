@@ -13,10 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import java.io.IOException;
-import java.io.InputStream;
-
-import codingblocks.com.gsocinfo.Constants;
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.fragments.AboutFragment;
 import codingblocks.com.gsocinfo.fragments.FaqFragment;
@@ -29,7 +25,7 @@ public class AboutActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.activity_home);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -53,39 +49,6 @@ public class AboutActivity extends AppCompatActivity
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container_about, AboutFragment.newInstance())
                 .commit();
-
-        // TODO: 01/09/17 : Move this to DB later on
-
-        try {
-            String json;
-            InputStream inputStream = getAssets().open("org.json");
-            int size = inputStream.available();
-            byte[] buffer = new byte[size];
-            inputStream.read(buffer);
-            inputStream.close();
-            json = new String(buffer, "UTF-8");
-            Constants.setOrganizations(json);
-
-            String json1;
-            InputStream inputStream1 = getAssets().open("projects.json");
-            int size1 = inputStream1.available();
-            byte[] buffer1 = new byte[size1];
-            inputStream1.read(buffer1);
-            inputStream1.close();
-            json1 = new String(buffer1, "UTF-8");
-            Constants.setProjects(json1);
-
-            String json2;
-            InputStream inputStream2 = getAssets().open("main_page.json");
-            int size2 = inputStream2.available();
-            byte[] buffer2 = new byte[size2];
-            inputStream2.read(buffer2);
-            inputStream2.close();
-            json2 = new String(buffer2, "UTF-8");
-            Constants.setMainPage(json2);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @Override

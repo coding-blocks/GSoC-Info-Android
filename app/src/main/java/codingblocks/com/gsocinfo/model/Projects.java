@@ -1,10 +1,16 @@
 package codingblocks.com.gsocinfo.model;
 
-import com.google.gson.annotations.Expose;
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Embedded;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ForeignKey;
+import android.arch.persistence.room.PrimaryKey;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
-import java.util.List;
+
+import static android.arch.persistence.room.ForeignKey.CASCADE;
 
 /**
  * Created by harshit on 25/08/17.
@@ -12,21 +18,25 @@ import java.util.List;
 public class Projects {
 
     @SerializedName("count")
-    @Expose
     private Integer count;
     @SerializedName("next")
-    @Expose
     private String next;
     @SerializedName("previous")
-    @Expose
     private String previous;
     @SerializedName("results")
-    @Expose
+
     private ArrayList<Project> results;
 
     public Integer getCount() {
         return count;
     }
+
+
+    /*
+    @ForeignKey(entity = Student.class,
+                    parentColumns = "id",
+                    childColumns = "student_id")
+     */
 
     public String getNext() {
         return next;
@@ -40,39 +50,73 @@ public class Projects {
         return results;
     }
 
-    public class Project {
-
+    @Entity(tableName = "projects",
+            foreignKeys = {@ForeignKey(entity = Student.class,
+                    parentColumns = "studentID",
+                    childColumns = "student_id",
+                    onDelete = CASCADE),
+                    @ForeignKey(entity = Organizations.Organization.class,
+                            parentColumns = "orgID",
+                            childColumns = "org_id",
+                            onDelete = CASCADE)
+            }
+    )
+    public static class Project {
+        @PrimaryKey
         @SerializedName("id")
-        @Expose
-        private long id;
+        private long projectID;
         @SerializedName("title")
-        @Expose
         private String title;
         @SerializedName("subcategory")
-        @Expose
         private String subcategory;
         @SerializedName("organization")
-        @Expose
+        @Embedded
         private Organizations.Organization organization;
         @SerializedName("student")
-        @Expose
+        @Embedded
         private Student student;
         @SerializedName("abstract")
-        @Expose
         private String _abstract;
         @SerializedName("assignee_display_names")
-        @Expose
         private ArrayList<String> assigneeDisplayNames = null;
-        @SerializedName("program_year")
-        @Expose
-        private Integer programYear;
+
+        @ColumnInfo(name = "student_id")
+        private long student_id;
+        @ColumnInfo(name = "org_id")
+        private long org_id;
+
+        public Project(long projectID, String title, String subcategory, Organizations.Organization organization, Student student, String _abstract, ArrayList<String> assigneeDisplayNames) {
+            this.projectID = projectID;
+            this.title = title;
+            this.subcategory = subcategory;
+            this.organization = organization;
+            this.student = student;
+            this._abstract = _abstract;
+            this.assigneeDisplayNames = assigneeDisplayNames;
+        }
+
+        public long getStudent_id() {
+            return student_id;
+        }
+
+        public void setStudent_id(long student_id) {
+            this.student_id = student_id;
+        }
+
+        public long getOrg_id() {
+            return org_id;
+        }
+
+        public void setOrg_id(long org_id) {
+            this.org_id = org_id;
+        }
 
         public String getId() {
-            return "https://summerofcode.withgoogle.com/projects/#" + id;
+            return "https://summerofcode.withgoogle.com/projects/#" + projectID;
         }
 
         public void setId(long id) {
-            this.id = id;
+            this.projectID = id;
         }
 
         public String getTitle() {
@@ -95,6 +139,14 @@ public class Projects {
             this.organization = organization;
         }
 
+        public long getProjectID() {
+            return projectID;
+        }
+
+        public void setProjectID(long projectID) {
+            this.projectID = projectID;
+        }
+
         public Student getStudent() {
             return student;
         }
@@ -103,42 +155,24 @@ public class Projects {
             return _abstract;
         }
 
-        public List<String> getAssigneeDisplayNames() {
+        public ArrayList<String> getAssigneeDisplayNames() {
             return assigneeDisplayNames;
         }
 
-        public Integer getProgramYear() {
-            return programYear;
+        public void setSubcategory(String subcategory) {
+            this.subcategory = subcategory;
         }
 
-    }
-
-    public class Student {
-
-        @SerializedName("id")
-        @Expose
-        private long id;
-        @SerializedName("display_name")
-        @Expose
-        private String displayName;
-        @SerializedName("program_year")
-        @Expose
-        private Integer programYear;
-
-        public long getId() {
-            return id;
+        public void setStudent(Student student) {
+            this.student = student;
         }
 
-        public void setId(Integer id) {
-            this.id = id;
+        public void set_abstract(String _abstract) {
+            this._abstract = _abstract;
         }
 
-        public String getDisplayName() {
-            return displayName;
-        }
-
-        public Integer getProgramYear() {
-            return programYear;
+        public void setAssigneeDisplayNames(ArrayList<String> assigneeDisplayNames) {
+            this.assigneeDisplayNames = assigneeDisplayNames;
         }
 
     }

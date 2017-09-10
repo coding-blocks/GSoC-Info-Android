@@ -1,18 +1,17 @@
 package codingblocks.com.gsocinfo.model;
 
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by harshit on 25/08/17.
  */
-
 public class Organizations {
 
     private ArrayList<Organization> results;
@@ -21,80 +20,61 @@ public class Organizations {
         return results;
     }
 
+    @Entity(tableName = "organizations")
     public static class Organization implements Parcelable{
 
         @SerializedName("id")
-        @Expose
-        private Long id;
+        @PrimaryKey
+        private Long orgID;
         @SerializedName("name")
-        @Expose
         private String name;
         @SerializedName("slug")
-        @Expose
         private String slug;
         @SerializedName("website_url")
-        @Expose
         private String websiteUrl;
         @SerializedName("category")
-        @Expose
         private String category;
         @SerializedName("contact_email")
-        @Expose
         private String contactEmail;
         @SerializedName("mailing_list")
-        @Expose
         private String mailingList;
         @SerializedName("irc_channel")
-        @Expose
-        private Object ircChannel;
+        private String ircChannel;
         @SerializedName("tagline")
-        @Expose
         private String tagline;
         @SerializedName("precis")
-        @Expose
         private String precis;
         @SerializedName("description")
-        @Expose
         private String description;
         @SerializedName("primary_open_source_license")
-        @Expose
         private String primaryOpenSourceLicense;
         @SerializedName("image_url")
-        @Expose
         private String imageUrl;
         @SerializedName("image_bg_color")
-        @Expose
-        private Object imageBgColor;
+        private String imageBgColor;
         @SerializedName("gplus_url")
-        @Expose
         private String gplusUrl;
         @SerializedName("twitter_url")
-        @Expose
         private String twitterUrl;
         @SerializedName("blog_url")
-        @Expose
         private String blogUrl;
         @SerializedName("application_instructions")
-        @Expose
         private String applicationInstructions;
         @SerializedName("topic_tags")
-        @Expose
-        private List<String> topicTags = null;
+        private ArrayList<String> topicTags = null;
         @SerializedName("technology_tags")
-        @Expose
-        private List<String> technologyTags = null;
+        private ArrayList<String> technologyTags = null;
         @SerializedName("proposal_tags")
-        @Expose
-        private List<String> proposalTags = null;
+        private ArrayList<String> proposalTags = null;
         @SerializedName("ideas_list")
-        @Expose
         private String ideasList;
         @SerializedName("contact_method")
-        @Expose
         private String contactMethod;
         @SerializedName("program_year")
-        @Expose
         private Integer programYear;
+
+        public Organization() {
+        }
 
         protected Organization(Parcel in) {
             name = in.readString();
@@ -132,11 +112,11 @@ public class Organizations {
         };
 
         public Long getId() {
-            return id;
+            return orgID;
         }
 
         public void setId(Long id) {
-            this.id = id;
+            this.orgID = id;
         }
 
         public String getName() {
@@ -167,7 +147,7 @@ public class Organizations {
             return mailingList;
         }
 
-        public Object getIrcChannel() {
+        public String getIrcChannel() {
             return ircChannel;
         }
 
@@ -191,7 +171,7 @@ public class Organizations {
             return imageUrl;
         }
 
-        public Object getImageBgColor() {
+        public String getImageBgColor() {
             return imageBgColor;
         }
 
@@ -211,15 +191,15 @@ public class Organizations {
             return applicationInstructions;
         }
 
-        public List<String> getTopicTags() {
+        public ArrayList<String> getTopicTags() {
             return topicTags;
         }
 
-        public List<String> getTechnologyTags() {
+        public ArrayList<String> getTechnologyTags() {
             return technologyTags;
         }
 
-        public List<String> getProposalTags() {
+        public ArrayList<String> getProposalTags() {
             return proposalTags;
         }
 
@@ -235,6 +215,105 @@ public class Organizations {
             return programYear;
         }
 
+        public void setSlug(String slug) {
+            this.slug = slug;
+        }
+
+        public void setWebsiteUrl(String websiteUrl) {
+            this.websiteUrl = websiteUrl;
+        }
+
+        public void setCategory(String category) {
+            this.category = category;
+        }
+
+        public void setContactEmail(String contactEmail) {
+            this.contactEmail = contactEmail;
+        }
+
+        public void setMailingList(String mailingList) {
+            this.mailingList = mailingList;
+        }
+
+        public void setIrcChannel(String ircChannel) {
+            this.ircChannel = ircChannel;
+        }
+
+        public void setTagline(String tagline) {
+            this.tagline = tagline;
+        }
+
+        public void setPrecis(String precis) {
+            this.precis = precis;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+
+        public void setPrimaryOpenSourceLicense(String primaryOpenSourceLicense) {
+            this.primaryOpenSourceLicense = primaryOpenSourceLicense;
+        }
+
+        public void setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+        }
+
+        public void setImageBgColor(String imageBgColor) {
+            this.imageBgColor = imageBgColor;
+        }
+
+        public void setGplusUrl(String gplusUrl) {
+            this.gplusUrl = gplusUrl;
+        }
+
+        public void setTwitterUrl(String twitterUrl) {
+            this.twitterUrl = twitterUrl;
+        }
+
+        public void setBlogUrl(String blogUrl) {
+            this.blogUrl = blogUrl;
+        }
+
+        public void setApplicationInstructions(String applicationInstructions) {
+            this.applicationInstructions = applicationInstructions;
+        }
+
+        public void setTopicTags(ArrayList<String> topicTags) {
+            this.topicTags = topicTags;
+        }
+
+        public void setTechnologyTags(ArrayList<String> technologyTags) {
+            this.technologyTags = technologyTags;
+        }
+
+        public Long getOrgID() {
+            return orgID;
+        }
+
+        public void setOrgID(Long orgID) {
+            this.orgID = orgID;
+        }
+
+        public void setProposalTags(ArrayList<String> proposalTags) {
+            this.proposalTags = proposalTags;
+        }
+
+        public void setIdeasList(String ideasList) {
+            this.ideasList = ideasList;
+        }
+
+        public void setContactMethod(String contactMethod) {
+            this.contactMethod = contactMethod;
+        }
+
+        public void setProgramYear(Integer programYear) {
+            this.programYear = programYear;
+        }
+
+        public static Creator<Organization> getCREATOR() {
+            return CREATOR;
+        }
 
         @Override
         public int describeContents() {

@@ -28,4 +28,9 @@
         <item name="android:textColor">@android:color/black</item>
     </style>
 
+    <style name="CustomButton" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorButtonNormal">@color/colorAccent</item>
+    </style>
+
 </resources>

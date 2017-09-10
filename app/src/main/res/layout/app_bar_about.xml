@@ -9,15 +9,44 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:elevation="0dp"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <ViewFlipper
+            android:id="@+id/sliderView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:autoStart="true"
+            app:layout_scrollFlags="enterAlways"
+            android:background="@color/colorPrimary"
+            android:flipInterval="2500"
+            android:inAnimation="@anim/slide_in_right"
+            android:outAnimation="@anim/slide_out_left">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/apply_xml" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/code_xml" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/share_xml" />
+
+        </ViewFlipper>
 
     </android.support.design.widget.AppBarLayout>
 
@@ -25,12 +54,12 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
-        android:scaleType="fitCenter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        app:fabSize="normal"
         android:layout_margin="@dimen/fab_margin"
+        android:scaleType="fitCenter"
+        app:fabSize="normal"
         app:srcCompat="@drawable/telescope" />
 
 </android.support.design.widget.CoordinatorLayout>
