@@ -14,6 +14,7 @@ import com.github.vipulasri.timelineview.TimelineView;
 import java.util.ArrayList;
 
 import codingblocks.com.gsocinfo.Constants;
+import codingblocks.com.gsocinfo.GSoCApp;
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.model.MainPage;
 
@@ -27,8 +28,19 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
     private ArrayList<String> date = Constants.generateDate(),
             title = Constants.generateTitle(),
             description = Constants.generateDescription();
-    private MainPage mainPage = Constants.getMainPage();
+    private MainPage.Copy mainPage;
+
     private static final int HEADER = 123;
+
+    public TimelineAdapter() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                mainPage = GSoCApp.getMainPageDao().getData();
+                notifyDataSetChanged();
+            }
+        }).start();
+    }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -50,12 +62,12 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
             ((TimelineHolder) holder).title.setText(title.get(position));
             ((TimelineHolder) holder).date.setText(date.get(position));
         } else if (holder instanceof AboutHolder) {
-            ((AboutHolder) holder).about.setText(mainPage.getCopy().getNumberOfStudents() + " STUDENTS, " +
-                    mainPage.getCopy().getNumberOfStudentCountries() + " COUNTRIES,\n" +
-                    mainPage.getCopy().getNumberOfYears() + " YEARS, " + mainPage.getCopy().getNumberOfOrganizations()
+            ((AboutHolder) holder).about.setText(mainPage.getNumberOfStudents() + " STUDENTS, " +
+                    mainPage.getNumberOfStudentCountries() + " COUNTRIES,\n" +
+                    mainPage.getNumberOfYears() + " YEARS, " + mainPage.getNumberOfOrganizations()
                     + " OPEN SOURCE ORGANIZATIONS");
-            ((AboutHolder) holder).linesOfCode.setText(mainPage.getCopy().getNumberOfLinesOfCode());
-            ((AboutHolder) holder).overView.setText(mainPage.getCopy().getHomepageIntroParagraph());
+            ((AboutHolder) holder).linesOfCode.setText(mainPage.getNumberOfLinesOfCode());
+            ((AboutHolder) holder).overView.setText(mainPage.getHomepageIntroParagraph());
         }
     }
 

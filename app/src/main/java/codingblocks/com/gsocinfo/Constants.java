@@ -1,12 +1,6 @@
 package codingblocks.com.gsocinfo;
 
-import com.google.gson.Gson;
-
 import java.util.ArrayList;
-
-import codingblocks.com.gsocinfo.model.MainPage;
-import codingblocks.com.gsocinfo.model.Organizations;
-import codingblocks.com.gsocinfo.model.Projects;
 
 
 /**
@@ -14,39 +8,6 @@ import codingblocks.com.gsocinfo.model.Projects;
  */
 
 public class Constants {
-
-    private static Organizations organizations;
-
-    private static Projects projects;
-
-    private static MainPage mainPage;
-
-    public static void setOrganizations(String json) {
-        Gson gson = new Gson();
-        Constants.organizations = gson.fromJson(json, Organizations.class);
-    }
-
-    public static ArrayList<Projects.Project> getProjects() {
-        return projects.getResults();
-    }
-
-    public static void setProjects(String json) {
-        Gson gson = new Gson();
-        Constants.projects = gson.fromJson(json, Projects.class);
-    }
-
-    public static ArrayList<Organizations.Organization> getOrganizations(){
-        return organizations.getResults();
-    }
-
-    public static MainPage getMainPage() {
-        return mainPage;
-    }
-
-    public static void setMainPage(String json) {
-        Gson gson = new Gson();
-        Constants.mainPage = gson.fromJson(json, MainPage.class);
-    }
 
     public static ArrayList<String > generateTitle(){
         ArrayList<String> title = new ArrayList<>();

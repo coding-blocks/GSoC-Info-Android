@@ -92,7 +92,7 @@ public class AboutActivity extends AppCompatActivity
                     .commit();
         } else if (id == R.id.nav_projects) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container_about, ProjectFragment.newInstance(null))
+                    .replace(R.id.container_about, ProjectFragment.newInstance(""))
                     .commit();
         } else if (id == R.id.nav_faq) {
             getSupportFragmentManager().beginTransaction()

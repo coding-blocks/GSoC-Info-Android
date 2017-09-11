@@ -1,16 +1,12 @@
 package codingblocks.com.gsocinfo.model;
 
-import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
-
-import static android.arch.persistence.room.ForeignKey.CASCADE;
 
 /**
  * Created by harshit on 25/08/17.
@@ -31,13 +27,6 @@ public class Projects {
         return count;
     }
 
-
-    /*
-    @ForeignKey(entity = Student.class,
-                    parentColumns = "id",
-                    childColumns = "student_id")
-     */
-
     public String getNext() {
         return next;
     }
@@ -50,6 +39,9 @@ public class Projects {
         return results;
     }
 
+/*
+    Not needed since @Embedded handles this automatically
+
     @Entity(tableName = "projects",
             foreignKeys = {@ForeignKey(entity = Student.class,
                     parentColumns = "studentID",
@@ -61,6 +53,9 @@ public class Projects {
                             onDelete = CASCADE)
             }
     )
+ */
+
+@Entity(tableName = "projects")
     public static class Project {
         @PrimaryKey
         @SerializedName("id")
@@ -74,16 +69,12 @@ public class Projects {
         private Organizations.Organization organization;
         @SerializedName("student")
         @Embedded
+
         private Student student;
         @SerializedName("abstract")
         private String _abstract;
         @SerializedName("assignee_display_names")
         private ArrayList<String> assigneeDisplayNames = null;
-
-        @ColumnInfo(name = "student_id")
-        private long student_id;
-        @ColumnInfo(name = "org_id")
-        private long org_id;
 
         public Project(long projectID, String title, String subcategory, Organizations.Organization organization, Student student, String _abstract, ArrayList<String> assigneeDisplayNames) {
             this.projectID = projectID;
@@ -93,22 +84,6 @@ public class Projects {
             this.student = student;
             this._abstract = _abstract;
             this.assigneeDisplayNames = assigneeDisplayNames;
-        }
-
-        public long getStudent_id() {
-            return student_id;
-        }
-
-        public void setStudent_id(long student_id) {
-            this.student_id = student_id;
-        }
-
-        public long getOrg_id() {
-            return org_id;
-        }
-
-        public void setOrg_id(long org_id) {
-            this.org_id = org_id;
         }
 
         public String getId() {

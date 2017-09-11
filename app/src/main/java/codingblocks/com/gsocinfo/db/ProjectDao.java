@@ -18,8 +18,8 @@ public interface ProjectDao {
     @Query("SELECT * FROM projects ORDER BY title")
     List<Projects.Project> getAllProjects();
 
-//    @Query("SELECT * FROM projects")
-//    Projects.Project getProjectByStudentId(long id);
+    @Query("SELECT * FROM projects WHERE orgID = :id")
+    List<Projects.Project> getProjectByOrgId(String id);
 
     @Insert
     void insertAllProjects(List<Projects.Project> projects);

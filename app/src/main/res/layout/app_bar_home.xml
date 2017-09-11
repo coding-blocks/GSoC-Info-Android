@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
+            app:layout_scrollFlags="scroll"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         <ViewFlipper
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:autoStart="true"
-            app:layout_scrollFlags="enterAlways"
+            app:layout_scrollFlags="scroll|enterAlways"
             android:background="@color/colorPrimary"
             android:flipInterval="2500"
             android:inAnimation="@anim/slide_in_right"
@@ -50,7 +50,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_about" />
+    <include layout="@layout/content_home" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

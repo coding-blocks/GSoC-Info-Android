@@ -7,8 +7,10 @@ import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 
@@ -22,7 +24,6 @@ import codingblocks.com.gsocinfo.model.Organizations;
 import codingblocks.com.gsocinfo.model.Projects;
 
 import static codingblocks.com.gsocinfo.GSoCApp.getProjectDao;
-import static codingblocks.com.gsocinfo.GSoCApp.getStudentDao;
 
 /**
  * Created by harshit on 02/09/17.
@@ -42,13 +43,21 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
+        populateDatabase();
+    }
 
+    public void populateDatabase(){
         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         final Gson gson = new Gson();
+        View view = LayoutInflater.from(this).inflate(R.layout.dialog_progress,null,false);
+        ((TextView) view.findViewById(R.id.textViewDialog)).setText("Settings things up for the first launch, please wait ...");
         final AlertDialog alertDialog = new AlertDialog.Builder(this)
                 .setMessage("Setting things up, please wait")
+                .setView(view)
                 .setCancelable(false)
+                .setView(view)
                 .create();
+
         alertDialog.show();
         Runnable runnable = new Runnable() {
 
@@ -96,8 +105,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (!sharedPreferences.getBoolean(getString(R.string.project_key), false) && !sharedPreferences.getBoolean(getString(R.string.student_key), false)) {
                     try {
 
-                        sharedPreferences.edit().putBoolean(getString(R.string.student_key), true).apply();
-                        GSoCApp.getProjectDao().nukeProjects();
+                        getProjectDao().nukeProjects();
                         final Projects projects;
                         String json1;
                         InputStream inputStream1 = getAssets().open("projects.json");
@@ -107,24 +115,11 @@ public class LoginActivity extends AppCompatActivity {
                         inputStream1.close();
                         json1 = new String(buffer1, "UTF-8");
                         projects = gson.fromJson(json1, Projects.class);
-
-                        getStudentDao().nukeStudents();
-
-                        for (Projects.Project project : projects.getResults()) {
-                            getStudentDao().insertSingleStudent(project.getStudent());
-                        }
-
-                        for (Projects.Project project : projects.getResults()) {
-                            project.setOrg_id(project.getOrganization().getOrgID());
-                            project.setStudent_id(project.getStudent().getStudentID());
-                        }
-
                         getProjectDao().insertAllProjects(projects.getResults());
                         sharedPreferences.edit().putBoolean(getString(R.string.project_key), true).apply();
 
                     } catch (IOException | NullPointerException e) {
                         e.printStackTrace();
-                        sharedPreferences.edit().putBoolean(getString(R.string.student_key), false).apply();
                         sharedPreferences.edit().putBoolean(getString(R.string.project_key), false).apply();
                     }
                 }

@@ -24,12 +24,11 @@ import codingblocks.com.gsocinfo.model.Projects;
 public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectHolder> {
 
     private Context context;
-    private ArrayList<Projects.Project> projects = new ArrayList<>();
+    private List<Projects.Project> projects = new ArrayList<>();
     private int count = 0; //keeping track of card item created for setting the background
 
     public void setData(List<Projects.Project> projects){
-        this.projects.addAll(projects);
-        notifyDataSetChanged();
+        this.projects = projects;
     }
 
     @Override

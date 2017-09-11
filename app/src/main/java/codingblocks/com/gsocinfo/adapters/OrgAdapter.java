@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +14,8 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
-import codingblocks.com.gsocinfo.Constants;
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.activities.OrgDetailActivity;
 import codingblocks.com.gsocinfo.model.Organizations;
@@ -26,11 +27,11 @@ import codingblocks.com.gsocinfo.model.Organizations;
 public class OrgAdapter extends RecyclerView.Adapter<OrgAdapter.OrgHolder> {
 
     public static final String ORG_TAG = "ORG";
-    private ArrayList<Organizations.Organization> organizations;
+    private List<Organizations.Organization> organizations = new ArrayList<>();
     private Context context;
 
-    public OrgAdapter() {
-        organizations = Constants.getOrganizations();
+    public void setData(List<Organizations.Organization> organizations){
+        this.organizations = organizations;
     }
 
     @Override
@@ -72,6 +73,8 @@ public class OrgAdapter extends RecyclerView.Adapter<OrgAdapter.OrgHolder> {
                 public void onClick(View view) {
                     Intent i = new Intent(context, OrgDetailActivity.class);
                     i.putExtra(ORG_TAG,organizations.get(getAdapterPosition()));
+                    Log.e(ORG_TAG, "onClick: " + organizations.get(getAdapterPosition()).getOrgID());
+                    i.putExtra("ORG_ID",organizations.get(getAdapterPosition()).getOrgID());
                     context.startActivity(i);
                 }
             });

@@ -5,16 +5,16 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-
-import codingblocks.com.gsocinfo.Constants;
+import codingblocks.com.gsocinfo.GSoCApp;
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.adapters.ProjectAdapter;
-import codingblocks.com.gsocinfo.model.Projects;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by harshit on 31/08/17.
@@ -22,13 +22,12 @@ import codingblocks.com.gsocinfo.model.Projects;
 
 public class ProjectFragment extends Fragment {
 
-    int beg = 0, end = 20;
-
-    public static ProjectFragment newInstance(@Nullable String org) {
+    public static ProjectFragment newInstance(@Nullable String id) {
 
         Bundle args = new Bundle();
-        if (org != null)
-            args.putString("ORG", org);
+        if (id != null) {
+            args.putString("ORG", id);
+        }
         ProjectFragment fragment = new ProjectFragment();
         fragment.setArguments(args);
         return fragment;
@@ -44,33 +43,35 @@ public class ProjectFragment extends Fragment {
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(projectAdapter);
-        final ArrayList<Projects.Project> projectArrayList = Constants.getProjects();
-
-        String org = getArguments().getString("ORG");
-
-        // TODO: 01/09/17  : Run this query from DB
-
-        if (org != null) {
-            ArrayList<Projects.Project> projects = new ArrayList<>();
-            for (Projects.Project p : Constants.getProjects()) {
-                if (p.getOrganization().getName().equals(org)) {
-                    projects.add(p);
-                }
-            }
-            projectAdapter.setData(projects);
-        } else {
-            projectAdapter.setData(projectArrayList.subList(beg, end));
-            recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+        final String orgId = getArguments().getString("ORG");
+        Log.e(TAG, "onCreateView: " + orgId);
+        if (orgId != null && !orgId.equals("")) {
+            new Thread(new Runnable() {
                 @Override
-                public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                    super.onScrolled(recyclerView, dx, dy);
-                    int totalItemCount = linearLayoutManager.getItemCount();
-                    int lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition();
-                    if (totalItemCount <= (lastVisibleItem + 5) && totalItemCount < projectArrayList.size()) {
-                        projectAdapter.setData(projectArrayList.subList(end + 1, end + 20));
-                    }
+                public void run() {
+                    Log.e(TAG, "run: " + orgId );
+                    projectAdapter.setData(GSoCApp.getProjectDao().getProjectByOrgId(orgId));
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            projectAdapter.notifyDataSetChanged();
+                        }
+                    });
                 }
-            });
+            }).start();
+        } else {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    projectAdapter.setData(GSoCApp.getProjectDao().getAllProjects());
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            projectAdapter.notifyDataSetChanged();
+                        }
+                    });
+                }
+            }).start();
         }
         return v;
 

@@ -26,6 +26,7 @@ import static codingblocks.com.gsocinfo.adapters.OrgAdapter.ORG_TAG;
 public class OrgDetailActivity extends AppCompatActivity {
 
     private Organizations.Organization organization;
+    String orgID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class OrgDetailActivity extends AppCompatActivity {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
 
-                if (verticalOffset == 0){
+                if (verticalOffset == 0) {
                     collapsingToolbarLayout.setTitle(" ");
                 }
                 if (Math.abs(verticalOffset) == appBarLayout.getTotalScrollRange())
@@ -54,7 +55,7 @@ public class OrgDetailActivity extends AppCompatActivity {
 
         Picasso.with(this).load(organization.getImageUrl()).into(orgIcon);
         orgDesc.setText(organization.getPrecis());
-
+        orgID = i.getStringExtra("ORG_ID");
         ViewPager viewPager = findViewById(R.id.viewPager);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapter);
@@ -70,11 +71,11 @@ public class OrgDetailActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            switch (position){
-                case 0 :
+            switch (position) {
+                case 0:
                     return OrgDetailFragment.newInstance();
                 case 1:
-                    return ProjectFragment.newInstance(organization.getName());
+                    return ProjectFragment.newInstance(orgID);
                 default:
                     return null;
             }
@@ -82,10 +83,10 @@ public class OrgDetailActivity extends AppCompatActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            switch (position){
-                case 0 :
+            switch (position) {
+                case 0:
                     return getString(R.string.orgTitle);
-                case 1 :
+                case 1:
                     return getString(R.string.orgProject);
             }
             return null;

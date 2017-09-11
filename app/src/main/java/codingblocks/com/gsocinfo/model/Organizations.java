@@ -25,7 +25,7 @@ public class Organizations {
 
         @SerializedName("id")
         @PrimaryKey
-        private Long orgID;
+        private String orgID;
         @SerializedName("name")
         private String name;
         @SerializedName("slug")
@@ -110,14 +110,6 @@ public class Organizations {
                 return new Organization[size];
             }
         };
-
-        public Long getId() {
-            return orgID;
-        }
-
-        public void setId(Long id) {
-            this.orgID = id;
-        }
 
         public String getName() {
             return name;
@@ -287,11 +279,11 @@ public class Organizations {
             this.technologyTags = technologyTags;
         }
 
-        public Long getOrgID() {
+        public String getOrgID() {
             return orgID;
         }
 
-        public void setOrgID(Long orgID) {
+        public void setOrgID(String orgID) {
             this.orgID = orgID;
         }
 
