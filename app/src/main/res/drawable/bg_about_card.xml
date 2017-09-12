@@ -3,8 +3,6 @@
 
     <item android:drawable="@color/colorPrimary" />
 
-    <item
-        android:drawable="@drawable/bg_mountains"
-        android:top="180dp" />
+    <item android:drawable="@drawable/stars_background" />
 
 </layer-list>

@@ -53,7 +53,7 @@ public class OrgDetailActivity extends AppCompatActivity {
         ImageView orgIcon = findViewById(R.id.org_detail_image);
         TextView orgDesc = findViewById(R.id.org_detail_desc);
 
-        Picasso.with(this).load(organization.getImageUrl()).into(orgIcon);
+        Picasso.with(this).load(organization.getImageUrl()).noFade().into(orgIcon);
         orgDesc.setText(organization.getPrecis());
         orgID = i.getStringExtra("ORG_ID");
         ViewPager viewPager = findViewById(R.id.viewPager);

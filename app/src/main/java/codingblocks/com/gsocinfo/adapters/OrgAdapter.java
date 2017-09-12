@@ -32,6 +32,7 @@ public class OrgAdapter extends RecyclerView.Adapter<OrgAdapter.OrgHolder> {
 
     public void setData(List<Organizations.Organization> organizations){
         this.organizations = organizations;
+        notifyDataSetChanged();
     }
 
     @Override

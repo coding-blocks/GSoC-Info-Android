@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import codingblocks.com.gsocinfo.GSoCApp;
+import codingblocks.com.gsocinfo.Constants;
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.adapters.OrgAdapter;
 
@@ -34,23 +34,12 @@ public class OrganizationFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_org, container, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.rv_org);
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
 
-        final OrgAdapter orgAdapter = new OrgAdapter();
+        OrgAdapter orgAdapter = new OrgAdapter();
         recyclerView.setAdapter(orgAdapter);
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                orgAdapter.setData(GSoCApp.getOrgDao().getAllOrganizations());
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        orgAdapter.notifyDataSetChanged();
-                    }
-                });
-            }
-        }).start();
+        orgAdapter.setData(Constants.getOrganizations());
 
         return view;
     }

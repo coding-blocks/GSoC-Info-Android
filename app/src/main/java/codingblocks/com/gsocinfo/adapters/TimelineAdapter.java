@@ -11,10 +11,9 @@ import android.widget.TextView;
 import com.github.vipulasri.timelineview.LineType;
 import com.github.vipulasri.timelineview.TimelineView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import codingblocks.com.gsocinfo.Constants;
-import codingblocks.com.gsocinfo.GSoCApp;
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.model.MainPage;
 
@@ -24,8 +23,7 @@ import codingblocks.com.gsocinfo.model.MainPage;
 
 public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private Context context;
-    private ArrayList<String> date = Constants.generateDate(),
+    private List<String> date = Constants.generateDate(),
             title = Constants.generateTitle(),
             description = Constants.generateDescription();
     private MainPage.Copy mainPage;
@@ -33,18 +31,16 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
     private static final int HEADER = 123;
 
     public TimelineAdapter() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                mainPage = GSoCApp.getMainPageDao().getData();
-                notifyDataSetChanged();
-            }
-        }).start();
+    }
+
+    public void setData(MainPage.Copy copy){
+        this.mainPage = copy;
+        notifyDataSetChanged();
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        this.context = parent.getContext();
+        Context context = parent.getContext();
         View view;
         if (viewType == HEADER) {
             view = View.inflate(context, R.layout.item_card_about, null);

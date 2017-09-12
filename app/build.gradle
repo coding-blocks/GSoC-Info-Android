@@ -52,5 +52,6 @@ dependencies {
     compile 'com.google.firebase:firebase-crash:10.0.1'
     compile 'com.android.support:support-v4:26.0.1'
     compile 'com.android.support:support-vector-drawable:26.0.0-alpha1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
     testCompile 'junit:junit:4.12'
 }

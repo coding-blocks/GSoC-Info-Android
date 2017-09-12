@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@color/colorPrimary" />
+    <item android:drawable="@drawable/side_nav_bar" />
 
     <item
-        android:bottom="20dp"
-        android:drawable="@drawable/home_banner_world"
-        android:left="20dp"
-        android:right="20dp"
-        android:top="320dp" />
+        android:top="80dp"
+        android:left="40dp"
+        android:right="40dp"
+        android:bottom="140dp"
+        android:drawable="@drawable/globe_flag" />
 </layer-list>

@@ -43,13 +43,9 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
-        populateDatabase();
-    }
-
-    public void populateDatabase(){
         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         final Gson gson = new Gson();
-        View view = LayoutInflater.from(this).inflate(R.layout.dialog_progress,null,false);
+        View view = LayoutInflater.from(this).inflate(R.layout.dialog_progress, null, false);
         ((TextView) view.findViewById(R.id.textViewDialog)).setText("Settings things up for the first launch, please wait ...");
         final AlertDialog alertDialog = new AlertDialog.Builder(this)
                 .setMessage("Setting things up, please wait")
@@ -104,7 +100,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 if (!sharedPreferences.getBoolean(getString(R.string.project_key), false) && !sharedPreferences.getBoolean(getString(R.string.student_key), false)) {
                     try {
-
                         getProjectDao().nukeProjects();
                         final Projects projects;
                         String json1;
@@ -133,6 +128,5 @@ public class LoginActivity extends AppCompatActivity {
         };
         new Thread(runnable).start();
     }
-
 
 }

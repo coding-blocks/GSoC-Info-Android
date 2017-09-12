@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import codingblocks.com.gsocinfo.Constants;
 import codingblocks.com.gsocinfo.GSoCApp;
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.adapters.ProjectAdapter;
@@ -44,12 +45,11 @@ public class ProjectFragment extends Fragment {
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(projectAdapter);
         final String orgId = getArguments().getString("ORG");
-        Log.e(TAG, "onCreateView: " + orgId);
         if (orgId != null && !orgId.equals("")) {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    Log.e(TAG, "run: " + orgId );
+                    Log.e(TAG, "run: " + orgId);
                     projectAdapter.setData(GSoCApp.getProjectDao().getProjectByOrgId(orgId));
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
@@ -60,18 +60,8 @@ public class ProjectFragment extends Fragment {
                 }
             }).start();
         } else {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    projectAdapter.setData(GSoCApp.getProjectDao().getAllProjects());
-                    getActivity().runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            projectAdapter.notifyDataSetChanged();
-                        }
-                    });
-                }
-            }).start();
+            projectAdapter.setData(Constants.getProjects());
+            projectAdapter.notifyDataSetChanged();
         }
         return v;
 

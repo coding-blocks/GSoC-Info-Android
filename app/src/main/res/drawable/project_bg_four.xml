@@ -4,8 +4,6 @@
     <item android:drawable="@color/project_four" />
 
     <item
-        android:bottom="40dp"
-        android:drawable="@drawable/project_bg_4"
-        android:right="20dp" />
+        android:drawable="@drawable/project_bg_4" />
 
 </layer-list>

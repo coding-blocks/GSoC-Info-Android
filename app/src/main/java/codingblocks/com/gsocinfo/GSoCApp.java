@@ -25,6 +25,14 @@ public class GSoCApp extends Application {
         projectsDao = appDatabase.getProjectsDao();
         organizationDao = appDatabase.getOrganizationsDao();
         mainPageDao = appDatabase.getMainPageDao();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Constants.setCopy(getMainPageDao().getData());
+                Constants.setOrganizations(getOrgDao().getAllOrganizations());
+                Constants.setProjects(getProjectDao().getAllProjects());
+            }
+        }).start();
     }
 
     public static OrganizationDao getOrgDao() {

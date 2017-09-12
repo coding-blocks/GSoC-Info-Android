@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import codingblocks.com.gsocinfo.Constants;
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.adapters.TimelineAdapter;
 
@@ -36,8 +37,8 @@ public class AboutFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.rv_timeline);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        TimelineAdapter timelineAdapter = new TimelineAdapter();
-
+        final TimelineAdapter timelineAdapter = new TimelineAdapter();
+        timelineAdapter.setData(Constants.getCopy());
         recyclerView.setAdapter(timelineAdapter);
         return view;
     }
