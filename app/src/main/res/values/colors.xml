@@ -8,6 +8,7 @@
     <color name="primary_color">#4CAF50</color>
     <color name="dark_primary_color">#388E3C</color>
     <color name="accent_color">#FF5722</color>
+    <color name="accent_color_alpha">#AAFF5722</color>
     <color name="white">#ffffff</color>
     <color name="project_one">#38114E</color>
     <color name="project_two">#075962</color>

@@ -30,7 +30,7 @@
 
     <style name="CustomButton" parent="AppTheme">
         <!-- Customize your theme here. -->
-        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="android:drawable">@drawable/bordered_translucent_button</item>
     </style>
 
 </resources>
