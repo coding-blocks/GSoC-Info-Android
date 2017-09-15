@@ -3,6 +3,8 @@ package codingblocks.com.gsocinfo.model;
 import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
+import android.support.v7.recyclerview.extensions.DiffCallback;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -69,12 +71,23 @@ public class Projects {
         private Organizations.Organization organization;
         @SerializedName("student")
         @Embedded
-
         private Student student;
         @SerializedName("abstract")
         private String _abstract;
         @SerializedName("assignee_display_names")
         private ArrayList<String> assigneeDisplayNames = null;
+
+        public static final DiffCallback<Project> DIFF_CALLBACK = new DiffCallback<Project>() {
+            @Override
+            public boolean areItemsTheSame(@NonNull Project oldItem, @NonNull Project newItem) {
+                return oldUser.getId() == newUser.getId();
+            }
+
+            @Override
+            public boolean areContentsTheSame(@NonNull Project oldItem, @NonNull Project newItem) {
+                return false;
+            }
+        };
 
         public Project(long projectID, String title, String subcategory, Organizations.Organization organization, Student student, String _abstract, ArrayList<String> assigneeDisplayNames) {
             this.projectID = projectID;
