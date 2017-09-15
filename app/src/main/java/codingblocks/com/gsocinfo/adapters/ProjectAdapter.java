@@ -1,11 +1,8 @@
 package codingblocks.com.gsocinfo.adapters;
 
-import android.arch.paging.PagedListAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.v7.recyclerview.extensions.DiffCallback;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,15 +21,11 @@ import codingblocks.com.gsocinfo.model.Projects;
  * Created by harshit on 26/08/17.
  */
 
-public class ProjectAdapter extends PagedListAdapter<Projects.Project,ProjectAdapter.ProjectHolder> {
+public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectHolder> {
 
     private Context context;
     private List<Projects.Project> projects = new ArrayList<>();
     private int count = 0; //keeping track of card item created for setting the background
-
-    protected ProjectAdapter() {
-        super(diffCallback);
-    }
 
     public void setData(List<Projects.Project> projects){
         this.projects = projects;

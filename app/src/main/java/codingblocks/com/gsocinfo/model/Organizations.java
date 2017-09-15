@@ -9,6 +9,10 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Created by harshit on 25/08/17.
  */
@@ -20,6 +24,9 @@ public class Organizations {
         return results;
     }
 
+    @EqualsAndHashCode
+    @Getter
+    @Setter
     @Entity(tableName = "organizations")
     public static class Organization implements Parcelable{
 
@@ -110,198 +117,6 @@ public class Organizations {
                 return new Organization[size];
             }
         };
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getSlug() {
-            return slug;
-        }
-
-        public String getWebsiteUrl() {
-            return websiteUrl;
-        }
-
-        public String getCategory() {
-            return category;
-        }
-
-        public String getContactEmail() {
-            return contactEmail;
-        }
-
-        public String getMailingList() {
-            return mailingList;
-        }
-
-        public String getIrcChannel() {
-            return ircChannel;
-        }
-
-        public String getTagline() {
-            return tagline;
-        }
-
-        public String getPrecis() {
-            return precis;
-        }
-
-        public String getDescription() {
-            return description;
-        }
-
-        public String getPrimaryOpenSourceLicense() {
-            return primaryOpenSourceLicense;
-        }
-
-        public String getImageUrl() {
-            return imageUrl;
-        }
-
-        public String getImageBgColor() {
-            return imageBgColor;
-        }
-
-        public String getGplusUrl() {
-            return gplusUrl;
-        }
-
-        public String getTwitterUrl() {
-            return twitterUrl;
-        }
-
-        public String getBlogUrl() {
-            return blogUrl;
-        }
-
-        public String getApplicationInstructions() {
-            return applicationInstructions;
-        }
-
-        public ArrayList<String> getTopicTags() {
-            return topicTags;
-        }
-
-        public ArrayList<String> getTechnologyTags() {
-            return technologyTags;
-        }
-
-        public ArrayList<String> getProposalTags() {
-            return proposalTags;
-        }
-
-        public String getIdeasList() {
-            return ideasList;
-        }
-
-        public String getContactMethod() {
-            return contactMethod;
-        }
-
-        public Integer getProgramYear() {
-            return programYear;
-        }
-
-        public void setSlug(String slug) {
-            this.slug = slug;
-        }
-
-        public void setWebsiteUrl(String websiteUrl) {
-            this.websiteUrl = websiteUrl;
-        }
-
-        public void setCategory(String category) {
-            this.category = category;
-        }
-
-        public void setContactEmail(String contactEmail) {
-            this.contactEmail = contactEmail;
-        }
-
-        public void setMailingList(String mailingList) {
-            this.mailingList = mailingList;
-        }
-
-        public void setIrcChannel(String ircChannel) {
-            this.ircChannel = ircChannel;
-        }
-
-        public void setTagline(String tagline) {
-            this.tagline = tagline;
-        }
-
-        public void setPrecis(String precis) {
-            this.precis = precis;
-        }
-
-        public void setDescription(String description) {
-            this.description = description;
-        }
-
-        public void setPrimaryOpenSourceLicense(String primaryOpenSourceLicense) {
-            this.primaryOpenSourceLicense = primaryOpenSourceLicense;
-        }
-
-        public void setImageUrl(String imageUrl) {
-            this.imageUrl = imageUrl;
-        }
-
-        public void setImageBgColor(String imageBgColor) {
-            this.imageBgColor = imageBgColor;
-        }
-
-        public void setGplusUrl(String gplusUrl) {
-            this.gplusUrl = gplusUrl;
-        }
-
-        public void setTwitterUrl(String twitterUrl) {
-            this.twitterUrl = twitterUrl;
-        }
-
-        public void setBlogUrl(String blogUrl) {
-            this.blogUrl = blogUrl;
-        }
-
-        public void setApplicationInstructions(String applicationInstructions) {
-            this.applicationInstructions = applicationInstructions;
-        }
-
-        public void setTopicTags(ArrayList<String> topicTags) {
-            this.topicTags = topicTags;
-        }
-
-        public void setTechnologyTags(ArrayList<String> technologyTags) {
-            this.technologyTags = technologyTags;
-        }
-
-        public String getOrgID() {
-            return orgID;
-        }
-
-        public void setOrgID(String orgID) {
-            this.orgID = orgID;
-        }
-
-        public void setProposalTags(ArrayList<String> proposalTags) {
-            this.proposalTags = proposalTags;
-        }
-
-        public void setIdeasList(String ideasList) {
-            this.ideasList = ideasList;
-        }
-
-        public void setContactMethod(String contactMethod) {
-            this.contactMethod = contactMethod;
-        }
-
-        public void setProgramYear(Integer programYear) {
-            this.programYear = programYear;
-        }
 
         public static Creator<Organization> getCREATOR() {
             return CREATOR;

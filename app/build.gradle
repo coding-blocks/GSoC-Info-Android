@@ -33,7 +33,7 @@ dependencies {
      compile 'com.mikepenz:fastadapter-extensions:2.6.3@aar'
      compile 'com.mikepenz:materialize:1.0.3@aar'
      **/
-
+    provided "org.projectlombok:lombok:1.16.18"
     //Room and livedata
     compile "android.arch.lifecycle:runtime:1.0.0-alpha9"
     compile "android.arch.lifecycle:extensions:1.0.0-alpha9"

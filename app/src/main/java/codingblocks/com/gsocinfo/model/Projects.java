@@ -10,6 +10,10 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Created by harshit on 25/08/17.
  */
@@ -41,23 +45,26 @@ public class Projects {
         return results;
     }
 
-/*
-    Not needed since @Embedded handles this automatically
+    /*
+        Not needed since @Embedded handles this automatically
 
-    @Entity(tableName = "projects",
-            foreignKeys = {@ForeignKey(entity = Student.class,
-                    parentColumns = "studentID",
-                    childColumns = "student_id",
-                    onDelete = CASCADE),
-                    @ForeignKey(entity = Organizations.Organization.class,
-                            parentColumns = "orgID",
-                            childColumns = "org_id",
-                            onDelete = CASCADE)
-            }
-    )
- */
+        @Entity(tableName = "projects",
+                foreignKeys = {@ForeignKey(entity = Student.class,
+                        parentColumns = "studentID",
+                        childColumns = "student_id",
+                        onDelete = CASCADE),
+                        @ForeignKey(entity = Organizations.Organization.class,
+                                parentColumns = "orgID",
+                                childColumns = "org_id",
+                                onDelete = CASCADE)
+                }
+        )
+     */
 
-@Entity(tableName = "projects")
+    @EqualsAndHashCode
+    @Getter
+    @Setter
+    @Entity(tableName = "projects")
     public static class Project {
         @PrimaryKey
         @SerializedName("id")
@@ -80,12 +87,12 @@ public class Projects {
         public static final DiffCallback<Project> DIFF_CALLBACK = new DiffCallback<Project>() {
             @Override
             public boolean areItemsTheSame(@NonNull Project oldItem, @NonNull Project newItem) {
-                return oldUser.getId() == newUser.getId();
+                return oldItem.getId().equals(newItem.getId());
             }
 
             @Override
             public boolean areContentsTheSame(@NonNull Project oldItem, @NonNull Project newItem) {
-                return false;
+                return oldItem.equals(newItem);
             }
         };
 
@@ -102,67 +109,6 @@ public class Projects {
         public String getId() {
             return "https://summerofcode.withgoogle.com/projects/#" + projectID;
         }
-
-        public void setId(long id) {
-            this.projectID = id;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public String getSubcategory() {
-            return subcategory;
-        }
-
-        public Organizations.Organization getOrganization() {
-            return organization;
-        }
-
-        public void setOrganization(Organizations.Organization organization) {
-            this.organization = organization;
-        }
-
-        public long getProjectID() {
-            return projectID;
-        }
-
-        public void setProjectID(long projectID) {
-            this.projectID = projectID;
-        }
-
-        public Student getStudent() {
-            return student;
-        }
-
-        public String getAbstract() {
-            return _abstract;
-        }
-
-        public ArrayList<String> getAssigneeDisplayNames() {
-            return assigneeDisplayNames;
-        }
-
-        public void setSubcategory(String subcategory) {
-            this.subcategory = subcategory;
-        }
-
-        public void setStudent(Student student) {
-            this.student = student;
-        }
-
-        public void set_abstract(String _abstract) {
-            this._abstract = _abstract;
-        }
-
-        public void setAssigneeDisplayNames(ArrayList<String> assigneeDisplayNames) {
-            this.assigneeDisplayNames = assigneeDisplayNames;
-        }
-
     }
 
 }
