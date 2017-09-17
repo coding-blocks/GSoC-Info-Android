@@ -36,29 +36,23 @@ public class OrganizationFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_org, container, false);
+        final View view = inflater.inflate(R.layout.fragment_org, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.rv_org);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-//        if (savedInstanceState != null && savedInstanceState.containsKey("ORG"))
-//            setData(savedInstanceState.<Organizations.Organization>getParcelableArrayList("ORG"));
         orgAdapter = new OrgAdapter();
         recyclerView.setAdapter(orgAdapter);
 
-        OrganizationViewModel organizationViewModel = ViewModelProviders.of(this).get(OrganizationViewModel.class);
+        OrganizationViewModel organizationViewModel = ViewModelProviders.of(getActivity()).get(OrganizationViewModel.class);
 
         organizationViewModel.getOrganizations().observe(this, new Observer<List<Organizations.Organization>>() {
             @Override
             public void onChanged(@Nullable List<Organizations.Organization> organizations) {
                 orgAdapter.setData(organizations);
+                view.findViewById(R.id.progressBar).setVisibility(View.GONE);
             }
         });
 
         return view;
     }
 
-//    public void setData(List<Organizations.Organization> data) {
-//        orgAdapter = new OrgAdapter();
-//        orgAdapter.setData(data);
-//        this.organizations = data;
-//    }
 }

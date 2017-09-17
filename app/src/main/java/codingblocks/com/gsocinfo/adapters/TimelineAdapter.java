@@ -23,18 +23,18 @@ import codingblocks.com.gsocinfo.data.model.MainPage;
 
 public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+    private static final int HEADER = 123;
     private List<String> date = Constants.generateDate(),
             title = Constants.generateTitle(),
             description = Constants.generateDescription();
     private MainPage.Copy mainPage;
 
-    private static final int HEADER = 123;
-
     public TimelineAdapter() {
     }
 
-    public void setData(MainPage.Copy copy){
+    public void setData(MainPage.Copy copy) {
         this.mainPage = copy;
+        notifyDataSetChanged();
     }
 
     @Override
@@ -78,6 +78,8 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
 
     @Override
     public int getItemCount() {
+        if (mainPage == null)
+            return 0;
         return date.size();
     }
 

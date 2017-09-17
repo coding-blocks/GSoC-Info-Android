@@ -16,11 +16,8 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import java.util.List;
-
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.data.model.Organizations;
-import codingblocks.com.gsocinfo.data.model.Projects;
 import codingblocks.com.gsocinfo.fragments.OrgDetailFragment;
 import codingblocks.com.gsocinfo.fragments.ProjectFragment;
 
@@ -28,9 +25,8 @@ import static codingblocks.com.gsocinfo.adapters.OrgAdapter.ORG_TAG;
 
 public class OrgDetailActivity extends AppCompatActivity {
 
-    private Organizations.Organization organization;
     String orgID;
-    List<Projects.Project> projects;
+    private Organizations.Organization organization;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +34,6 @@ public class OrgDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_org_detail);
         Intent i = getIntent();
         orgID = i.getStringExtra("ORG_ID");
-
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -76,16 +71,6 @@ public class OrgDetailActivity extends AppCompatActivity {
         public ViewPagerAdapter(FragmentManager fm) {
             super(fm);
         }
-
-        //To prevent android.os.TransactionTooLargeException https://stackoverflow.com/a/43193467/5471095
-//        @Override
-//        public Parcelable saveState() {
-//            Bundle bundle = (Bundle) super.saveState();
-//            bundle.putParcelableArray("states", null); // Never maintain any states from the base class, just null it out
-//            return bundle;
-//        }
-
-
 
         @Override
         public Fragment getItem(int position) {

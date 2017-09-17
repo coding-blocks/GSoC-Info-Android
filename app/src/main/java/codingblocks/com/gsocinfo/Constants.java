@@ -9,34 +9,6 @@ import java.util.ArrayList;
 
 public class Constants {
 
-//    private static MainPage.Copy copy;
-//    private static List<Organizations.Organization> organizations;
-//    private static List<Projects.Project> projects;
-
-//    public static MainPage.Copy getCopy() {
-//        return copy;
-//    }
-//
-//    public static void setCopy(MainPage.Copy copy) {
-//        Constants.copy = copy;
-//    }
-//
-//    public static List<Organizations.Organization> getOrganizations() {
-//        return organizations;
-//    }
-//
-//    public static void setOrganizations(List<Organizations.Organization> organizations) {
-//        Constants.organizations = organizations;
-//    }
-//
-//    public static List<Projects.Project> getProjects() {
-//        return projects;
-//    }
-//
-//    public static void setProjects(List<Projects.Project> projects) {
-//        Constants.projects = projects;
-//    }
-
     public static ArrayList<String > generateTitle(){
         ArrayList<String> title = new ArrayList<>();
         title.add("Organisation Applications open");

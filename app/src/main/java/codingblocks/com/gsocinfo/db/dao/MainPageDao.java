@@ -1,5 +1,6 @@
 package codingblocks.com.gsocinfo.db.dao;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
@@ -13,7 +14,7 @@ import codingblocks.com.gsocinfo.data.model.MainPage;
 public interface MainPageDao {
 
     @Query("SELECT * FROM mainpage")
-    MainPage.Copy getData();
+    LiveData<MainPage.Copy> getData();
 
     @Insert
     void insertData(MainPage.Copy copy);

@@ -37,27 +37,34 @@ public class ProjectFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_project, container, false);
+        final View view = inflater.inflate(R.layout.fragment_project, container, false);
 
-        RecyclerView recyclerView = v.findViewById(R.id.rv_projects);
+        RecyclerView recyclerView = view.findViewById(R.id.rv_projects);
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         projectAdapter = new ProjectAdapter();
-
-        ProjectViewModel projectViewModel = ViewModelProviders.of(this).get(ProjectViewModel.class);
+        ProjectViewModel projectViewModel = ViewModelProviders.of(getActivity()).get(ProjectViewModel.class);
         String orgID = getArguments().getString("ORG");
-        if (orgID != null && !orgID.equals(""))
-            projectViewModel.setProjectByOrgID(orgID);
-
-        projectViewModel.getProjects().observe(this, new Observer<List<Projects.Project>>() {
-            @Override
-            public void onChanged(@Nullable List<Projects.Project> projects) {
-                projectAdapter.setData(projects);
-            }
-        });
+        if (orgID != null && !orgID.equals("")) {
+            projectViewModel.getProjectsByOrgID(orgID).observe(this, new Observer<List<Projects.Project>>() {
+                @Override
+                public void onChanged(@Nullable List<Projects.Project> projects) {
+                    projectAdapter.setData(projects);
+                    view.findViewById(R.id.progressBar).setVisibility(View.GONE);
+                }
+            });
+        } else {
+            projectViewModel.getProjects().observe(this, new Observer<List<Projects.Project>>() {
+                @Override
+                public void onChanged(@Nullable List<Projects.Project> projects) {
+                    projectAdapter.setData(projects);
+                    view.findViewById(R.id.progressBar).setVisibility(View.GONE);
+                }
+            });
+        }
         recyclerView.setAdapter(projectAdapter);
 
-        return v;
+        return view;
     }
 
 }

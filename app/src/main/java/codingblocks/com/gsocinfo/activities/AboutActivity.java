@@ -16,26 +16,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import codingblocks.com.gsocinfo.GSoCApp;
 import codingblocks.com.gsocinfo.R;
-import codingblocks.com.gsocinfo.fragments.AboutFragment;
 import codingblocks.com.gsocinfo.fragments.FaqFragment;
+import codingblocks.com.gsocinfo.fragments.MainPageFragment;
 import codingblocks.com.gsocinfo.fragments.OrganizationFragment;
 import codingblocks.com.gsocinfo.fragments.ProjectFragment;
-import codingblocks.com.gsocinfo.data.model.MainPage;
-import codingblocks.com.gsocinfo.data.model.Organizations;
-import codingblocks.com.gsocinfo.data.model.Projects;
 
 public class AboutActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private MainPage.Copy mainPageCopy;
-    private List<Projects.Project> projects = new ArrayList<>();
-    private List<Organizations.Organization> organizations = new ArrayList<>();
-    private AlertDialog alertDialog;
+    MainPageFragment mainPageFragment;
+    OrganizationFragment organizationFragment;
+    ProjectFragment projectFragment;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -54,7 +46,7 @@ public class AboutActivity extends AppCompatActivity
         });
         final View view = LayoutInflater.from(this).inflate(R.layout.dialog_progress, null, false);
         ((TextView) view.findViewById(R.id.textViewDialog)).setText("Adding special sauce . . .");
-        alertDialog = new AlertDialog.Builder(AboutActivity.this)
+        AlertDialog alertDialog = new AlertDialog.Builder(AboutActivity.this)
                 .setMessage("Hold On")
                 .setView(view)
                 .setCancelable(false)
@@ -66,22 +58,16 @@ public class AboutActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        projectFragment = ProjectFragment.newInstance("");
+        organizationFragment = OrganizationFragment.newInstance();
+        mainPageFragment = MainPageFragment.newInstance();
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                mainPageCopy = GSoCApp.getMainPageDao().getData();
-                AboutFragment aboutFragment = AboutFragment.newInstance();
-                aboutFragment.setData(mainPageCopy);
-                if (savedInstanceState == null)
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.container_about, aboutFragment)
-                            .commit();
-            }
-        }).start();
-
+        if (savedInstanceState == null)
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.container_about, MainPageFragment.newInstance())
+                    .commit();
     }
 
     @Override
@@ -114,20 +100,23 @@ public class AboutActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-
         if (id == R.id.nav_about) {
-            AboutFragment aboutFragment = AboutFragment.newInstance();
-            aboutFragment.setData(mainPageCopy);
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container_about, aboutFragment)
+                    .replace(R.id.container_about,
+                            mainPageFragment,
+                            "ABOUT")
                     .commit();
         } else if (id == R.id.nav_organizations) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container_about, OrganizationFragment.newInstance())
+                    .replace(R.id.container_about,
+                            organizationFragment,
+                            "ORGANIZATION")
                     .commit();
         } else if (id == R.id.nav_projects) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container_about, ProjectFragment.newInstance(""))
+                    .replace(R.id.container_about,
+                            projectFragment,
+                            "PROJECT")
                     .commit();
         } else if (id == R.id.nav_faq) {
             getSupportFragmentManager().beginTransaction()

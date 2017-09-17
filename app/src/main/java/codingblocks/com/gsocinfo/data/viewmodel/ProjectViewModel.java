@@ -22,6 +22,10 @@ public class ProjectViewModel extends AndroidViewModel {
         projects = GSoCApp.getProjectDao().getAllProjects();
     }
 
+    public LiveData<List<Projects.Project>> getProjectsByOrgID(String id) {
+        return GSoCApp.getProjectDao().getProjectByOrgId(id);
+    }
+
     public LiveData<List<Projects.Project>> getProjects() {
         return projects;
     }
@@ -30,7 +34,7 @@ public class ProjectViewModel extends AndroidViewModel {
         this.projects = projects;
     }
 
-    public void setProjectByOrgID(String orgID){
+    public void setProjectByOrgID(String orgID) {
         GSoCApp.getProjectDao().getProjectByOrgId(orgID);
     }
 

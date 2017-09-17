@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/stars_bg"
         android:orientation="vertical"
-        android:background="@drawable/bg_about_card"
         android:padding="8dp">
 
         <TextView
@@ -22,9 +21,9 @@
             android:id="@+id/linesOfCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#fff"
             android:textSize="48sp"
-            android:textStyle="bold"
-            android:textColor="#fff"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -33,10 +32,10 @@
             android:textColor="#fff"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/textAbout"
             style="@style/Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:textColor="#fff"/>
 
     </LinearLayout>
