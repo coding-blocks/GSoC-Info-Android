@@ -15,7 +15,7 @@ import java.util.List;
 
 import codingblocks.com.gsocinfo.Constants;
 import codingblocks.com.gsocinfo.R;
-import codingblocks.com.gsocinfo.model.MainPage;
+import codingblocks.com.gsocinfo.data.model.MainPage;
 
 /**
  * Created by harshit on 25/08/17.
@@ -35,7 +35,6 @@ public class TimelineAdapter extends android.support.v7.widget.RecyclerView.Adap
 
     public void setData(MainPage.Copy copy){
         this.mainPage = copy;
-        notifyDataSetChanged();
     }
 
     @Override

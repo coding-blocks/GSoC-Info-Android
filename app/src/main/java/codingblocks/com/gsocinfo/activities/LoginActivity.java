@@ -19,9 +19,9 @@ import java.io.InputStream;
 
 import codingblocks.com.gsocinfo.GSoCApp;
 import codingblocks.com.gsocinfo.R;
-import codingblocks.com.gsocinfo.model.MainPage;
-import codingblocks.com.gsocinfo.model.Organizations;
-import codingblocks.com.gsocinfo.model.Projects;
+import codingblocks.com.gsocinfo.data.model.MainPage;
+import codingblocks.com.gsocinfo.data.model.Organizations;
+import codingblocks.com.gsocinfo.data.model.Projects;
 
 import static codingblocks.com.gsocinfo.GSoCApp.getProjectDao;
 
@@ -30,6 +30,8 @@ import static codingblocks.com.gsocinfo.GSoCApp.getProjectDao;
  */
 
 public class LoginActivity extends AppCompatActivity {
+
+    private AlertDialog alertDialog;
 
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
@@ -45,22 +47,43 @@ public class LoginActivity extends AppCompatActivity {
         });
         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         final Gson gson = new Gson();
-        View view = LayoutInflater.from(this).inflate(R.layout.dialog_progress, null, false);
+        final View view = LayoutInflater.from(this).inflate(R.layout.dialog_progress, null, false);
         ((TextView) view.findViewById(R.id.textViewDialog)).setText("Settings things up for the first launch, please wait ...");
-        final AlertDialog alertDialog = new AlertDialog.Builder(this)
-                .setMessage("Setting things up, please wait")
-                .setView(view)
-                .setCancelable(false)
-                .setView(view)
-                .create();
 
-        alertDialog.show();
         Runnable runnable = new Runnable() {
-
             Organizations organizations;
-
             @Override
             public void run() {
+
+                if (!sharedPreferences.getBoolean(getString(R.string.main_page), false)) {
+                    LoginActivity.this.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            alertDialog = new AlertDialog.Builder(LoginActivity.this)
+                                    .setMessage("Setting things up, please wait")
+                                    .setView(view)
+                                    .setCancelable(false)
+                                    .setView(view)
+                                    .create();
+                            alertDialog.show();
+                        }
+                    });
+                    try {
+                        String json2;
+                        InputStream inputStream2 = null;
+                        inputStream2 = getAssets().open("main_page.json");
+                        int size2 = inputStream2.available();
+                        byte[] buffer2 = new byte[size2];
+                        inputStream2.read(buffer2);
+                        inputStream2.close();
+                        json2 = new String(buffer2, "UTF-8");
+                        Gson gson = new Gson();
+                        MainPage mainPage = gson.fromJson(json2, MainPage.class);
+                        GSoCApp.getMainPageDao().insertData(mainPage.getCopy());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
                 if (!sharedPreferences.getBoolean(getString(R.string.org_key), false)) {
                     try {
                         GSoCApp.getOrgDao().nukeOrgs();
@@ -71,30 +94,11 @@ public class LoginActivity extends AppCompatActivity {
                         inputStream.read(buffer);
                         inputStream.close();
                         json = new String(buffer, "UTF-8");
-//                        Constants.setOrganizations(json);
                         organizations = gson.fromJson(json, Organizations.class);
                         GSoCApp.getOrgDao().insertAllOrganization(organizations.getResults());
                         sharedPreferences.edit().putBoolean(getString(R.string.org_key), true).apply();
                     } catch (IOException e) {
                         sharedPreferences.edit().putBoolean(getString(R.string.org_key), false).apply();
-                        e.printStackTrace();
-                    }
-                }
-                if (!sharedPreferences.getBoolean(getString(R.string.main_page), false)) {
-                    try {
-                        String json2;
-                        InputStream inputStream2 = null;
-                        inputStream2 = getAssets().open("main_page.json");
-                        int size2 = inputStream2.available();
-                        byte[] buffer2 = new byte[size2];
-                        inputStream2.read(buffer2);
-                        inputStream2.close();
-                        json2 = new String(buffer2, "UTF-8");
-//                        Constants.setMainPage(json2);
-                        Gson gson = new Gson();
-                        MainPage mainPage = gson.fromJson(json2, MainPage.class);
-                        GSoCApp.getMainPageDao().insertData(mainPage.getCopy());
-                    } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
@@ -121,7 +125,8 @@ public class LoginActivity extends AppCompatActivity {
                 LoginActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        alertDialog.hide();
+                        if (alertDialog.isShowing())
+                            alertDialog.hide();
                     }
                 });
             }

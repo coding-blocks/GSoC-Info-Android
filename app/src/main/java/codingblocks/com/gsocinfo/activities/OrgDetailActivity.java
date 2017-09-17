@@ -16,10 +16,13 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.List;
+
 import codingblocks.com.gsocinfo.R;
+import codingblocks.com.gsocinfo.data.model.Organizations;
+import codingblocks.com.gsocinfo.data.model.Projects;
 import codingblocks.com.gsocinfo.fragments.OrgDetailFragment;
 import codingblocks.com.gsocinfo.fragments.ProjectFragment;
-import codingblocks.com.gsocinfo.model.Organizations;
 
 import static codingblocks.com.gsocinfo.adapters.OrgAdapter.ORG_TAG;
 
@@ -27,15 +30,20 @@ public class OrgDetailActivity extends AppCompatActivity {
 
     private Organizations.Organization organization;
     String orgID;
+    List<Projects.Project> projects;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_org_detail);
+        Intent i = getIntent();
+        orgID = i.getStringExtra("ORG_ID");
+
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Intent i = getIntent();
+
         organization = i.getParcelableExtra(ORG_TAG);
+
         final CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
         AppBarLayout appBarLayout = findViewById(R.id.app_bar_layout);
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
@@ -55,7 +63,7 @@ public class OrgDetailActivity extends AppCompatActivity {
 
         Picasso.with(this).load(organization.getImageUrl()).noFade().into(orgIcon);
         orgDesc.setText(organization.getPrecis());
-        orgID = i.getStringExtra("ORG_ID");
+
         ViewPager viewPager = findViewById(R.id.viewPager);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapter);
@@ -68,6 +76,16 @@ public class OrgDetailActivity extends AppCompatActivity {
         public ViewPagerAdapter(FragmentManager fm) {
             super(fm);
         }
+
+        //To prevent android.os.TransactionTooLargeException https://stackoverflow.com/a/43193467/5471095
+//        @Override
+//        public Parcelable saveState() {
+//            Bundle bundle = (Bundle) super.saveState();
+//            bundle.putParcelableArray("states", null); // Never maintain any states from the base class, just null it out
+//            return bundle;
+//        }
+
+
 
         @Override
         public Fragment getItem(int position) {

@@ -1,8 +1,10 @@
-package codingblocks.com.gsocinfo.model;
+package codingblocks.com.gsocinfo.data.model;
 
 import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.v7.recyclerview.extensions.DiffCallback;
 
@@ -65,7 +67,7 @@ public class Projects {
     @Getter
     @Setter
     @Entity(tableName = "projects")
-    public static class Project {
+    public static class Project implements Parcelable{
         @PrimaryKey
         @SerializedName("id")
         private long projectID;
@@ -96,18 +98,47 @@ public class Projects {
             }
         };
 
-        public Project(long projectID, String title, String subcategory, Organizations.Organization organization, Student student, String _abstract, ArrayList<String> assigneeDisplayNames) {
-            this.projectID = projectID;
-            this.title = title;
-            this.subcategory = subcategory;
-            this.organization = organization;
-            this.student = student;
-            this._abstract = _abstract;
-            this.assigneeDisplayNames = assigneeDisplayNames;
+        public Project() {
         }
+
+        protected Project(Parcel in) {
+            projectID = in.readLong();
+            title = in.readString();
+            subcategory = in.readString();
+            organization = in.readParcelable(Organizations.Organization.class.getClassLoader());
+            _abstract = in.readString();
+            assigneeDisplayNames = in.createStringArrayList();
+        }
+
+        public static final Creator<Project> CREATOR = new Creator<Project>() {
+            @Override
+            public Project createFromParcel(Parcel in) {
+                return new Project(in);
+            }
+
+            @Override
+            public Project[] newArray(int size) {
+                return new Project[size];
+            }
+        };
 
         public String getId() {
             return "https://summerofcode.withgoogle.com/projects/#" + projectID;
+        }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel parcel, int i) {
+            parcel.writeLong(projectID);
+            parcel.writeString(title);
+            parcel.writeString(subcategory);
+            parcel.writeParcelable(organization, i);
+            parcel.writeString(_abstract);
+            parcel.writeStringList(assigneeDisplayNames);
         }
     }
 

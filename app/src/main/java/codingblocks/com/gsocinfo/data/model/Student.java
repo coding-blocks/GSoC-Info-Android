@@ -1,4 +1,4 @@
-package codingblocks.com.gsocinfo.model;
+package codingblocks.com.gsocinfo.data.model;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;

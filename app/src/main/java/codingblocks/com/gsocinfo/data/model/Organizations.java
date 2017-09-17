@@ -1,4 +1,4 @@
-package codingblocks.com.gsocinfo.model;
+package codingblocks.com.gsocinfo.data.model;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
@@ -30,13 +30,14 @@ public class Organizations {
     @Entity(tableName = "organizations")
     public static class Organization implements Parcelable{
 
+        public Organization() {
+        }
+
         @SerializedName("id")
         @PrimaryKey
         private String orgID;
         @SerializedName("name")
         private String name;
-        @SerializedName("slug")
-        private String slug;
         @SerializedName("website_url")
         private String websiteUrl;
         @SerializedName("category")
@@ -57,8 +58,6 @@ public class Organizations {
         private String primaryOpenSourceLicense;
         @SerializedName("image_url")
         private String imageUrl;
-        @SerializedName("image_bg_color")
-        private String imageBgColor;
         @SerializedName("gplus_url")
         private String gplusUrl;
         @SerializedName("twitter_url")
@@ -77,15 +76,9 @@ public class Organizations {
         private String ideasList;
         @SerializedName("contact_method")
         private String contactMethod;
-        @SerializedName("program_year")
-        private Integer programYear;
-
-        public Organization() {
-        }
 
         protected Organization(Parcel in) {
             name = in.readString();
-            slug = in.readString();
             websiteUrl = in.readString();
             category = in.readString();
             contactEmail = in.readString();
@@ -130,7 +123,6 @@ public class Organizations {
         @Override
         public void writeToParcel(Parcel parcel, int i) {
             parcel.writeString(name);
-            parcel.writeString(slug);
             parcel.writeString(websiteUrl);
             parcel.writeString(category);
             parcel.writeString(contactEmail);

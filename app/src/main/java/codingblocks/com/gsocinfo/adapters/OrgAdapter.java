@@ -18,7 +18,7 @@ import java.util.List;
 
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.activities.OrgDetailActivity;
-import codingblocks.com.gsocinfo.model.Organizations;
+import codingblocks.com.gsocinfo.data.model.Organizations;
 
 /**
  * Created by harshit on 26/08/17.

@@ -3,6 +3,7 @@
 
     <item android:drawable="@color/colorPrimary" />
 
-    <item android:drawable="@drawable/stars_background" />
+    <item android:drawable="@drawable/stars_bg"
+        android:bottom="20dp"/>
 
 </layer-list>

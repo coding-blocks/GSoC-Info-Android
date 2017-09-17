@@ -1,11 +1,6 @@
 package codingblocks.com.gsocinfo;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import codingblocks.com.gsocinfo.model.MainPage;
-import codingblocks.com.gsocinfo.model.Organizations;
-import codingblocks.com.gsocinfo.model.Projects;
 
 
 /**
@@ -14,33 +9,33 @@ import codingblocks.com.gsocinfo.model.Projects;
 
 public class Constants {
 
-    private static MainPage.Copy copy;
-    private static List<Organizations.Organization> organizations;
-    private static List<Projects.Project> projects;
+//    private static MainPage.Copy copy;
+//    private static List<Organizations.Organization> organizations;
+//    private static List<Projects.Project> projects;
 
-    public static MainPage.Copy getCopy() {
-        return copy;
-    }
-
-    public static void setCopy(MainPage.Copy copy) {
-        Constants.copy = copy;
-    }
-
-    public static List<Organizations.Organization> getOrganizations() {
-        return organizations;
-    }
-
-    public static void setOrganizations(List<Organizations.Organization> organizations) {
-        Constants.organizations = organizations;
-    }
-
-    public static List<Projects.Project> getProjects() {
-        return projects;
-    }
-
-    public static void setProjects(List<Projects.Project> projects) {
-        Constants.projects = projects;
-    }
+//    public static MainPage.Copy getCopy() {
+//        return copy;
+//    }
+//
+//    public static void setCopy(MainPage.Copy copy) {
+//        Constants.copy = copy;
+//    }
+//
+//    public static List<Organizations.Organization> getOrganizations() {
+//        return organizations;
+//    }
+//
+//    public static void setOrganizations(List<Organizations.Organization> organizations) {
+//        Constants.organizations = organizations;
+//    }
+//
+//    public static List<Projects.Project> getProjects() {
+//        return projects;
+//    }
+//
+//    public static void setProjects(List<Projects.Project> projects) {
+//        Constants.projects = projects;
+//    }
 
     public static ArrayList<String > generateTitle(){
         ArrayList<String> title = new ArrayList<>();

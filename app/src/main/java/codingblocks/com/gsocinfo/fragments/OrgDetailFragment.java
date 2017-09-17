@@ -19,7 +19,7 @@ import java.util.List;
 
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.adapters.TagAdapter;
-import codingblocks.com.gsocinfo.model.Organizations;
+import codingblocks.com.gsocinfo.data.model.Organizations;
 
 import static codingblocks.com.gsocinfo.adapters.OrgAdapter.ORG_TAG;
 

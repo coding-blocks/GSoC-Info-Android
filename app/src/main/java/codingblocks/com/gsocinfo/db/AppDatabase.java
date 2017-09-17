@@ -4,9 +4,12 @@ import android.arch.persistence.room.Database;
 import android.arch.persistence.room.RoomDatabase;
 import android.arch.persistence.room.TypeConverters;
 
-import codingblocks.com.gsocinfo.model.MainPage;
-import codingblocks.com.gsocinfo.model.Organizations;
-import codingblocks.com.gsocinfo.model.Projects;
+import codingblocks.com.gsocinfo.db.dao.MainPageDao;
+import codingblocks.com.gsocinfo.db.dao.OrganizationDao;
+import codingblocks.com.gsocinfo.db.dao.ProjectDao;
+import codingblocks.com.gsocinfo.data.model.MainPage;
+import codingblocks.com.gsocinfo.data.model.Organizations;
+import codingblocks.com.gsocinfo.data.model.Projects;
 
 /**
  * Created by harshit on 08/09/17.

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import codingblocks.com.gsocinfo.R;
-import codingblocks.com.gsocinfo.model.Projects;
+import codingblocks.com.gsocinfo.data.model.Projects;
 
 /**
  * Created by harshit on 26/08/17.
@@ -29,6 +29,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
 
     public void setData(List<Projects.Project> projects){
         this.projects = projects;
+        notifyDataSetChanged();
     }
 
     @Override

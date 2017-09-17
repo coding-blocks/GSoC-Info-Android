@@ -4,9 +4,9 @@ import android.app.Application;
 import android.arch.persistence.room.Room;
 
 import codingblocks.com.gsocinfo.db.AppDatabase;
-import codingblocks.com.gsocinfo.db.MainPageDao;
-import codingblocks.com.gsocinfo.db.OrganizationDao;
-import codingblocks.com.gsocinfo.db.ProjectDao;
+import codingblocks.com.gsocinfo.db.dao.MainPageDao;
+import codingblocks.com.gsocinfo.db.dao.OrganizationDao;
+import codingblocks.com.gsocinfo.db.dao.ProjectDao;
 
 /**
  * Created by harshit on 08/09/17.
@@ -25,14 +25,6 @@ public class GSoCApp extends Application {
         projectsDao = appDatabase.getProjectsDao();
         organizationDao = appDatabase.getOrganizationsDao();
         mainPageDao = appDatabase.getMainPageDao();
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Constants.setCopy(getMainPageDao().getData());
-                Constants.setOrganizations(getOrgDao().getAllOrganizations());
-                Constants.setProjects(getProjectDao().getAllProjects());
-            }
-        }).start();
     }
 
     public static OrganizationDao getOrgDao() {
