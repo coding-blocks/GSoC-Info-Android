@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +39,11 @@ public class OrganizationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_org, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.rv_org);
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        DisplayMetrics displayMetrics = getContext().getResources().getDisplayMetrics();
+        float width = displayMetrics.widthPixels / displayMetrics.density;
+        final int spanCount = (int) (width / 150.00);
+
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.VERTICAL));
         orgAdapter = new OrgAdapter();
         recyclerView.setAdapter(orgAdapter);
 

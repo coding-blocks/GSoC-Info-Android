@@ -5,8 +5,9 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,8 +41,12 @@ public class ProjectFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_project, container, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.rv_projects);
-        final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(linearLayoutManager);
+        DisplayMetrics displayMetrics = getContext().getResources().getDisplayMetrics();
+        float width = displayMetrics.widthPixels / displayMetrics.density;
+        final int spanCount = (int) (width / 240.00);
+
+        final StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(staggeredGridLayoutManager);
         projectAdapter = new ProjectAdapter();
         ProjectViewModel projectViewModel = ViewModelProviders.of(getActivity()).get(ProjectViewModel.class);
         String orgID = getArguments().getString("ORG");
