@@ -1,5 +1,6 @@
 package codingblocks.com.gsocinfo.adapters;
 
+import android.arch.paging.PagedListAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -7,6 +8,7 @@ import android.support.transition.TransitionManager;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,14 +30,19 @@ import static android.view.View.GONE;
  * Created by harshit on 26/08/17.
  */
 
-public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectHolder> {
+public class ProjectAdapter extends PagedListAdapter<Projects.Project, ProjectAdapter.ProjectHolder> {
 
     private Context context;
     private List<Projects.Project> projects = new ArrayList<>();
     private int count = 0; //keeping track of card item created for setting the background
 
+    public ProjectAdapter() {
+        super(Projects.Project.DIFF_CALLBACK);
+        projects.clear();
+    }
+
     public void setData(List<Projects.Project> projects) {
-        this.projects = projects;
+        this.projects.addAll(projects);
         notifyDataSetChanged();
     }
 
@@ -48,6 +55,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
 
     @Override
     public void onBindViewHolder(final ProjectHolder holder, int position) {
+        Log.e("TAG", "onBindViewHolder: " + position);
         holder.linearLayoutExpanded.setVisibility(GONE);
         Projects.Project currProject = projects.get(position);
         holder.studentName.setText(currProject.getStudent().getDisplayName());

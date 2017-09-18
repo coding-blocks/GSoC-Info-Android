@@ -72,7 +72,7 @@ public class Projects {
 
             @Override
             public boolean areContentsTheSame(@NonNull Project oldItem, @NonNull Project newItem) {
-                return oldItem.equals(newItem);
+                return oldItem.getId().equals(newItem.getId());
             }
         };
         public static final Creator<Project> CREATOR = new Creator<Project>() {

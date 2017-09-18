@@ -3,8 +3,7 @@ package codingblocks.com.gsocinfo.data.viewmodel;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
-
-import java.util.List;
+import android.arch.paging.PagedList;
 
 import codingblocks.com.gsocinfo.GSoCApp;
 import codingblocks.com.gsocinfo.data.model.Projects;
@@ -15,22 +14,32 @@ import codingblocks.com.gsocinfo.data.model.Projects;
 
 public class ProjectViewModel extends AndroidViewModel {
 
-    private LiveData<List<Projects.Project>> projects;
+    private LiveData<PagedList<Projects.Project>> projects;
 
     public ProjectViewModel(Application application) {
         super(application);
-        projects = GSoCApp.getProjectDao().getAllProjects();
+        projects = GSoCApp.getProjectDao().getAllProjects().create(0,
+                new PagedList.Config.Builder()
+                        .setPageSize(40)
+                        .setEnablePlaceholders(false)
+                        .setPrefetchDistance(10)
+                        .build());
     }
 
-    public LiveData<List<Projects.Project>> getProjectsByOrgID(String id) {
-        return GSoCApp.getProjectDao().getProjectByOrgId(id);
+    public LiveData<PagedList<Projects.Project>> getProjectsByOrgID(String id) {
+        return GSoCApp.getProjectDao().getProjectByOrgId(id).create(0,
+                new PagedList.Config.Builder()
+                        .setPageSize(40)
+                        .setEnablePlaceholders(true)
+                        .setPrefetchDistance(10)
+                        .build());
     }
 
-    public LiveData<List<Projects.Project>> getProjects() {
+    public LiveData<PagedList<Projects.Project>> getProjects() {
         return projects;
     }
 
-    public void setProjects(LiveData<List<Projects.Project>> projects) {
+    public void setProjects(LiveData<PagedList<Projects.Project>> projects) {
         this.projects = projects;
     }
 

@@ -35,6 +35,7 @@ public class OrgAdapter extends PagedListAdapter<Organizations.Organization, Org
 
     public OrgAdapter() {
         super(Organizations.Organization.DIFF_CALLBACK);
+        organizations.clear();
     }
 
     public void setData(List<Organizations.Organization> organizations) {

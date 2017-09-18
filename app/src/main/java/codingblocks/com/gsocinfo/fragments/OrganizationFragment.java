@@ -48,7 +48,7 @@ public class OrganizationFragment extends Fragment {
 
         OrganizationViewModel organizationViewModel = ViewModelProviders.of(getActivity()).get(OrganizationViewModel.class);
 
-        organizationViewModel.getOrganizations().observe(getActivity(), new Observer<PagedList<Organizations.Organization>>() {
+        organizationViewModel.getOrganizations().observe(this, new Observer<PagedList<Organizations.Organization>>() {
             @Override
             public void onChanged(@Nullable PagedList<Organizations.Organization> organizations) {
                 orgAdapter.setData(organizations);
