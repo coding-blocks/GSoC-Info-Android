@@ -34,16 +34,12 @@ public class FaqFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_faq, container, false);
-        Animation animationUp, animationDown;
-
-        animationUp = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up);
-        animationDown = AnimationUtils.loadAnimation(getContext(), R.anim.slide_down);
 
         RecyclerView generalRv = view.findViewById(R.id.rv_general_faq);
-        FaqAdapter generalAdapter = new FaqAdapter(Constants.getGeneralQuestions(), Constants.getGeneralAnswers(), animationDown, animationUp);
+        FaqAdapter faqAdapter = new FaqAdapter(Constants.getGeneralQuestions(), Constants.getGeneralAnswers());
         generalRv.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        generalRv.setAdapter(generalAdapter);
+        generalRv.setAdapter(faqAdapter);
 
         return view;
     }

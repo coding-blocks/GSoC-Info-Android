@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.firebase-perf'
 
 android {
     compileSdkVersion 26
@@ -26,14 +27,6 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
-//    FastAdapter
-    /**
-     compile('com.mikepenz:fastadapter:2.6.3@aar') {transitive = true}compile 'com.mikepenz:fastadapter-commons:2.6.3@aar'
-     compile 'com.mikepenz:fastadapter-extensions:2.6.3@aar'
-     compile 'com.mikepenz:materialize:1.0.3@aar'
-     **/
-    provided "org.projectlombok:lombok:1.16.18"
     //Room and livedata
     compile "android.arch.lifecycle:runtime:1.0.0-alpha9"
     compile "android.arch.lifecycle:extensions:1.0.0-alpha9"
@@ -49,10 +42,12 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.github.vipulasri:timelineview:1.0.5'
-    compile 'com.google.firebase:firebase-core:10.0.1'
-    compile 'com.google.firebase:firebase-crash:10.0.1'
+    compile 'com.google.firebase:firebase-core:11.2.2'
+    compile 'com.google.firebase:firebase-crash:11.2.2'
+    compile 'com.google.firebase:firebase-perf:11.2.2'
     compile 'com.android.support:support-v4:26.1.0'
     compile 'com.android.support:support-vector-drawable:26.0.0-alpha1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
+    provided "org.projectlombok:lombok:1.16.18"
     testCompile 'junit:junit:4.12'
 }

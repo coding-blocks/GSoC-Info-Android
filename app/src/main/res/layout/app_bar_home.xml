@@ -25,26 +25,26 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:autoStart="true"
-            app:layout_scrollFlags="scroll|enterAlways"
             android:background="@color/colorPrimary"
             android:flipInterval="2500"
             android:inAnimation="@anim/slide_in_right"
-            android:outAnimation="@anim/slide_out_left">
+            android:outAnimation="@anim/slide_out_left"
+            app:layout_scrollFlags="scroll|enterAlways">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/apply_xml" />
+                android:src="@drawable/apply" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/code_xml" />
+                android:src="@drawable/code" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/share_xml" />
+                android:src="@drawable/share" />
 
         </ViewFlipper>
 

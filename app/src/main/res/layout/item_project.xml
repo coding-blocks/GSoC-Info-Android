@@ -2,93 +2,132 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/projectCard"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
     android:layout_marginTop="4dp"
-    android:layout_marginBottom="4dp"
-    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
     android:orientation="vertical">
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:id="@+id/frameLayoutProject"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/lLayoutProject"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/lLayoutProject"
-            android:padding="16dp">
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/studentName"
-                style="@style/Title"
+            <LinearLayout
+                android:id="@+id/linearLayoutProject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#fff"
-                tools:text="Student Name" />
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
 
-            <TextView
-                android:id="@+id/projectName"
-                style="@style/Subtitle"
+                <TextView
+                    android:id="@+id/studentName"
+                    style="@style/Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    tools:text="Student Name" />
+
+                <TextView
+                    android:id="@+id/projectName"
+                    style="@style/Subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    tools:text="Project name" />
+
+                <TextView
+                    style="@style/Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Organization"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/orgName"
+                    style="@style/Subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    tools:text="Organization Name" />
+
+                <TextView
+                    style="@style/Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mentor"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/mentorName"
+                    style="@style/Subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="#fff"
+                    tools:text="Organization Name" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutExpanded"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#fff"
-                tools:text="Project name" />
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:visibility="gone">
 
-            <TextView
-                style="@style/Title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Organization"
-                android:textColor="#fff" />
+                <TextView
+                    android:id="@+id/projectTitle"
+                    style="@style/Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Project"
+                    android:textColor="#fff" />
 
-            <TextView
-                android:id="@+id/orgName"
-                style="@style/Subtitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#fff"
-                tools:text="Organization Name" />
-
-            <TextView
-                style="@style/Title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#fff"
-                android:text="Mentor" />
-
-            <TextView
-                android:id="@+id/mentorName"
-                style="@style/Subtitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#fff"
-                android:maxLines="2"
-                android:ellipsize="end"
-                tools:text="Organization Name" />
+                <TextView
+                    android:id="@+id/projectDesc"
+                    style="@style/Subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:justificationMode="inter_word"
+                    android:textColor="#fff"
+                    tools:text="Organization Name" />
+            </LinearLayout>
 
         </LinearLayout>
 
         <ImageButton
+            android:id="@+id/linkImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|end"
-            android:id="@+id/linkImage"
-            android:background="@null"
-            android:padding="16dp"
             android:layout_margin="4dp"
+            android:background="@null"
             android:foreground="?attr/selectableItemBackground"
+            android:padding="8dp"
             app:srcCompat="@drawable/project_link" />
 
     </FrameLayout>
 
     <!--<TextView-->
-        <!--android:id="@+id/projectDescTextView"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content" />-->
+    <!--android:id="@+id/projectDescTextView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" />-->
 
 
 </android.support.v7.widget.CardView>

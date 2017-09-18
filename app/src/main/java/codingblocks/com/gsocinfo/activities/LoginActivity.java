@@ -37,21 +37,28 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         Button button = findViewById(R.id.loginButton);
+
+//        if (sharedPreferences.getBoolean("LOGGED_IN",false)){
+//            startActivity(new Intent(getBaseContext(), AboutActivity.class));
+//            finish();
+//        }
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getBaseContext(), AboutActivity.class));
-                finish();
+                sharedPreferences.edit().putBoolean("LOGGED_IN", true).apply();
             }
         });
-        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
         final Gson gson = new Gson();
         final View view = LayoutInflater.from(this).inflate(R.layout.dialog_progress, null, false);
         ((TextView) view.findViewById(R.id.textViewDialog)).setText("Settings things up for the first launch, please wait ...");
 
         Runnable runnable = new Runnable() {
             Organizations organizations;
+
             @Override
             public void run() {
 

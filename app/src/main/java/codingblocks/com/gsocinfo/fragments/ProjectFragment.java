@@ -48,6 +48,7 @@ public class ProjectFragment extends Fragment {
         final StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
         projectAdapter = new ProjectAdapter();
+
         ProjectViewModel projectViewModel = ViewModelProviders.of(getActivity()).get(ProjectViewModel.class);
         String orgID = getArguments().getString("ORG");
         if (orgID != null && !orgID.equals("")) {
@@ -67,6 +68,7 @@ public class ProjectFragment extends Fragment {
                 }
             });
         }
+
         recyclerView.setAdapter(projectAdapter);
 
         return view;

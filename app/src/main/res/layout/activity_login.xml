@@ -16,7 +16,7 @@
         android:fontFamily="sans-serif-light"
         android:text="Get Started"
         android:textAllCaps="false"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorAccent"
         android:textSize="24sp" />
 
 </FrameLayout>
