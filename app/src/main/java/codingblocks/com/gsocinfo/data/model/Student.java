@@ -6,16 +6,12 @@ import android.arch.persistence.room.PrimaryKey;
 import com.google.gson.annotations.SerializedName;
 
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * Created by harshit on 08/09/17.
  */
 
 @EqualsAndHashCode
-@Getter
-@Setter
 @Entity(tableName = "students")
 public class Student {
 
@@ -25,5 +21,19 @@ public class Student {
     @SerializedName("display_name")
     private String displayName;
 
+    public long getStudentID() {
+        return studentID;
+    }
 
+    public void setStudentID(long studentID) {
+        this.studentID = studentID;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
+    }
 }

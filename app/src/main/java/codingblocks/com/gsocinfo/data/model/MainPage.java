@@ -8,8 +8,6 @@ import android.os.Parcelable;
 import com.google.gson.annotations.SerializedName;
 
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * Created by harshit on 01/09/17.
@@ -24,14 +22,20 @@ public class MainPage {
     }
 
     @EqualsAndHashCode
-    @Getter
-    @Setter
     @Entity(tableName = "mainpage")
     public static class Copy implements Parcelable{
 
-        public Copy() {
-        }
+        public static final Creator<Copy> CREATOR = new Creator<Copy>() {
+            @Override
+            public Copy createFromParcel(Parcel in) {
+                return new Copy(in);
+            }
 
+            @Override
+            public Copy[] newArray(int size) {
+                return new Copy[size];
+            }
+        };
         @PrimaryKey(autoGenerate = true)
         public int id;
         @SerializedName("number_of_lines_of_code")
@@ -53,6 +57,9 @@ public class MainPage {
         @SerializedName("number_of_student_countries")
         private String numberOfStudentCountries;
 
+        public Copy() {
+        }
+
         protected Copy(Parcel in) {
             id = in.readInt();
             numberOfLinesOfCode = in.readString();
@@ -66,17 +73,85 @@ public class MainPage {
             numberOfStudentCountries = in.readString();
         }
 
-        public static final Creator<Copy> CREATOR = new Creator<Copy>() {
-            @Override
-            public Copy createFromParcel(Parcel in) {
-                return new Copy(in);
-            }
+        public int getId() {
+            return id;
+        }
 
-            @Override
-            public Copy[] newArray(int size) {
-                return new Copy[size];
-            }
-        };
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public String getNumberOfLinesOfCode() {
+            return numberOfLinesOfCode;
+        }
+
+        public void setNumberOfLinesOfCode(String numberOfLinesOfCode) {
+            this.numberOfLinesOfCode = numberOfLinesOfCode;
+        }
+
+        public String getHomepageStartButton() {
+            return homepageStartButton;
+        }
+
+        public void setHomepageStartButton(String homepageStartButton) {
+            this.homepageStartButton = homepageStartButton;
+        }
+
+        public String getNumberOfStudents() {
+            return numberOfStudents;
+        }
+
+        public void setNumberOfStudents(String numberOfStudents) {
+            this.numberOfStudents = numberOfStudents;
+        }
+
+        public String getHomepageIntroParagraph() {
+            return homepageIntroParagraph;
+        }
+
+        public void setHomepageIntroParagraph(String homepageIntroParagraph) {
+            this.homepageIntroParagraph = homepageIntroParagraph;
+        }
+
+        public String getNumberOfMentors() {
+            return numberOfMentors;
+        }
+
+        public void setNumberOfMentors(String numberOfMentors) {
+            this.numberOfMentors = numberOfMentors;
+        }
+
+        public String getNumberOfStudentAndMentorCountries() {
+            return numberOfStudentAndMentorCountries;
+        }
+
+        public void setNumberOfStudentAndMentorCountries(String numberOfStudentAndMentorCountries) {
+            this.numberOfStudentAndMentorCountries = numberOfStudentAndMentorCountries;
+        }
+
+        public String getNumberOfYears() {
+            return numberOfYears;
+        }
+
+        public void setNumberOfYears(String numberOfYears) {
+            this.numberOfYears = numberOfYears;
+        }
+
+        public String getNumberOfOrganizations() {
+            return numberOfOrganizations;
+        }
+
+        public void setNumberOfOrganizations(String numberOfOrganizations) {
+            this.numberOfOrganizations = numberOfOrganizations;
+        }
+
+        public String getNumberOfStudentCountries() {
+            return numberOfStudentCountries;
+        }
+
+        public void setNumberOfStudentCountries(String numberOfStudentCountries) {
+            this.numberOfStudentCountries = numberOfStudentCountries;
+        }
 
         @Override
         public int describeContents() {

@@ -13,8 +13,6 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * Created by harshit on 25/08/17.
@@ -64,10 +62,30 @@ public class Projects {
      */
 
     @EqualsAndHashCode
-    @Getter
-    @Setter
     @Entity(tableName = "projects")
     public static class Project implements Parcelable{
+        public static final DiffCallback<Project> DIFF_CALLBACK = new DiffCallback<Project>() {
+            @Override
+            public boolean areItemsTheSame(@NonNull Project oldItem, @NonNull Project newItem) {
+                return oldItem.getId().equals(newItem.getId());
+            }
+
+            @Override
+            public boolean areContentsTheSame(@NonNull Project oldItem, @NonNull Project newItem) {
+                return oldItem.equals(newItem);
+            }
+        };
+        public static final Creator<Project> CREATOR = new Creator<Project>() {
+            @Override
+            public Project createFromParcel(Parcel in) {
+                return new Project(in);
+            }
+
+            @Override
+            public Project[] newArray(int size) {
+                return new Project[size];
+            }
+        };
         @PrimaryKey
         @SerializedName("id")
         private long projectID;
@@ -86,18 +104,6 @@ public class Projects {
         @SerializedName("assignee_display_names")
         private ArrayList<String> assigneeDisplayNames = null;
 
-        public static final DiffCallback<Project> DIFF_CALLBACK = new DiffCallback<Project>() {
-            @Override
-            public boolean areItemsTheSame(@NonNull Project oldItem, @NonNull Project newItem) {
-                return oldItem.getId().equals(newItem.getId());
-            }
-
-            @Override
-            public boolean areContentsTheSame(@NonNull Project oldItem, @NonNull Project newItem) {
-                return oldItem.equals(newItem);
-            }
-        };
-
         public Project() {
         }
 
@@ -110,17 +116,61 @@ public class Projects {
             assigneeDisplayNames = in.createStringArrayList();
         }
 
-        public static final Creator<Project> CREATOR = new Creator<Project>() {
-            @Override
-            public Project createFromParcel(Parcel in) {
-                return new Project(in);
-            }
+        public long getProjectID() {
+            return projectID;
+        }
 
-            @Override
-            public Project[] newArray(int size) {
-                return new Project[size];
-            }
-        };
+        public void setProjectID(long projectID) {
+            this.projectID = projectID;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public String getSubcategory() {
+            return subcategory;
+        }
+
+        public void setSubcategory(String subcategory) {
+            this.subcategory = subcategory;
+        }
+
+        public Organizations.Organization getOrganization() {
+            return organization;
+        }
+
+        public void setOrganization(Organizations.Organization organization) {
+            this.organization = organization;
+        }
+
+        public Student getStudent() {
+            return student;
+        }
+
+        public void setStudent(Student student) {
+            this.student = student;
+        }
+
+        public String get_abstract() {
+            return _abstract;
+        }
+
+        public void set_abstract(String _abstract) {
+            this._abstract = _abstract;
+        }
+
+        public ArrayList<String> getAssigneeDisplayNames() {
+            return assigneeDisplayNames;
+        }
+
+        public void setAssigneeDisplayNames(ArrayList<String> assigneeDisplayNames) {
+            this.assigneeDisplayNames = assigneeDisplayNames;
+        }
 
         public String getId() {
             return "https://summerofcode.withgoogle.com/projects/#" + projectID;
