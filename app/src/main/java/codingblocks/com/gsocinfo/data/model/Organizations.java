@@ -29,6 +29,7 @@ public class Organizations {
     public static class Organization implements Parcelable{
 
         public static final DiffCallback<Organization> DIFF_CALLBACK = new DiffCallback<Organization>() {
+
             @Override
             public boolean areItemsTheSame(@NonNull Organization oldItem, @NonNull Organization newItem) {
                 return oldItem.getOrgID().equals(newItem.getOrgID());

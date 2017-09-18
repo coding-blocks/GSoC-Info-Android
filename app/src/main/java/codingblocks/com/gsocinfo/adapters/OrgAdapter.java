@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,8 @@ import java.util.List;
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.activities.OrgDetailActivity;
 import codingblocks.com.gsocinfo.data.model.Organizations;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by harshit on 26/08/17.
@@ -35,7 +38,7 @@ public class OrgAdapter extends PagedListAdapter<Organizations.Organization, Org
     }
 
     public void setData(List<Organizations.Organization> organizations) {
-        this.organizations = organizations;
+        this.organizations.addAll(organizations);
         notifyDataSetChanged();
     }
 
@@ -47,11 +50,14 @@ public class OrgAdapter extends PagedListAdapter<Organizations.Organization, Org
 
     @Override
     public void onBindViewHolder(OrgHolder holder, int position) {
+        Log.e(TAG, "onBindViewHolder: " + position);
         Organizations.Organization currentOrg = organizations.get(position);
-        holder.orgName.setText(currentOrg.getName());
-        holder.orgTagline.setText(currentOrg.getTagline());
-        String currUrl = currentOrg.getImageUrl();
-        Picasso.with(context).load(currUrl).into(holder.orgImage);
+        if (currentOrg != null) {
+            holder.orgName.setText(currentOrg.getName());
+            holder.orgTagline.setText(currentOrg.getTagline());
+            String currUrl = currentOrg.getImageUrl();
+            Picasso.with(context).load(currUrl).into(holder.orgImage);
+        }
     }
 
     @Override

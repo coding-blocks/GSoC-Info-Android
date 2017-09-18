@@ -18,15 +18,6 @@ public class GSoCApp extends Application {
     private static OrganizationDao organizationDao;
     private static MainPageDao mainPageDao;
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        AppDatabase appDatabase = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "gsoc-database").build();
-        projectsDao = appDatabase.getProjectsDao();
-        organizationDao = appDatabase.getOrganizationsDao();
-        mainPageDao = appDatabase.getMainPageDao();
-    }
-
     public static OrganizationDao getOrgDao() {
         return organizationDao;
     }
@@ -37,6 +28,17 @@ public class GSoCApp extends Application {
 
     public static MainPageDao getMainPageDao() {
         return mainPageDao;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        AppDatabase appDatabase = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "gsoc-database")
+                .fallbackToDestructiveMigration()
+                .build();
+        projectsDao = appDatabase.getProjectsDao();
+        organizationDao = appDatabase.getOrganizationsDao();
+        mainPageDao = appDatabase.getMainPageDao();
     }
 
 }

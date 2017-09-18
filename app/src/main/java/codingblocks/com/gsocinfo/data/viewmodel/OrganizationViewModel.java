@@ -19,12 +19,12 @@ public class OrganizationViewModel extends AndroidViewModel {
     public OrganizationViewModel(Application application) {
         super(application);
         organizations = GSoCApp.getOrgDao().getAllOrganizations()
-                .create(null, new PagedList.Config.Builder()
-                        .setPageSize(30)
-                        .setPrefetchDistance(30)
+                .create(0, new PagedList.Config.Builder()
+                        .setPageSize(40)
+                        .setPrefetchDistance(10)
+                        .setEnablePlaceholders(false)
                         .build()
                 );
-
     }
 
     public LiveData<PagedList<Organizations.Organization>> getOrganizations() {
