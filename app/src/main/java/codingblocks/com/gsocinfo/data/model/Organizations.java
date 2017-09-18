@@ -4,6 +4,8 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
+import android.support.v7.recyclerview.extensions.DiffCallback;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -30,9 +32,28 @@ public class Organizations {
     @Entity(tableName = "organizations")
     public static class Organization implements Parcelable{
 
-        public Organization() {
-        }
+        public static final DiffCallback<Organization> DIFF_CALLBACK = new DiffCallback<Organization>() {
+            @Override
+            public boolean areItemsTheSame(@NonNull Organization oldItem, @NonNull Organization newItem) {
+                return oldItem.getOrgID().equals(newItem.getOrgID());
+            }
 
+            @Override
+            public boolean areContentsTheSame(@NonNull Organization oldItem, @NonNull Organization newItem) {
+                return oldItem.equals(newItem);
+            }
+        };
+        public static final Creator<Organization> CREATOR = new Creator<Organization>() {
+            @Override
+            public Organization createFromParcel(Parcel in) {
+                return new Organization(in);
+            }
+
+            @Override
+            public Organization[] newArray(int size) {
+                return new Organization[size];
+            }
+        };
         @SerializedName("id")
         @PrimaryKey
         private String orgID;
@@ -77,6 +98,9 @@ public class Organizations {
         @SerializedName("contact_method")
         private String contactMethod;
 
+        public Organization() {
+        }
+
         protected Organization(Parcel in) {
             name = in.readString();
             websiteUrl = in.readString();
@@ -98,18 +122,6 @@ public class Organizations {
             ideasList = in.readString();
             contactMethod = in.readString();
         }
-
-        public static final Creator<Organization> CREATOR = new Creator<Organization>() {
-            @Override
-            public Organization createFromParcel(Parcel in) {
-                return new Organization(in);
-            }
-
-            @Override
-            public Organization[] newArray(int size) {
-                return new Organization[size];
-            }
-        };
 
         public static Creator<Organization> getCREATOR() {
             return CREATOR;

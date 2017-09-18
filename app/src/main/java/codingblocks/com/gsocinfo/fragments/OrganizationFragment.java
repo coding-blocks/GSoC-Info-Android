@@ -2,6 +2,7 @@ package codingblocks.com.gsocinfo.fragments;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.arch.paging.PagedList;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,8 +12,6 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import java.util.List;
 
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.adapters.OrgAdapter;
@@ -49,14 +48,13 @@ public class OrganizationFragment extends Fragment {
 
         OrganizationViewModel organizationViewModel = ViewModelProviders.of(getActivity()).get(OrganizationViewModel.class);
 
-        organizationViewModel.getOrganizations().observe(this, new Observer<List<Organizations.Organization>>() {
+        organizationViewModel.getOrganizations().observe(getActivity(), new Observer<PagedList<Organizations.Organization>>() {
             @Override
-            public void onChanged(@Nullable List<Organizations.Organization> organizations) {
+            public void onChanged(@Nullable PagedList<Organizations.Organization> organizations) {
                 orgAdapter.setData(organizations);
                 view.findViewById(R.id.progressBar).setVisibility(View.GONE);
             }
         });
-
         return view;
     }
 

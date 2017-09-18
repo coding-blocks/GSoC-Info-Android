@@ -1,6 +1,6 @@
 package codingblocks.com.gsocinfo.db.dao;
 
-import android.arch.lifecycle.LiveData;
+import android.arch.paging.LivePagedListProvider;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
@@ -17,10 +17,8 @@ import codingblocks.com.gsocinfo.data.model.Organizations;
 public interface OrganizationDao {
 
     @Query("SELECT * FROM organizations ORDER BY name")
-    LiveData<List<Organizations.Organization>> getAllOrganizations();
+    LivePagedListProvider<Integer, Organizations.Organization> getAllOrganizations();
 
-//    @Query("SELECT * FROM projects")
-//    Projects.Project getProjectByStudentId(long id);
     @Insert
     void insertAllOrganization(List<Organizations.Organization> organizations);
 
