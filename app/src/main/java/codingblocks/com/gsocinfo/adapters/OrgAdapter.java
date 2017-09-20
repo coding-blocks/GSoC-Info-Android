@@ -7,7 +7,6 @@ import android.support.annotation.NonNull;
 import android.support.v7.recyclerview.extensions.DiffCallback;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +18,6 @@ import com.squareup.picasso.Picasso;
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.activities.OrgDetailActivity;
 import codingblocks.com.gsocinfo.data.model.Organization;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * Created by harshit on 26/08/17.
@@ -55,13 +52,12 @@ public class OrgAdapter extends PagedListAdapter<Organization, OrgAdapter.OrgHol
 
     @Override
     public void onBindViewHolder(OrgHolder holder, int position) {
-        Log.e(TAG, "onBindViewHolder: " + position);
         Organization currentOrg = getItem(position);
         if (currentOrg != null) {
             holder.orgName.setText(currentOrg.getName());
             holder.orgTagline.setText(currentOrg.getTagline());
             String currUrl = currentOrg.getImageUrl();
-            Picasso.with(context).load(currUrl).resize(200, 200).into(holder.orgImage);
+            Picasso.with(context).load(currUrl).resize(320, 320).into(holder.orgImage);
         } else
             holder.clear();
     }

@@ -11,7 +11,7 @@ public class Constants {
 
     public static ArrayList<String > generateTitle(){
         ArrayList<String> title = new ArrayList<>();
-        title.add("Organisation Applications open");
+        title.add("Organization Applications open");
         title.add("Organizations Application Deadline");
         title.add("Organizations Announced");
         title.add("Student Application Period");

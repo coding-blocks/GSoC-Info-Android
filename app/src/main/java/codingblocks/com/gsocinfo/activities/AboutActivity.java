@@ -1,6 +1,8 @@
 package codingblocks.com.gsocinfo.activities;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -12,6 +14,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.getkeepsafe.taptargetview.TapTarget;
+import com.getkeepsafe.taptargetview.TapTargetSequence;
 
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.fragments.FaqFragment;
@@ -25,15 +30,19 @@ public class AboutActivity extends AppCompatActivity
     MainPageFragment mainPageFragment;
     OrganizationFragment organizationFragment;
     ProjectFragment projectFragment;
+    Toolbar toolbar;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        toolbar.inflateMenu(R.menu.about);
         FloatingActionButton fab = findViewById(R.id.fab);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,10 +59,55 @@ public class AboutActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        if (savedInstanceState == null)
+        if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container_about, MainPageFragment.newInstance())
                     .commit();
+            navigationView.setCheckedItem(R.id.nav_about);
+        }
+
+        if (!sharedPreferences.getBoolean("main_activity_target", false)) {
+            new TapTargetSequence(this)
+                    .continueOnCancel(true)
+                    .targets(
+                            TapTarget.forToolbarNavigationIcon(toolbar, getString(R.string.nav_drawer_target))
+                                    .targetCircleColor(R.color.colorAccent)
+                                    .drawShadow(true)
+                                    .tintTarget(true)
+                                    .outerCircleAlpha(0.90f).id(1),
+                            TapTarget.forToolbarMenuItem(toolbar, R.id.action_search, getString(R.string.search_target_title), getString(R.string.search_target_desc))
+                                    .targetCircleColor(R.color.colorAccent)
+                                    .drawShadow(true)
+                                    .tintTarget(true)
+                                    .outerCircleAlpha(0.90f).id(2),
+                            TapTarget.forView(fab, getString(R.string.mentor_target_title), getString(R.string.mentor_target_desc))
+                                    .drawShadow(true)
+                                    .tintTarget(true)
+                                    .targetCircleColor(R.color.colorAccent)
+                                    .outerCircleAlpha(0.90f).id(3)
+
+                    )
+                    .listener(new TapTargetSequence.Listener() {
+                        @Override
+                        public void onSequenceFinish() {
+                            sharedPreferences.edit().putBoolean("main_activity_target", true).apply();
+                        }
+
+                        @Override
+                        public void onSequenceStep(TapTarget lastTarget, boolean targetClicked) {
+
+                        }
+
+                        @Override
+                        public void onSequenceCanceled(TapTarget lastTarget) {
+                        }
+                    }).start();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     @Override

@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
 
         final Gson gson = new Gson();
         final View view = LayoutInflater.from(this).inflate(R.layout.dialog_progress, null, false);
-        ((TextView) view.findViewById(R.id.textViewDialog)).setText("Settings things up for the first launch, please wait ...");
+        ((TextView) view.findViewById(R.id.textViewDialog)).setText(R.string.first_launch_dialog);
 
         Runnable runnable = new Runnable() {
             Organizations organizations;
