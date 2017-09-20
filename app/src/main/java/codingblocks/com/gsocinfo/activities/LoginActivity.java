@@ -61,7 +61,6 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void run() {
-
                 if (!sharedPreferences.getBoolean(getString(R.string.main_page), false)) {
                     LoginActivity.this.runOnUiThread(new Runnable() {
                         @Override

@@ -8,7 +8,7 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
-import codingblocks.com.gsocinfo.data.model.Projects;
+import codingblocks.com.gsocinfo.data.model.Project;
 
 /**
  * Created by harshit on 08/09/17.
@@ -17,19 +17,19 @@ import codingblocks.com.gsocinfo.data.model.Projects;
 public interface ProjectDao {
 
     @Query("SELECT * FROM projects ORDER BY title")
-    LivePagedListProvider<Integer, Projects.Project> getAllProjects();
+    LivePagedListProvider<?, Project> getAllProjects();
 
     @Query("SELECT * FROM projects WHERE orgID = :id")
-    LivePagedListProvider<Integer, Projects.Project> getProjectByOrgId(String id);
+    LivePagedListProvider<?, Project> getProjectByOrgId(String id);
 
     @Insert
-    void insertAllProjects(List<Projects.Project> projects);
+    void insertAllProjects(List<Project> projects);
 
     @Insert
-    void insertSingleProject(Projects.Project... project);
+    void insertSingleProject(Project... project);
 
     @Delete
-    void deleteAllProjects(List<Projects.Project> projects);
+    void deleteAllProjects(List<Project> projects);
 
     @Query("DELETE FROM projects")
     void nukeProjects();

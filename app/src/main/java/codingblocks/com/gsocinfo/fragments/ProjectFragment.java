@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.adapters.ProjectAdapter;
-import codingblocks.com.gsocinfo.data.model.Projects;
+import codingblocks.com.gsocinfo.data.model.Project;
 import codingblocks.com.gsocinfo.data.viewmodel.ProjectViewModel;
 
 /**
@@ -51,18 +51,20 @@ public class ProjectFragment extends Fragment {
         ProjectViewModel projectViewModel = ViewModelProviders.of(getActivity()).get(ProjectViewModel.class);
         String orgID = getArguments().getString("ORG");
         if (orgID != null && !orgID.equals("")) {
-            projectViewModel.getProjectsByOrgID(orgID).observe(this, new Observer<PagedList<Projects.Project>>() {
+            projectViewModel.getProjectsByOrgID(orgID).observe(this, new Observer<PagedList<Project>>() {
                 @Override
-                public void onChanged(@Nullable PagedList<Projects.Project> projects) {
-                    projectAdapter.setData(projects);
+                public void onChanged(@Nullable PagedList<Project> projects) {
+                    projectAdapter.setList(projects);
+                    projectAdapter.notifyDataSetChanged();
                     view.findViewById(R.id.progressBar).setVisibility(View.GONE);
                 }
             });
         } else {
-            projectViewModel.getProjects().observe(this, new Observer<PagedList<Projects.Project>>() {
+            projectViewModel.getProjects().observe(this, new Observer<PagedList<Project>>() {
                 @Override
-                public void onChanged(@Nullable PagedList<Projects.Project> projects) {
-                    projectAdapter.setData(projects);
+                public void onChanged(@Nullable PagedList<Project> projects) {
+                    projectAdapter.setList(projects);
+                    projectAdapter.notifyDataSetChanged();
                     view.findViewById(R.id.progressBar).setVisibility(View.GONE);
                 }
             });

@@ -7,14 +7,11 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.fragments.FaqFragment;
@@ -44,23 +41,12 @@ public class AboutActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
-        final View view = LayoutInflater.from(this).inflate(R.layout.dialog_progress, null, false);
-        ((TextView) view.findViewById(R.id.textViewDialog)).setText("Adding special sauce . . .");
-        AlertDialog alertDialog = new AlertDialog.Builder(AboutActivity.this)
-                .setMessage("Hold On")
-                .setView(view)
-                .setCancelable(false)
-                .setView(view)
-                .create();
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
-        projectFragment = ProjectFragment.newInstance("");
-        organizationFragment = OrganizationFragment.newInstance();
-        mainPageFragment = MainPageFragment.newInstance();
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -101,18 +87,21 @@ public class AboutActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.nav_about) {
+            mainPageFragment = MainPageFragment.newInstance();
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container_about,
                             mainPageFragment,
                             "ABOUT")
                     .commit();
         } else if (id == R.id.nav_organizations) {
+            organizationFragment = OrganizationFragment.newInstance();
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container_about,
                             organizationFragment,
                             "ORGANIZATION")
                     .commit();
         } else if (id == R.id.nav_projects) {
+            projectFragment = ProjectFragment.newInstance("");
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container_about,
                             projectFragment,

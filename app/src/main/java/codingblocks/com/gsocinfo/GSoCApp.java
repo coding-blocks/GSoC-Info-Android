@@ -17,28 +17,32 @@ public class GSoCApp extends Application {
     private static ProjectDao projectsDao;
     private static OrganizationDao organizationDao;
     private static MainPageDao mainPageDao;
+    private static AppDatabase appDatabase;
 
     public static OrganizationDao getOrgDao() {
+        if (organizationDao == null)
+            organizationDao = appDatabase.getOrganizationsDao();
         return organizationDao;
     }
 
     public static ProjectDao getProjectDao() {
+        if (projectsDao == null)
+            projectsDao = appDatabase.getProjectsDao();
         return projectsDao;
     }
 
     public static MainPageDao getMainPageDao() {
+        if (mainPageDao == null)
+            mainPageDao = appDatabase.getMainPageDao();
         return mainPageDao;
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        AppDatabase appDatabase = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "gsoc-database")
+        appDatabase = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "gsoc-database")
                 .fallbackToDestructiveMigration()
                 .build();
-        projectsDao = appDatabase.getProjectsDao();
-        organizationDao = appDatabase.getOrganizationsDao();
-        mainPageDao = appDatabase.getMainPageDao();
     }
 
 }

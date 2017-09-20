@@ -6,7 +6,7 @@ import android.arch.lifecycle.LiveData;
 import android.arch.paging.PagedList;
 
 import codingblocks.com.gsocinfo.GSoCApp;
-import codingblocks.com.gsocinfo.data.model.Organizations;
+import codingblocks.com.gsocinfo.data.model.Organization;
 
 /**
  * Created by harshit on 17/09/17.
@@ -14,24 +14,22 @@ import codingblocks.com.gsocinfo.data.model.Organizations;
 
 public class OrganizationViewModel extends AndroidViewModel {
 
-    private LiveData<PagedList<Organizations.Organization>> organizations;
+    public LiveData<PagedList<Organization>> organizations;
 
     public OrganizationViewModel(Application application) {
         super(application);
         organizations = GSoCApp.getOrgDao().getAllOrganizations()
-                .create(0, new PagedList.Config.Builder()
-                        .setPageSize(40)
-                        .setPrefetchDistance(25)
-                        .setEnablePlaceholders(false)
-                        .build()
-                );
+                .create(null, new PagedList.Config.Builder()
+                        .setPageSize(50)
+                        .setPrefetchDistance(10)
+                        .build());
     }
 
-    public LiveData<PagedList<Organizations.Organization>> getOrganizations() {
+    public LiveData<PagedList<Organization>> getOrganizations() {
         return organizations;
     }
 
-    public void setOrganizations(LiveData<PagedList<Organizations.Organization>> organizations) {
+    public void setOrganizations(LiveData<PagedList<Organization>> organizations) {
         this.organizations = organizations;
     }
 }

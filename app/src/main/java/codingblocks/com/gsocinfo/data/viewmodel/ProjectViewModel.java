@@ -6,7 +6,7 @@ import android.arch.lifecycle.LiveData;
 import android.arch.paging.PagedList;
 
 import codingblocks.com.gsocinfo.GSoCApp;
-import codingblocks.com.gsocinfo.data.model.Projects;
+import codingblocks.com.gsocinfo.data.model.Project;
 
 /**
  * Created by harshit on 17/09/17.
@@ -14,37 +14,23 @@ import codingblocks.com.gsocinfo.data.model.Projects;
 
 public class ProjectViewModel extends AndroidViewModel {
 
-    private LiveData<PagedList<Projects.Project>> projects;
+    private LiveData<PagedList<Project>> projects;
 
     public ProjectViewModel(Application application) {
         super(application);
-        projects = GSoCApp.getProjectDao().getAllProjects().create(0,
-                new PagedList.Config.Builder()
-                        .setPageSize(40)
-                        .setEnablePlaceholders(false)
-                        .setPrefetchDistance(10)
-                        .build());
+        projects = GSoCApp.getProjectDao().getAllProjects().create(null, 50);
     }
 
-    public LiveData<PagedList<Projects.Project>> getProjectsByOrgID(String id) {
-        return GSoCApp.getProjectDao().getProjectByOrgId(id).create(0,
-                new PagedList.Config.Builder()
-                        .setPageSize(40)
-                        .setEnablePlaceholders(true)
-                        .setPrefetchDistance(10)
-                        .build());
-    }
-
-    public LiveData<PagedList<Projects.Project>> getProjects() {
+    public LiveData<PagedList<Project>> getProjects() {
         return projects;
     }
 
-    public void setProjects(LiveData<PagedList<Projects.Project>> projects) {
+    public void setProjects(LiveData<PagedList<Project>> projects) {
         this.projects = projects;
     }
 
-    public void setProjectByOrgID(String orgID) {
-        GSoCApp.getProjectDao().getProjectByOrgId(orgID);
+    public LiveData<PagedList<Project>> getProjectsByOrgID(String id) {
+        return GSoCApp.getProjectDao().getProjectByOrgId(id).create(null, 50);
     }
 
 

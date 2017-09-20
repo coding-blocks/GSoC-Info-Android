@@ -4,7 +4,8 @@ import android.arch.paging.PagedListAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.transition.TransitionManager;
+import android.support.annotation.NonNull;
+import android.support.v7.recyclerview.extensions.DiffCallback;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -18,11 +19,8 @@ import android.widget.TextView;
 
 import com.commonsware.cwac.anddown.AndDown;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import codingblocks.com.gsocinfo.R;
-import codingblocks.com.gsocinfo.data.model.Projects;
+import codingblocks.com.gsocinfo.data.model.Project;
 
 import static android.view.View.GONE;
 
@@ -30,20 +28,24 @@ import static android.view.View.GONE;
  * Created by harshit on 26/08/17.
  */
 
-public class ProjectAdapter extends PagedListAdapter<Projects.Project, ProjectAdapter.ProjectHolder> {
+public class ProjectAdapter extends PagedListAdapter<Project, ProjectAdapter.ProjectHolder> {
 
+    private static final DiffCallback<Project> DIFF_CALLBACK = new DiffCallback<Project>() {
+        @Override
+        public boolean areItemsTheSame(@NonNull Project oldItem, @NonNull Project newItem) {
+            return oldItem.equals(newItem);
+        }
+
+        @Override
+        public boolean areContentsTheSame(@NonNull Project oldItem, @NonNull Project newItem) {
+            return areItemsTheSame(oldItem, newItem);
+        }
+    };
     private Context context;
-    private List<Projects.Project> projects = new ArrayList<>();
     private int count = 0; //keeping track of card item created for setting the background
 
     public ProjectAdapter() {
-        super(Projects.Project.DIFF_CALLBACK);
-        projects.clear();
-    }
-
-    public void setData(List<Projects.Project> projects) {
-        this.projects.addAll(projects);
-        notifyDataSetChanged();
+        super(DIFF_CALLBACK);
     }
 
     @Override
@@ -57,7 +59,7 @@ public class ProjectAdapter extends PagedListAdapter<Projects.Project, ProjectAd
     public void onBindViewHolder(final ProjectHolder holder, int position) {
         Log.e("TAG", "onBindViewHolder: " + position);
         holder.linearLayoutExpanded.setVisibility(GONE);
-        Projects.Project currProject = projects.get(position);
+        Project currProject = getItem(position);
         holder.studentName.setText(currProject.getStudent().getDisplayName());
         holder.projectName.setText(currProject.getTitle());
         holder.orgName.setText(currProject.getOrganization().getName());
@@ -74,11 +76,6 @@ public class ProjectAdapter extends PagedListAdapter<Projects.Project, ProjectAd
         }
     }
 
-
-    @Override
-    public int getItemCount() {
-        return projects.size();
-    }
 
     public class ProjectHolder extends RecyclerView.ViewHolder {
 
@@ -125,13 +122,12 @@ public class ProjectAdapter extends PagedListAdapter<Projects.Project, ProjectAd
                     } else {
                         linearLayoutExpanded.setVisibility(GONE);
                     }
-                    TransitionManager.beginDelayedTransition(linearLayout);
                 }
             });
             urlImage.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Projects.Project project = projects.get(getAdapterPosition());
+                    Project project = getItem(getAdapterPosition());
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     String url = project.getId();
                     intent.setData(Uri.parse(url));

@@ -9,13 +9,14 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.adapters.OrgAdapter;
-import codingblocks.com.gsocinfo.data.model.Organizations;
+import codingblocks.com.gsocinfo.data.model.Organization;
 import codingblocks.com.gsocinfo.data.viewmodel.OrganizationViewModel;
 
 /**
@@ -45,16 +46,17 @@ public class OrganizationFragment extends Fragment {
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.VERTICAL));
         orgAdapter = new OrgAdapter();
         recyclerView.setAdapter(orgAdapter);
-
         OrganizationViewModel organizationViewModel = ViewModelProviders.of(getActivity()).get(OrganizationViewModel.class);
 
-        organizationViewModel.getOrganizations().observe(this, new Observer<PagedList<Organizations.Organization>>() {
+        organizationViewModel.getOrganizations().observe(this, new Observer<PagedList<Organization>>() {
             @Override
-            public void onChanged(@Nullable PagedList<Organizations.Organization> organizations) {
-                orgAdapter.setData(organizations);
+            public void onChanged(@Nullable PagedList<Organization> organizations) {
+                Log.e("TAG", "onChanged: ");
+                orgAdapter.setList(organizations);
                 view.findViewById(R.id.progressBar).setVisibility(View.GONE);
             }
         });
+
         return view;
     }
 

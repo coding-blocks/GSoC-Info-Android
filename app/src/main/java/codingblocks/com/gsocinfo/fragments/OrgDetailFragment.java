@@ -19,7 +19,7 @@ import java.util.List;
 
 import codingblocks.com.gsocinfo.R;
 import codingblocks.com.gsocinfo.adapters.TagAdapter;
-import codingblocks.com.gsocinfo.data.model.Organizations;
+import codingblocks.com.gsocinfo.data.model.Organization;
 
 import static codingblocks.com.gsocinfo.adapters.OrgAdapter.ORG_TAG;
 
@@ -43,7 +43,7 @@ public class OrgDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_org_details,container,false);
         Intent i = getActivity().getIntent();
-        Organizations.Organization organization = i.getParcelableExtra(ORG_TAG);
+        Organization organization = (Organization) i.getSerializableExtra(ORG_TAG);
 
         TextView orgDetails = view.findViewById(R.id.org_detail_details);
         TextView orgTitle = view.findViewById(R.id.org_detail_title);

@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import codingblocks.com.gsocinfo.R;
-import codingblocks.com.gsocinfo.data.model.Organizations;
+import codingblocks.com.gsocinfo.data.model.Organization;
 import codingblocks.com.gsocinfo.fragments.OrgDetailFragment;
 import codingblocks.com.gsocinfo.fragments.ProjectFragment;
 
@@ -26,7 +26,7 @@ import static codingblocks.com.gsocinfo.adapters.OrgAdapter.ORG_TAG;
 public class OrgDetailActivity extends AppCompatActivity {
 
     String orgID;
-    private Organizations.Organization organization;
+    private Organization organization;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class OrgDetailActivity extends AppCompatActivity {
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        organization = i.getParcelableExtra(ORG_TAG);
+        organization = (Organization) i.getSerializableExtra(ORG_TAG);
 
         final CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
         AppBarLayout appBarLayout = findViewById(R.id.app_bar_layout);
@@ -56,7 +56,7 @@ public class OrgDetailActivity extends AppCompatActivity {
         ImageView orgIcon = findViewById(R.id.org_detail_image);
         TextView orgDesc = findViewById(R.id.org_detail_desc);
 
-        Picasso.with(this).load(organization.getImageUrl()).noFade().into(orgIcon);
+        Picasso.with(this).load(organization.getImageUrl()).into(orgIcon);
         orgDesc.setText(organization.getPrecis());
 
         ViewPager viewPager = findViewById(R.id.viewPager);

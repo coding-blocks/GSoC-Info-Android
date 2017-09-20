@@ -8,7 +8,7 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
-import codingblocks.com.gsocinfo.data.model.Organizations;
+import codingblocks.com.gsocinfo.data.model.Organization;
 
 /**
  * Created by harshit on 08/09/17.
@@ -17,13 +17,13 @@ import codingblocks.com.gsocinfo.data.model.Organizations;
 public interface OrganizationDao {
 
     @Query("SELECT * FROM organizations ORDER BY name")
-    LivePagedListProvider<Integer, Organizations.Organization> getAllOrganizations();
+    LivePagedListProvider<?, Organization> getAllOrganizations();
 
     @Insert
-    void insertAllOrganization(List<Organizations.Organization> organizations);
+    void insertAllOrganization(List<Organization> organizations);
 
     @Delete
-    void deleteAllOrganizations(List<Organizations.Organization> organizations);
+    void deleteAllOrganizations(List<Organization> organizations);
 
     @Query("DELETE FROM organizations")
     void nukeOrgs();
