@@ -1,6 +1,7 @@
 package codingblocks.com.gsocinfo.activities;
 
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
@@ -11,6 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.transition.Fade;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,7 +26,7 @@ import codingblocks.com.gsocinfo.fragments.MainPageFragment;
 import codingblocks.com.gsocinfo.fragments.OrganizationFragment;
 import codingblocks.com.gsocinfo.fragments.ProjectFragment;
 
-public class AboutActivity extends AppCompatActivity
+public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     MainPageFragment mainPageFragment;
@@ -50,6 +52,16 @@ public class AboutActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Fade fade = new Fade();
+            fade.excludeTarget(R.id.appBarMain, true);
+            fade.excludeTarget(android.R.id.statusBarBackground, true);
+            fade.excludeTarget(android.R.id.navigationBarBackground, true);
+
+            getWindow().setEnterTransition(fade);
+            getWindow().setExitTransition(fade);
+        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

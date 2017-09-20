@@ -41,13 +41,13 @@ public class LoginActivity extends AppCompatActivity {
         Button button = findViewById(R.id.loginButton);
 
 //        if (sharedPreferences.getBoolean("LOGGED_IN",false)){
-//            startActivity(new Intent(getBaseContext(), AboutActivity.class));
+//            startActivity(new Intent(getBaseContext(), HomeActivity.class));
 //            finish();
 //        }
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getBaseContext(), AboutActivity.class));
+                startActivity(new Intent(getBaseContext(), HomeActivity.class));
                 sharedPreferences.edit().putBoolean("LOGGED_IN", true).apply();
             }
         });

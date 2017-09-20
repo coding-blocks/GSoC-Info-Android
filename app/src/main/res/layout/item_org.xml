@@ -15,8 +15,8 @@
 
         <ImageView
             android:id="@+id/org_image"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_gravity="center"
             android:layout_margin="16dp"/>
 

@@ -4,6 +4,9 @@ import android.arch.paging.PagedListAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.view.ViewCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.recyclerview.extensions.DiffCallback;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -57,7 +60,12 @@ public class OrgAdapter extends PagedListAdapter<Organization, OrgAdapter.OrgHol
             holder.orgName.setText(currentOrg.getName());
             holder.orgTagline.setText(currentOrg.getTagline());
             String currUrl = currentOrg.getImageUrl();
-            Picasso.with(context).load(currUrl).resize(320, 320).into(holder.orgImage);
+            Picasso.with(context)
+                    .load(currUrl)
+                    .resize(320, 320)
+                    .into(holder.orgImage);
+            ViewCompat.setTransitionName(holder.orgImage, currentOrg.getName());
+
         } else
             holder.clear();
     }
@@ -81,8 +89,12 @@ public class OrgAdapter extends PagedListAdapter<Organization, OrgAdapter.OrgHol
                 public void onClick(View view) {
                     Intent i = new Intent(context, OrgDetailActivity.class);
                     i.putExtra(ORG_TAG, getItem(getAdapterPosition()));
+                    i.putExtra("EXTRA_TRANSITION_NAME", ViewCompat.getTransitionName(orgImage));
+                    ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation((AppCompatActivity) context,
+                            orgImage,
+                            ViewCompat.getTransitionName(orgImage));
                     i.putExtra("ORG_ID", getItem(getAdapterPosition()).getOrgID());
-                    context.startActivity(i);
+                    context.startActivity(i, optionsCompat.toBundle());
                 }
             });
         }
