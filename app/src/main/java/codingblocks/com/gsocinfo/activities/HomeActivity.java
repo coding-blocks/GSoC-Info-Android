@@ -13,7 +13,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.Fade;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -87,11 +86,6 @@ public class HomeActivity extends AppCompatActivity
                                     .drawShadow(true)
                                     .tintTarget(true)
                                     .outerCircleAlpha(0.90f).id(1),
-                            TapTarget.forToolbarMenuItem(toolbar, R.id.action_search, getString(R.string.search_target_title), getString(R.string.search_target_desc))
-                                    .targetCircleColor(R.color.colorAccent)
-                                    .drawShadow(true)
-                                    .tintTarget(true)
-                                    .outerCircleAlpha(0.90f).id(2),
                             TapTarget.forView(fab, getString(R.string.mentor_target_title), getString(R.string.mentor_target_desc))
                                     .drawShadow(true)
                                     .tintTarget(true)
@@ -130,23 +124,6 @@ public class HomeActivity extends AppCompatActivity
         } else {
             drawer.openDrawer(GravityCompat.START);
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.about, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.action_search) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

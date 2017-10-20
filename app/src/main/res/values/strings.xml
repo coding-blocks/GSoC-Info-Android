@@ -28,10 +28,12 @@
     <string name="project_key">PROJECTS</string>
     <string name="student_key">STUDENTS</string>
     <string name="main_page">MAIN_PAGE</string>
-    <string name="first_launch_dialog">Settings things up for the first launch, please wait ...</string>
+    <string name="first_launch_dialog">Settings things up for the first launch, please wait …</string>
     <string name="nav_drawer_target">Click here to view more sections in the app</string>
     <string name="search_target_desc">This allows you to search for any content throughout the app</string>
     <string name="search_target_title">Click here to search</string>
     <string name="mentor_target_title">Click here to chat with a mentor</string>
     <string name="mentor_target_desc">Chat with mentors and students who participated in GSoC</string>
+    <string name="search_hint">Search</string>
+    <string name="title_activity_search">SearchActivity</string>
 </resources>

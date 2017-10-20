@@ -32,4 +32,12 @@ public class OrganizationViewModel extends AndroidViewModel {
     public void setOrganizations(LiveData<PagedList<Organization>> organizations) {
         this.organizations = organizations;
     }
+
+    public LiveData<PagedList<Organization>> getOrgsByName(String name) {
+        return GSoCApp.getOrgDao().getOrgsByName(name)
+                .create(null, new PagedList.Config.Builder()
+                        .setPageSize(50)
+                        .setPrefetchDistance(10)
+                        .build());
+    }
 }

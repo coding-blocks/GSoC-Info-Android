@@ -25,6 +25,11 @@ public interface OrganizationDao {
     @Delete
     void deleteAllOrganizations(List<Organization> organizations);
 
+    @Query("SELECT * FROM organizations WHERE name like '%' || :name || '%' OR " +
+            "topicTags like '%' || :name || '%' OR technologyTags like '%' || :name || '%' OR" +
+            " proposalTags like '%' || :name || '%' ORDER BY name")
+    LivePagedListProvider<?, Organization> getOrgsByName(String name);
+
     @Query("DELETE FROM organizations")
     void nukeOrgs();
 }
