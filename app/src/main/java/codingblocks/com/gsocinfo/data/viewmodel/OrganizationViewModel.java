@@ -20,7 +20,7 @@ public class OrganizationViewModel extends AndroidViewModel {
         super(application);
         organizations = GSoCApp.getOrgDao().getAllOrganizations()
                 .create(null, new PagedList.Config.Builder()
-                        .setPageSize(50)
+                        .setPageSize(30)
                         .setPrefetchDistance(10)
                         .build());
     }

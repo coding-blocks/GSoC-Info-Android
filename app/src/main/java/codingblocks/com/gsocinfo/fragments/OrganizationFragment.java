@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -28,6 +29,7 @@ import codingblocks.com.gsocinfo.data.viewmodel.OrganizationViewModel;
 
 public class OrganizationFragment extends Fragment {
 
+    public PagedList<Organization> orgPagedList;
     OrganizationViewModel organizationViewModel;
     private OrgAdapter orgAdapter;
 
@@ -65,12 +67,7 @@ public class OrganizationFragment extends Fragment {
             @Override
             public boolean onQueryTextChange(String newText) {
                 if (newText.equals("")) {
-                    organizationViewModel.getOrganizations().observe(getActivity(), new Observer<PagedList<Organization>>() {
-                        @Override
-                        public void onChanged(@Nullable PagedList<Organization> organizations) {
-                            orgAdapter.setList(organizations);
-                        }
-                    });
+                    orgAdapter.setList(orgPagedList);
                 }
                 return false;
             }
@@ -93,7 +90,8 @@ public class OrganizationFragment extends Fragment {
         organizationViewModel.getOrganizations().observe(this, new Observer<PagedList<Organization>>() {
             @Override
             public void onChanged(@Nullable PagedList<Organization> organizations) {
-                orgAdapter.setList(organizations);
+                orgPagedList = organizations;
+                orgAdapter.setList(orgPagedList);
                 view.findViewById(R.id.progressBar).setVisibility(View.GONE);
             }
         });
